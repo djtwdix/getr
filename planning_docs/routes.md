@@ -1,0 +1,6 @@
+## Routes
+
+GET
+POST
+
+Get
