@@ -1,0 +1,8 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 60px;
+  color: #EFDE9D;
+  background-color: #061115;
+}/*# sourceMappingURL=main.css.map */
