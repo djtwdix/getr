@@ -1,0 +1,88 @@
+.listings-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.listings {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-family: $main;
+  color: $dark-blue;
+}
+
+.listings-item {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 500px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 20px $dark-blue;
+  margin: 20px;
+}
+
+.listing-image {
+  width: inherit;
+  height: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.listing-image {
+  img {
+    max-height: auto;
+    max-width: 100%;
+  }
+}
+
+.listing-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.listing-mid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.listing-make {
+  font-weight: 700;
+}
+
+.listing-model {
+  font-weight: 500;
+}
+
+.specs {
+  div {
+    margin-bottom: 20px;
+  }
+}
+
+.listing-footer {
+  width: inherit;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.listing-price {
+  opacity: 90%;
+  color: lightgray;
+}
