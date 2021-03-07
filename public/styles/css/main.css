@@ -4,14 +4,14 @@
   width: 100vw;
   height: 80px;
   color: #F5F6F5;
-  background-color: #061115;
+  background-color: #105578;
   padding-left: 30px;
   padding-right: 30px;
 }
 
 .logo {
   font-size: 40px;
-  font-family: "Della Respira", serif;
+  font-family: "Delius", cursive;
   cursor: pointer;
 }
 
@@ -73,9 +73,9 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  background-color: #061115;
+  background-color: #105578;
   z-index: 1;
-  box-shadow: 2px 2px 4px #061115;
+  box-shadow: 2px 2px 4px #105578;
 }
 
 .dropdown-list li {
