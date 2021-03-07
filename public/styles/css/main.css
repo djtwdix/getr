@@ -172,7 +172,6 @@
 }
 
 .listings {
-  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -257,4 +256,10 @@
 
 .hide {
   display: none;
+}
+
+main {
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
 }/*# sourceMappingURL=main.css.map */
