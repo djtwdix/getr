@@ -330,13 +330,94 @@
   color: lightgray;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100vh;
+  background: radial-gradient(81.88% 81.88% at 50% 50%, #EFDE9D 0%, #F5F6F5 100%);
+  font-family: "Poppins", sans-serif;
+}
+main #post-ad-card {
+  margin-top: 4vh;
+  padding: 3w;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  background-color: #F5F6F5;
+}
+main #post-ad-card .banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main #post-ad-card .banner img {
+  width: 300px;
+}
+main #post-ad-card h1 {
+  margin: 3rem;
+  opacity: 80%;
+  font-weight: bolder;
+  text-align: center;
+}
+main #post-ad-card .row {
+  margin: 1rem;
+}
+main #post-ad-card .row h2 {
+  margin-top: 2rem;
+  opacity: 80%;
+}
+main #post-ad-card .row #price {
+  max-width: 20rem;
+}
+main #post-ad-card .row #price #price-input {
+  border-radius: 0 !important;
+}
+main #post-ad-card .row #price #right {
+  border-radius: 0px 17px 17px 0px;
+}
+main #post-ad-card .row #price #left {
+  border-radius: 17px 0px 0px 17px;
+}
+main #post-ad-card .row button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  min-width: 6rem;
+  border-radius: 17px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #105578;
+  color: #F5F6F5;
+  font-weight: bolder;
+}
+main #post-ad-card input,
+main #post-ad-card select,
+main #post-ad-card textarea {
+  border-radius: 17px;
+}
+main #post-ad-card label {
+  font-weight: bolder;
+  opacity: 80%;
+}
+
+@media (max-width: 1000px) {
+  main {
+    display: flow-root;
+  }
+
+  .banner img {
+    display: none;
+  }
+}
 .hide {
   display: none;
 }
 
-main {
+/* main {
   width: 90vw;
   height: 100vh;
   margin: auto;
   margin-top: 80px;
-}/*# sourceMappingURL=main.css.map */
+} *//*# sourceMappingURL=main.css.map */

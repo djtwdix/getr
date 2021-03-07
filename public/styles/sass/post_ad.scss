@@ -1,0 +1,87 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100vh;
+  background: radial-gradient(81.88% 81.88% at 50% 50%, $beige 0%, $white 100%);
+  font-family: "Poppins", sans-serif;
+
+  #post-ad-card {
+    // This value should be calc navbar height
+    margin-top: 4vh;
+
+    padding: 3w;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    background-color: $white;
+
+    .banner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 300px;
+      }
+    }
+    h1 {
+      margin: 3rem;
+      opacity: 80%;
+      font-weight: bolder; // font-family: "Raleway", sans-serif;
+      text-align: center;
+    }
+
+    .row {
+      margin: 1rem;
+      h2 {
+        margin-top: 2rem;
+        opacity: 80%;
+      }
+      #price {
+        max-width: 20rem;
+        #price-input {
+          border-radius: 0 !important;
+        }
+        #right {
+          border-radius: 0px 17px 17px 0px;
+        }
+        #left {
+          border-radius: 17px 0px 0px 17px;
+        }
+      }
+
+      button {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        min-width: 6rem;
+        border-radius: 17px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $blue;
+        color: $white;
+        font-weight: bolder;
+      }
+    }
+    input,
+    select,
+    textarea {
+      border-radius: 17px;
+    }
+    label {
+      font-weight: bolder;
+      opacity: 80%;
+    }
+  }
+}
+
+@media (max-width: $breakpoint) {
+  main{
+    display: flow-root;
+  }
+  .banner img {
+    display: none;
+  }
+}

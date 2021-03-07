@@ -6,19 +6,25 @@ $beige: #EFDE9D;
 $brown: #914B1B;
 $logo: 'Delius', cursive;
 $main:  'Poppins', sans-serif;
+$breakpoint: 1000px;
 
 @import "_navbar.scss";
 @import "_landing.scss";
 @import "_listings.scss";
 @import "_listing.scss";
+@import "_post_ad.scss";
 
 .hide {
   display: none;
 }
 
-main {
+/* main {
   width: 90vw;
   height: 100vh;
   margin: auto;
   margin-top: 80px;
-}
+} */
+
+
+
+
