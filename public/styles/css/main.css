@@ -40,6 +40,7 @@ main #post-ad-card h1 {
   margin: 3rem;
   opacity: 80%;
   font-weight: bolder;
+  text-align: center;
 }
 
 main #post-ad-card .row {
