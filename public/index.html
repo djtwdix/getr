@@ -5,14 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+
 
   <!-- fontawesome -->
 
   <script src="https://kit.fontawesome.com/5e4ea1b3b4.js" crossorigin="anonymous"></script>
 
+  <!-- google fonts -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+
   <!-- bootstrap -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   <!-- external css -->
 
@@ -21,14 +32,38 @@
   <title>Getr</title>
 </head>
 <body>
-  <nav class="my-navbar">
+  <nav class="navbar my-navbar">
     <div class="nav-left">
       <div class="logo">
         GETr
       </div>
     </div>
-    <div class="nav-right">
+    <div class="my-nav-right">
+      <form>
+        <input type="search" placeholder="search">
+      </form>
+      <div class="search-icon">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="my-account-dropdown">
+        <div class="dropdown-button">
+          My Account
+        </div>
+        <div class="dropdown-list">
+          <ul>
+            <li>
+              My Faves
+            </li>
+            <li>
+              My Listing
+            </li>
+            <li>
+              Post Ad
+            </li>
+        </div>
 
+        </ul>
+      </div>
     </div>
   </nav>
 </body>

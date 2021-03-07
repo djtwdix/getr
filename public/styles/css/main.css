@@ -1,8 +1,103 @@
-.navbar {
+.my-navbar {
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 60px;
-  color: #EFDE9D;
+  height: 80px;
+  color: #F5F6F5;
   background-color: #061115;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.logo {
+  font-size: 40px;
+  font-family: "Della Respira", serif;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #EFDE9D;
+}
+
+.my-nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar i {
+  margin-right: 20px;
+  position: relative;
+  bottom: -3px;
+  /* background-color: $beige; */
+  padding: 6px;
+  border-radius: 40px;
+  color: #EFDE9D;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.navbar i:hover {
+  color: #EFDE9D;
+}
+.navbar input {
+  padding-left: 10px;
+  font-size: 16px;
+  border-radius: 40px;
+  outline: none;
+  width: 300px;
+  border: none;
+}
+.navbar input:focus {
+  outline: none;
+}
+.navbar button {
+  font-size: 16px;
+  background-color: #EFDE9D;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 5px;
+}
+.navbar button:active {
+  background-color: #a4996b;
+}
+
+.my-account-dropdown {
+  text-align: center;
+  overflow: hidden;
+  width: 160px;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  background-color: #061115;
+  z-index: 1;
+  box-shadow: 2px 2px 4px #061115;
+}
+
+.dropdown-list li {
+  text-align: center;
+  list-style-type: none;
+  margin-top: 20px;
+}
+.dropdown-list li:hover {
+  color: #EFDE9D;
+}
+.dropdown-list ul {
+  padding: 0px;
+  padding-bottom: 15px;
+  margin: auto;
+  width: 160px;
+}
+
+.my-account-dropdown:hover .dropdown-button {
+  color: #EFDE9D;
+}
+.my-account-dropdown:hover .dropdown-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
