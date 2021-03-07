@@ -11,7 +11,7 @@
 
 .logo {
   font-size: 40px;
-  font-family: "Delius", cursive;
+  font-family: 'Delius', cursive;
   cursor: pointer;
 }
 
@@ -38,9 +38,11 @@
   margin-left: 10px;
   cursor: pointer;
 }
+
 .navbar i:hover {
   color: #EFDE9D;
 }
+
 .navbar input {
   padding-left: 10px;
   font-size: 16px;
@@ -49,9 +51,11 @@
   width: 300px;
   border: none;
 }
+
 .navbar input:focus {
   outline: none;
 }
+
 .navbar button {
   font-size: 16px;
   background-color: #EFDE9D;
@@ -59,6 +63,7 @@
   border: none;
   border-radius: 5px;
 }
+
 .navbar button:active {
   background-color: #a4996b;
 }
@@ -83,9 +88,11 @@
   list-style-type: none;
   margin-top: 20px;
 }
+
 .dropdown-list li:hover {
   color: #EFDE9D;
 }
+
 .dropdown-list ul {
   padding: 0px;
   padding-bottom: 15px;
@@ -96,6 +103,7 @@
 .my-account-dropdown:hover .dropdown-button {
   color: #EFDE9D;
 }
+
 .my-account-dropdown:hover .dropdown-list {
   display: flex;
   flex-direction: row;
@@ -128,15 +136,18 @@
   padding-left: 10px;
   box-shadow: 0px 0px 5px #061115;
 }
+
 .landing-left input:focus {
   outline: none;
 }
+
 .landing-left .landing-search {
   margin-top: 30px;
   width: inherit;
   display: flex;
   justify-content: center;
 }
+
 .landing-left i {
   background-color: #105578;
   padding: 5px;
@@ -147,18 +158,22 @@
   bottom: -2px;
   cursor: pointer;
 }
+
 .landing-left .title {
   font-weight: 700;
   font-size: 60px;
 }
+
 .landing-left .subtitle {
   font-size: 30px;
   font-weight: 300;
 }
+
 .landing-left .text-emphasis {
   color: #105578;
   text-shadow: 1px 1px 2px #061115;
 }
+
 .landing-left .advanced-search {
   margin-top: 10px;
   align-self: flex-end;
@@ -330,57 +345,61 @@
   color: lightgray;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#post-ad-card {
   padding: 1rem;
-  height: 100vh;
-  background: radial-gradient(81.88% 81.88% at 50% 50%, #EFDE9D 0%, #F5F6F5 100%);
   font-family: "Poppins", sans-serif;
-}
-main #post-ad-card {
-  margin-top: 4vh;
+  max-width: 2000px;
+  margin: 10vh;
   padding: 3w;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
   background-color: #F5F6F5;
 }
-main #post-ad-card .banner {
+
+#post-ad-card .banner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-main #post-ad-card .banner img {
+
+#post-ad-card .banner img {
   width: 300px;
 }
-main #post-ad-card h1 {
+
+#post-ad-card h1 {
   margin: 3rem;
   opacity: 80%;
   font-weight: bolder;
   text-align: center;
 }
-main #post-ad-card .row {
+
+#post-ad-card .row {
   margin: 1rem;
 }
-main #post-ad-card .row h2 {
+
+#post-ad-card .row h2 {
   margin-top: 2rem;
   opacity: 80%;
 }
-main #post-ad-card .row #price {
+
+#post-ad-card .row #price {
   max-width: 20rem;
 }
-main #post-ad-card .row #price #price-input {
+
+#post-ad-card .row #price #price-input {
   border-radius: 0 !important;
 }
-main #post-ad-card .row #price #right {
+
+#post-ad-card .row #price #right {
   border-radius: 0px 17px 17px 0px;
 }
-main #post-ad-card .row #price #left {
+
+#post-ad-card .row #price #left {
   border-radius: 17px 0px 0px 17px;
 }
-main #post-ad-card .row button {
+
+#post-ad-card .row button {
   margin-top: 2rem;
   margin-bottom: 2rem;
   min-width: 6rem;
@@ -392,25 +411,27 @@ main #post-ad-card .row button {
   color: #F5F6F5;
   font-weight: bolder;
 }
-main #post-ad-card input,
-main #post-ad-card select,
-main #post-ad-card textarea {
+
+#post-ad-card input,
+#post-ad-card select,
+#post-ad-card textarea {
   border-radius: 17px;
 }
-main #post-ad-card label {
+
+#post-ad-card label {
   font-weight: bolder;
   opacity: 80%;
 }
 
 @media (max-width: 1000px) {
-  main {
-    display: flow-root;
+  #post-ad-card {
+    margin: 2.5vh;
   }
-
   .banner img {
     display: none;
   }
 }
+
 .hide {
   display: none;
 }
@@ -420,4 +441,5 @@ main #post-ad-card label {
   height: 100vh;
   margin: auto;
   margin-top: 80px;
-} *//*# sourceMappingURL=main.css.map */
+} */
+/*# sourceMappingURL=main.css.map */
