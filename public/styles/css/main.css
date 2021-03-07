@@ -4,7 +4,7 @@
   width: 100vw;
   height: 80px;
   color: #F5F6F5;
-  background-color: #105578;
+  background-color: #061115;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -73,9 +73,9 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  background-color: #105578;
+  background-color: #061115;
   z-index: 1;
-  box-shadow: 2px 2px 4px #105578;
+  box-shadow: 2px 2px 4px #061115;
 }
 
 .dropdown-list li {
@@ -100,4 +100,70 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Poppins", sans-serif;
+}
+
+.landing-right img {
+  width: 500px;
+  height: 500px;
+}
+
+.landing-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 80px;
+}
+
+.landing-left input {
+  border: 2px solid #105578;
+  border-radius: 60px;
+  width: 400px;
+  padding-left: 10px;
+  box-shadow: 0px 0px 5px #061115;
+}
+.landing-left input:focus {
+  outline: none;
+}
+.landing-left .landing-search {
+  margin-top: 30px;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+}
+.landing-left i {
+  position: relative;
+  left: -30px;
+  bottom: -4px;
+  cursor: pointer;
+}
+.landing-left .title {
+  font-weight: 700;
+  font-size: 60px;
+}
+.landing-left .subtitle {
+  font-size: 30px;
+  font-weight: 300;
+}
+.landing-left .text-emphasis {
+  color: #105578;
+  text-shadow: 1px 1px 2px #061115;
+}
+.landing-left .advanced-search {
+  margin-top: 10px;
+  align-self: flex-end;
+  position: relative;
+  left: -150px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

@@ -4,7 +4,7 @@
   width: 100vw;
   height: 80px;
   color: $white;
-  background-color: $blue;
+  background-color: $dark-blue;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -76,9 +76,9 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  background-color: $blue;
+  background-color: $dark-blue;
   z-index: 1;
-  box-shadow: 2px 2px 4px $blue;
+  box-shadow: 2px 2px 4px $dark-blue;
 }
 
 .dropdown-list {

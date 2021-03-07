@@ -8,4 +8,8 @@ $logo: 'Delius', cursive;
 $main:  'Poppins', sans-serif;
 
 @import "_navbar.scss";
+@import "_landing.scss";
 
+.hide {
+  display: none;
+}
