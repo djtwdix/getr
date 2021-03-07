@@ -10,6 +10,7 @@ $main:  'Poppins', sans-serif;
 @import "_navbar.scss";
 @import "_landing.scss";
 @import "_listings.scss";
+@import "_listing.scss";
 
 .hide {
   display: none;
@@ -19,4 +20,5 @@ main {
   width: 90vw;
   height: 100vh;
   margin: auto;
+  margin-top: 80px;
 }

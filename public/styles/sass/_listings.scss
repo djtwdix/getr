@@ -27,7 +27,7 @@
   margin: 20px;
 }
 
-.listing-image {
+.listings-image {
   width: inherit;
   height: 50%;
   text-align: center;
@@ -35,21 +35,21 @@
   cursor: pointer;
 }
 
-.listing-image {
+.listings-image {
   img {
     max-height: auto;
     max-width: 100%;
   }
 }
 
-.listing-info {
+.listings-info {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
 
-.listing-mid {
+.listings-mid {
   display: flex;
   justify-content: space-between;
 }
@@ -60,11 +60,11 @@
   justify-content: space-around;
 }
 
-.listing-make {
+.listings-make {
   font-weight: 700;
 }
 
-.listing-model {
+.listings-model {
   font-weight: 500;
 }
 
@@ -74,7 +74,7 @@
   }
 }
 
-.listing-footer {
+.listings-footer {
   width: inherit;
   padding-left: 50px;
   padding-right: 50px;
@@ -83,13 +83,14 @@
   margin-bottom: 20px;
 }
 
-.listing-footer {
+.listings-footer {
   i {
     cursor: pointer;
+    color: $blue;
   }
 }
 
-.listing-price {
+.listings-price {
   opacity: 90%;
   color: lightgray;
 }
