@@ -28,7 +28,11 @@
   <main>
     <div class="container-xl" id="post-ad-card">
       <form class="row g-3">
-        <h1>Post an Ad</h1>
+        <div class="banner">
+          <h1>Post an Ad</h1>
+          <img src="./docs/images/transaction.svg" alt="">
+        </div>
+
         <div class="col-sm-6">
           <label class="form-label">Title</label>
           <input type="text" class="form-control form-control-lg" maxlength="50" required>
@@ -57,7 +61,8 @@
           <div class="input-group col-1">
             <label class="form-label"></label>
             <span class="input-group-text" id="left">$</span>
-            <input type="text" class="form-control" id="price-input"aria-label="Amount (to the nearest dollar)" required>
+            <input type="text" class="form-control" id="price-input" aria-label="Amount (to the nearest dollar)"
+              required>
             <span class="input-group-text" id="right">CAD</span>
           </div>
         </div>

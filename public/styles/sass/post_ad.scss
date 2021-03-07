@@ -2,16 +2,26 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 100vh;
   padding: 1rem;
   background-color: $white;
   font-family: "Poppins", sans-serif;
 
   #post-ad-card {
+    // This value should be calc navbar height
+    margin-top: 4vh;
+
     padding: 2vw;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+    .banner{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      img{
+        width: 300px;
+      }
+    }
     h1 {
       margin: 3rem;
       opacity: 80%;
@@ -53,5 +63,11 @@ main {
     textarea {
       border-radius: 17px;
     }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .banner img {
+    display: none;
   }
 }
