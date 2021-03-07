@@ -138,9 +138,13 @@
   justify-content: center;
 }
 .landing-left i {
+  background-color: #105578;
+  padding: 5px;
+  color: #F5F6F5;
+  border-radius: 50%;
   position: relative;
-  left: -30px;
-  bottom: -4px;
+  left: 10px;
+  bottom: -2px;
   cursor: pointer;
 }
 .landing-left .title {
