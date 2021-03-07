@@ -19,6 +19,9 @@ main #post-ad-card {
   margin: 2vw;
   min-width: 80vw;
   min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
 }
@@ -27,6 +30,15 @@ main #post-ad-card h1 {
   margin: 3rem;
   opacity: 80%;
   font-weight: bolder;
+}
+
+main #post-ad-card input,
+main #post-ad-card select {
+  border-radius: 17px;
+}
+
+main #post-ad-card .form-control {
+  border-radius: 17px;
 }
 
 main #post-ad-card .row {
@@ -40,6 +52,18 @@ main #post-ad-card .row h2 {
 
 main #post-ad-card .row #price {
   max-width: 20rem;
+}
+
+main #post-ad-card .row #price #price-input {
+  border-radius: none !important;
+}
+
+main #post-ad-card .row #price #right {
+  border-radius: 0px 17px 17px 0px;
+}
+
+main #post-ad-card .row #price #left {
+  border-radius: 17px 0px 0px 17px;
 }
 
 main #post-ad-card .row button {

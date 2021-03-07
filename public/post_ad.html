@@ -27,11 +27,11 @@
   </div>
   <main>
     <div class="container-xl" id="post-ad-card">
-      <h1>Post an Ad</h1>
       <form class="row g-3">
+        <h1>Post an Ad</h1>
         <div class="col-sm-6">
           <label class="form-label">Title</label>
-          <input type="text" class="form-control form-control-lg" id="colFormLabelLg" maxlength="50" required>
+          <input type="text" class="form-control form-control-lg" maxlength="50" required>
         </div>
 
         <div class="col-mb-3">
@@ -51,14 +51,14 @@
 
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
         </div>
         <div id="price">
           <div class="input-group col-1">
             <label class="form-label"></label>
-            <span class="input-group-text">$</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-text">CAD</span>
+            <span class="input-group-text" id="left">$</span>
+            <input type="text" class="form-control" id="price-input"aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text" id="right">CAD</span>
           </div>
         </div>
         <div class="mb-3">
