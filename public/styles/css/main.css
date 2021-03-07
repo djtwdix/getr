@@ -4,5 +4,30 @@
   width: 100vw;
   height: 60px;
   color: #EFDE9D;
-  background-color: #061115;
-}/*# sourceMappingURL=main.css.map */
+  background-color: #105578;
+}
+
+main {
+  height: 100vh;
+  padding: 1rem;
+  background-color: #F5F6F5;
+  font-family: "Poppins", sans-serif;
+}
+
+main #post-ad-card {
+  padding: 2vw;
+  margin: 2vw;
+  min-width: 80vw;
+  min-height: 60vh;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+
+main #post-ad-card h1 {
+  margin: 2rem;
+}
+
+main #post-ad-card .row {
+  margin: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
