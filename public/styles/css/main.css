@@ -24,10 +24,33 @@ main #post-ad-card {
 }
 
 main #post-ad-card h1 {
-  margin: 2rem;
+  margin: 3rem;
+  opacity: 80%;
+  font-weight: bolder;
 }
 
 main #post-ad-card .row {
   margin: 1rem;
+}
+
+main #post-ad-card .row h2 {
+  margin-top: 2rem;
+  opacity: 80%;
+}
+
+main #post-ad-card .row #price {
+  max-width: 20rem;
+}
+
+main #post-ad-card .row button {
+  margin-top: 2rem;
+  min-width: 6rem;
+  border-radius: 17px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #105578;
+  color: #F5F6F5;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=main.css.map */

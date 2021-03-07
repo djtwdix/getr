@@ -53,12 +53,20 @@
           <label for="exampleFormControlTextarea1" class="form-label">Description</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <div class="input-group col-1 justify-content-start">
-          <label class="form-label">Price</label>
-          <span class="input-group-text">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-text">CAD</span>
+        <div id="price">
+          <div class="input-group col-1">
+            <label class="form-label"></label>
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text">CAD</span>
+          </div>
         </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">What does it look like?</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <h2>Where are you located?</h2>
 
         <div class="col-md-5">
           <label for="inputCity" class="form-label">City</label>
@@ -97,12 +105,8 @@
           </div>
         </div>
 
-        <div class="mb-3">
-          <label for="formFile" class="form-label">What does it look like?</label>
-          <input class="form-control" type="file" id="formFile">
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Post <i class="fas fa-pen"></i></button>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn">Post <i class="fas fa-pen"></i></button>
         </div>
       </form>
     </div>
