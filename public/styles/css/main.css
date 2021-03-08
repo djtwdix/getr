@@ -562,6 +562,15 @@
   margin-bottom: 1rem;
 }
 
+#status-body #status-page #status #status-description {
+  margin-bottom: 4rem;
+}
+
+#status-body #status-page #status #take-me-back {
+  color: #F5F6F5;
+  font-weight: bolder;
+}
+
 .hide {
   display: none;
 }

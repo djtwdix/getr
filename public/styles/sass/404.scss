@@ -22,7 +22,13 @@
         font-weight: bolder;
         margin-bottom: 1rem;
       }
-
+      #status-description {
+        margin-bottom: 4rem;
+      }
+      #take-me-back {
+        color: $white;
+        font-weight: bolder;
+      }
     }
   }
 }
