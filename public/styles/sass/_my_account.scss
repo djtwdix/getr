@@ -1,0 +1,80 @@
+#dashboard-card {
+  display: flex;
+  padding: 3w;
+  margin: 10vh;
+
+  // This value should be calc navbar height margin-top
+  max-width: 2000px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  background-color: $white;
+
+  font-family: "Poppins", sans-serif;
+
+  #dashboard-profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+    background: linear-gradient(180deg, $blue 5%, #6825d9 100%);
+
+    border-radius: 40px 0px 0px 40px;
+    color: $white;
+    .user-profile {
+      img {
+        margin: 1rem;
+        padding: 1rem;
+        width: 10rem;
+        border-radius: 50%;
+
+      }
+    }
+
+    .links {
+      transition: all 0.5s ease-in;
+
+      max-width: 80%;
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 2rem 0rem;
+        padding: 1rem;
+
+        border-radius: 40px;
+        :hover {
+          transform: scale(1.03);
+        }
+
+        .btn {
+          background-color: rgba(241, 171, 41, 0.89);
+          border-radius: 40px;
+          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+  #dashboard-lists {
+    flex: 2;
+  }
+}
+
+@media (max-width: $breakpoint) {
+  #dashboard-card {
+    flex-direction: column;
+
+    #dashboard-profile {
+      border-radius: 40px 40px 0px 0px;
+      .links {
+        display: flex;
+        .link {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
