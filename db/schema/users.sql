@@ -5,7 +5,7 @@ CREATE TABLE users (
   email VARCHAR(255) NOT NULL,
   hashed_password VARCHAR(255),
   first_name VARCHAR(255),
-  last_name VARCHAR(255,)
+  last_name VARCHAR(255),
   city VARCHAR(255),
   province VARCHAR(255),
   country VARCHAR(255),

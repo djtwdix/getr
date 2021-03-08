@@ -17,3 +17,4 @@ const todayDate = () => {
   today = yyyy + '-' + mm + '-' + dd;
   return today
 }
+exports.todayDate = todayDate;
