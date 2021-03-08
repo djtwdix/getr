@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
   <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
 
-  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
+  <script src="scripts/client.js"></script>
 
 
   <!-- fontawesome -->
@@ -31,47 +35,21 @@
 
   <link rel="stylesheet" href="styles/css/main.css">
 
+ <!-- components -->
+
+ <script src="/public/scripts/components/navbar.js"></script>
+ <script src="/public/scripts/components/landing-page.js"></script>
+ <script src="/public/scripts/components/search-results.js"></script>
+
   <title>Getr</title>
 </head>
 
 <body>
 
 <!--   navbar -->
+<header class="header">
 
-  <nav class="navbar my-navbar">
-    <div class="nav-left">
-      <div class="logo">
-        GETr
-      </div>
-    </div>
-    <div class="my-nav-right">
-      <form>
-        <input type="search" placeholder="search">
-      </form>
-      <div class="search-icon">
-        <i class="fas fa-search"></i>
-      </div>
-      <div class="my-account-dropdown">
-        <div class="dropdown-button">
-          My Account
-        </div>
-        <div class="dropdown-list">
-          <ul>
-            <li>
-              My Faves
-            </li>
-            <li>
-              My Listings
-            </li>
-            <li>
-              Post Ad
-            </li>
-        </div>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
+</header>
 
 <!--   navbar end -->
 
@@ -79,32 +57,7 @@
 
   <!-- landing page -->
 
-    <div class="landing hide">
-      <div class="landing-left">
-        <div class="title">
-            Find Your
-          <br>
-            Dream Guitar
-        </div>
-        <div class="subtitle">
-            Don't go through life without finding <span class="text-emphasis">the ONE</span>
-        </div>
-        <div class="landing-search">
-          <form>
-            <input type="search" placeholder="Find yours now....">
-          </form>
-          <div class="search-icon">
-            <i class="fas fa-search"></i>
-          </div>
-        </div>
-        <div class="advanced-search">
-          Advanced Search
-        </div>
-      </div>
-      <div class="landing-right">
-        <img src="svg/undraw_compose_music_ovo2.svg" alt="Music SVG">
-      </div>
-    </div>
+
 
     <!-- landing page end -->
 
@@ -185,7 +138,7 @@
 
  <!--  single listing page -->
 
- <div class="listing-page">
+ <div class="listing-page hide">
    <div class="listing">
     <div class=listing-image>
       <img src="/public/images/start.jpeg">
