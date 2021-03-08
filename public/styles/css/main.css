@@ -95,6 +95,8 @@
   z-index: 1;
   -webkit-box-shadow: 2px 2px 4px #061115;
           box-shadow: 2px 2px 4px #061115;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .dropdown-list li {

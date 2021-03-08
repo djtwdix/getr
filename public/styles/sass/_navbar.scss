@@ -80,6 +80,8 @@
   background-color: $dark-blue;
   z-index: 1;
   box-shadow: 2px 2px 4px $dark-blue;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .dropdown-list {
