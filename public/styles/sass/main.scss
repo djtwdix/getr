@@ -19,10 +19,11 @@ $breakpoint: 1000px;
   display: none;
 }
 
-main {
+.main-container {
   width: 90vw;
   height: 90vh;
   margin: auto;
+  margin-top: 10vh;
 }
 
 .red {
