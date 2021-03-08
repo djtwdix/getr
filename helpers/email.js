@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 
-const sendOffer = (sellerEmail, message, listingBrand, listingModel) => {
+const sendOffer = (sellerEmail, message, listingBrand, listingModel, buyerEmail) => {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -13,7 +13,7 @@ const sendOffer = (sellerEmail, message, listingBrand, listingModel) => {
     from: 'getr.offer@gmail.com',
     to: sellerEmail,
     subject: 'New offer on ' + listingBrand + ' ' + listingModel,
-    text: message
+    text: message + 'Please reply at: ' + buyerEmail
   };
 
   transporter.sendMail(mailOptions, function(error, info){
