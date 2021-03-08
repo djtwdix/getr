@@ -12,7 +12,7 @@ const navbar =  `<nav class="navbar my-navbar">
     <input class="search-field" type="search" placeholder="search">
   </form>
   <div class="my-account-dropdown">
-    <div class="dropdown-button">
+    <div class="dropdown-button" id="my-account-btn">
       My Account
     </div>
     <div class="dropdown-list">
@@ -54,6 +54,10 @@ const createNavbar = () => {
   $("#post-ad-btn").on("click", function() {
     $("main").empty();
     createPostAdForm();
+  })
+  $("#my-account-btn").on("click", function() {
+    $("main").empty();
+    createMyAccount();
   })
 }
 

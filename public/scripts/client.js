@@ -1,4 +1,5 @@
 $(document).ready(function(){
   createNavbar();
-  createLanding();
+  /* createLanding(); */
+  createMyAccount();
 })
