@@ -1,6 +1,5 @@
 #dashboard-card {
   display: flex;
-  padding: 3w;
   margin: 10vh;
 
   // This value should be calc navbar height margin-top
@@ -29,12 +28,11 @@
         padding: 1rem;
         width: 10rem;
         border-radius: 50%;
-
       }
     }
 
     .links {
-      transition: all 0.5s ease-in;
+      transition: all 0.7s ease;
 
       max-width: 80%;
       .link {
@@ -47,12 +45,12 @@
         border-radius: 40px;
         :hover {
           transform: scale(1.03);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
         }
 
         .btn {
           background-color: rgba(241, 171, 41, 0.89);
           border-radius: 40px;
-          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
           color: $dark-blue;
         }
       }
@@ -60,6 +58,10 @@
   }
   #dashboard-lists {
     flex: 2;
+    // padding: 0.5rem;
+    .listings {
+      justify-content: center;
+    }
   }
 }
 
@@ -67,13 +69,33 @@
   #dashboard-card {
     flex-direction: column;
 
+
     #dashboard-profile {
       border-radius: 40px 40px 0px 0px;
       .links {
         display: flex;
         .link {
           flex-direction: row;
+
         }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint2) {
+  #dashboard-card {
+    flex-direction: column;
+    margin: 1.2vh;
+
+    #dashboard-profile {
+      border-radius: 40px 40px 0px 0px;
+      .links {
+        display: flex;
+        flex-direction: column;
+        .link {
+          margin: 0.5rem 0rem;
+          padding: 0.5rem;        }
       }
     }
   }

@@ -131,7 +131,7 @@
           justify-content: center;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .my-navbar {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
@@ -242,7 +242,7 @@
   font-size: 12px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .landing-right {
     display: none;
   }
@@ -477,7 +477,7 @@
   color: #105578;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .listing {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -544,6 +544,7 @@
 
 #post-ad-card .row #price {
   max-width: 20rem;
+  margin-bottom: 2rem;
 }
 
 #post-ad-card .row #price #price-input {
@@ -556,6 +557,14 @@
 
 #post-ad-card .row #price #left {
   border-radius: 17px 0px 0px 17px;
+}
+
+#post-ad-card .row .input-group #image-url {
+  border-radius: 17px 0px 0px 17px;
+}
+
+#post-ad-card .row .input-group #basic-url {
+  border-radius: 0px 17px 17px 0px !important;
 }
 
 #post-ad-card .row button {
@@ -587,7 +596,7 @@
   opacity: 80%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   #post-ad-card {
     margin: 2.5vh;
   }
@@ -600,7 +609,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 3w;
   margin: 10vh;
   max-width: 2000px;
   -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
@@ -642,8 +650,8 @@
 }
 
 #dashboard-card #dashboard-profile .links {
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   max-width: 80%;
 }
 
@@ -665,13 +673,13 @@
 #dashboard-card #dashboard-profile .links .link :hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
 }
 
 #dashboard-card #dashboard-profile .links .link .btn {
   background-color: rgba(241, 171, 41, 0.89);
   border-radius: 40px;
-  -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   color: #061115;
 }
 
@@ -681,7 +689,13 @@
           flex: 2;
 }
 
-@media (max-width: 1000px) {
+#dashboard-card #dashboard-lists .listings {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1100px) {
   #dashboard-card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -702,6 +716,84 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+@media (max-width: 780px) {
+  #dashboard-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1.2vh;
+  }
+  #dashboard-card #dashboard-profile {
+    border-radius: 40px 40px 0px 0px;
+  }
+  #dashboard-card #dashboard-profile .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #dashboard-card #dashboard-profile .links .link {
+    margin: 0.5rem 0rem;
+    padding: 0.5rem;
+  }
+}
+
+#status-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #061115), to(#105578));
+  background: linear-gradient(180deg, #061115 5%, #105578 100%);
+}
+
+#status-body #status-page {
+  color: #F5F6F5;
+}
+
+#status-body #status-page #status {
+  margin-bottom: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#status-body #status-page #status #status-number {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+#status-body #status-page #status #status-description {
+  margin-bottom: 4rem;
+}
+
+#status-body #status-page #status #take-me-back {
+  color: #F5F6F5;
+  font-weight: bolder;
 }
 
 .hide {
