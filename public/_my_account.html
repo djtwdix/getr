@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0dace9ff45.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./styles/css/main.css">
+
+  <title>Post Ad</title>
 </head>
+
 <body>
-  <h1>Hey Hwllo</h1>
+  <div style="background-color: black; height: 80px;">
+    <p style="color: white;">NAVBAR</p>
+  </div>
+  <main>
+    <div class="container-l" id="dashboard-card">
+      <div class="container-l" id="dashboard-profile">
+        <div class="user-profile">
+          <img src="./images/user.jpg" alt="user">
+          <h3>Yam</h3>
+        </div>
+
+        <div class="links container-l">
+          <div class="link">
+            <button type="button" class="btn" id="dashboard-fav">Favourites <i class="fas fa-heart"></i></button>
+          </div>
+          <div class="link" id="dashboard-listings">
+            <button type="button" class="btn" id="dashboard-fav">Listings <i class="fas fa-stream"></i></button>
+          </div>
+          <div class="link" id="dashboard-messages">
+            <button type="button" class="btn" id="dashboard-fav">Messages <i class="fas fa-comment"></i>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="container-l" id="dashboard-lists">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </main>
+
 </body>
+
 </html>
