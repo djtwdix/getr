@@ -153,6 +153,7 @@
 }
 
 .landing {
+  margin-top: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
