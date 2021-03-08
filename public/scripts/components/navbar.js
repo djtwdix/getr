@@ -23,7 +23,7 @@ const navbar =  `<nav class="navbar my-navbar">
         <li>
           My Listings
         </li>
-        <li>
+        <li id="post-ad-btn">
           Post Ad
         </li>
     </div>
@@ -50,6 +50,10 @@ const createNavbar = () => {
   $(".logo").on("click", function() {
     $("main").empty();
     createLanding();
+  })
+  $("#post-ad-btn").on("click", function() {
+    $("main").empty();
+    createPostAdForm();
   })
 }
 

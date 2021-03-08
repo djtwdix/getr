@@ -4,7 +4,6 @@
   max-width: 2000px;
   // This value should be calc navbar height margin-top
   margin: 10vh;
-
   padding: 3w;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
@@ -19,7 +18,6 @@
       width: 300px;
     }
   }
-
   h1 {
     margin: 3rem;
     opacity: 80%;
@@ -35,7 +33,6 @@
     }
     #price {
       max-width: 20rem;
-      margin-bottom: 2rem;
       #price-input {
         border-radius: 0 !important;
       }
@@ -44,15 +41,6 @@
       }
       #left {
         border-radius: 17px 0px 0px 17px;
-      }
-    }
-
-    .input-group {
-      #image-url {
-        border-radius: 17px 0px 0px 17px;
-      }
-      #basic-url {
-        border-radius: 0px 17px 17px 0px !important;
       }
     }
 
