@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 80px;
+  margin-top: 2rem;
 }
 
 .landing-left {
@@ -68,3 +68,11 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: $breakpoint) {
+  .landing-right {
+    display: none;
+  }
+}
+
+

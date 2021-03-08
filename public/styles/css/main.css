@@ -160,7 +160,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-top: 80px;
+  margin-top: 2rem;
 }
 
 .landing-left input {
@@ -221,6 +221,12 @@
   left: -150px;
   cursor: pointer;
   font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .landing-right {
+    display: none;
+  }
 }
 
 .listings-title {
