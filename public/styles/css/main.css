@@ -392,6 +392,7 @@
   margin: auto;
   -webkit-box-shadow: 0px 0px 20px;
           box-shadow: 0px 0px 20px;
+  margin-top: 7vh;
   border-radius: 40px;
   overflow: hidden;
   font-size: 100%;
