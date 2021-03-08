@@ -172,7 +172,6 @@
   font-size: 40px;
   font-weight: 700;
   margin-left: 30px;
-  margin-top: 30px;
 }
 
 .listings {
@@ -336,7 +335,7 @@ main {
   align-items: center;
   padding: 1rem;
   height: 100vh;
-  background: radial-gradient(81.88% 81.88% at 50% 50%, #EFDE9D 0%, #F5F6F5 100%);
+  /* background: radial-gradient(81.88% 81.88% at 50% 50%, $beige 0%, $white 100%); */
   font-family: "Poppins", sans-serif;
 }
 main #post-ad-card {
