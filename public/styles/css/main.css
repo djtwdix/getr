@@ -592,4 +592,8 @@ main {
   height: 90vh;
   margin: auto;
 }
+
+.red {
+  color: red !important;
+}
 /*# sourceMappingURL=main.css.map */

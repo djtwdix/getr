@@ -4,10 +4,10 @@ const searchResults = `<div class="listings-page">
 </div>
 <div class="listings">
   <div class="listings-item">
-    <div class=listings-image>
+    <div class="listings-image show-listing">
       <img src="/public/images/start.jpeg">
     </div>
-    <div class="listings-info">
+    <div class="listings-info show-listing">
       <div class="listings-mid">
         <div class="specs">
           <div class="listings-make">
@@ -70,4 +70,12 @@ const searchResults = `<div class="listings-page">
 
 const createSearchResults = () => {
   $("main").append(searchResults);
+  $(".fa-heart").on("click", function(){
+    $(this).toggleClass("red");
+  })
+  $(".show-listing").on("click", function() {
+    console.log("click")
+    $("main").empty();
+    createShowListing();
+  })
 };

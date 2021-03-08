@@ -29,6 +29,7 @@ const createLanding = () => {
   $("main").append(landingPage);
   $(".search-submit").on("click", function(){
     $("main").empty();
+    console.log("click")
     createSearchResults();
   })
 }
