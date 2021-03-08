@@ -34,6 +34,7 @@
     }
     #price {
       max-width: 20rem;
+      margin-bottom: 2rem;
       #price-input {
         border-radius: 0 !important;
       }
@@ -42,6 +43,15 @@
       }
       #left {
         border-radius: 17px 0px 0px 17px;
+      }
+    }
+
+    .input-group {
+      #image-url {
+        border-radius: 17px 0px 0px 17px;
+      }
+      #basic-url {
+        border-radius: 0px 17px 17px 0px !important;
       }
     }
 

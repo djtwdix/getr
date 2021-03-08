@@ -385,6 +385,7 @@
 
 #post-ad-card .row #price {
   max-width: 20rem;
+  margin-bottom: 2rem;
 }
 
 #post-ad-card .row #price #price-input {
@@ -397,6 +398,14 @@
 
 #post-ad-card .row #price #left {
   border-radius: 17px 0px 0px 17px;
+}
+
+#post-ad-card .row .input-group #image-url {
+  border-radius: 17px 0px 0px 17px;
+}
+
+#post-ad-card .row .input-group #basic-url {
+  border-radius: 0px 17px 17px 0px !important;
 }
 
 #post-ad-card .row button {

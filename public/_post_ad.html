@@ -29,18 +29,12 @@
     <div class="container-l" id="post-ad-card">
       <form class="row g-3">
         <div class="banner container-xl">
-          <h1>Post an Ad</h1>
+          <h1>Post on Getr</h1>
           <figure class="figure">
             <img src="./docs/images/transaction.svg" alt="">
           </figure>
         </div>
-
-        <div class="col-sm-6">
-          <label class="form-label">Title</label>
-          <input type="text" class="form-control form-control-lg" maxlength="50" required>
-        </div>
-
-        <div class="col-mb-3">
+        <div class="col-sm-7">
           <label class="form-label">Brand</label>
           <select class="form-select" id="validationCustom04" required>
             <option selected disabled value="">Choose...</option>
@@ -54,6 +48,13 @@
             <option value="Other">Other...</option>
           </select>
         </div>
+
+        <div class="col-sm-6">
+          <label class="form-label">Model</label>
+          <input type="text" class="form-control form-control-lg" maxlength="25" required>
+        </div>
+
+
 
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Description</label>
@@ -71,6 +72,14 @@
         <div class="mb-3">
           <label for="formFile" class="form-label">What does it look like?</label>
           <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <label for="basic-url">Or your image URL</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="image-url">https://</span>
+          </div>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
         </div>
 
         <h2>Where are you located?</h2>
