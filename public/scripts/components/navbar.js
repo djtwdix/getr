@@ -5,12 +5,12 @@ const navbar =  `<nav class="navbar my-navbar">
   </div>
 </div>
 <div class="my-nav-right">
+<div class="search-icon">
+  <i class="fas fa-search"></i>
+</div>
   <form>
     <input class="search-field" type="search" placeholder="search">
   </form>
-  <div class="search-icon">
-    <i class="fas fa-search"></i>
-  </div>
   <div class="my-account-dropdown">
     <div class="dropdown-button">
       My Account
