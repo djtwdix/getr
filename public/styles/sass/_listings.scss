@@ -11,85 +11,84 @@
   justify-content: flex-start;
   font-family: $main;
   color: $dark-blue;
-}
 
-.listings-item {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 200px;
-  height: 400px;
-  border-radius: 40px;
-  box-shadow: 0px 0px 10px $dark-blue;
-  margin: 20px;
-}
-
-.listings-image {
-  width: inherit;
-  height: 50%;
-  text-align: center;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.listings-image {
-  img {
-    max-height: auto;
-    max-width: 100%;
+  .listings-item {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 400px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px $dark-blue;
+    margin: 20px;
   }
-}
 
-.listings-info {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.listings-mid {
-  display: flex;
-  justify-content: space-between;
-}
-
-.specs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.listings-make {
-  font-weight: 700;
-}
-
-.listings-model {
-  font-weight: 500;
-}
-
-.specs {
-  div {
-    margin-bottom: 20px;
-  }
-}
-
-.listings-footer {
-  width: inherit;
-  padding-left: 50px;
-  padding-right: 50px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.listings-footer {
-  i {
+  .listings-image {
+    width: inherit;
+    height: 50%;
+    text-align: center;
+    overflow: hidden;
     cursor: pointer;
-    color: $blue;
+    img {
+      max-height: auto;
+      max-width: 100%;
+    }
+  }
+
+  .listings-info {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .listings-mid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .specs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    div {
+      margin-bottom: 20px;
+    }
+  }
+
+  .listings-make {
+    font-weight: 700;
+  }
+
+  .listings-model {
+    font-weight: 500;
+  }
+
+  .listings-footer {
+    width: inherit;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    i {
+      cursor: pointer;
+      color: $blue;
+    }
+  }
+
+  .listings-price {
+    opacity: 90%;
+    color: lightgray;
   }
 }
 
-.listings-price {
-  opacity: 90%;
-  color: lightgray;
-}
+
+
+
+
+
+
+
