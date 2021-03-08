@@ -24,4 +24,4 @@ const sendOffer = (sellerEmail, message, listingBrand, listingModel) => {
     }
   });
 }
-module.exports = sendOffer;
+exports.sendOffer = sendOffer;
