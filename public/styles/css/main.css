@@ -432,6 +432,80 @@
   }
 }
 
+#dashboard-card {
+  display: flex;
+  padding: 3w;
+  margin: 10vh;
+  max-width: 2000px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  background-color: #F5F6F5;
+  font-family: "Poppins", sans-serif;
+}
+
+#dashboard-card #dashboard-profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(180deg, #105578 5%, #6825d9 100%);
+  border-radius: 40px 0px 0px 40px;
+  color: #F5F6F5;
+}
+
+#dashboard-card #dashboard-profile .user-profile img {
+  margin: 1rem;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+#dashboard-card #dashboard-profile .links {
+  transition: all 0.5s ease-in;
+  max-width: 80%;
+}
+
+#dashboard-card #dashboard-profile .links .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0rem;
+  padding: 1rem;
+  border-radius: 40px;
+}
+
+#dashboard-card #dashboard-profile .links .link :hover {
+  transform: scale(1.03);
+}
+
+#dashboard-card #dashboard-profile .links .link .btn {
+  background-color: rgba(241, 171, 41, 0.89);
+  border-radius: 40px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  color: #061115;
+}
+
+#dashboard-card #dashboard-lists {
+  flex: 2;
+}
+
+@media (max-width: 1000px) {
+  #dashboard-card {
+    flex-direction: column;
+  }
+  #dashboard-card #dashboard-profile {
+    border-radius: 40px 40px 0px 0px;
+  }
+  #dashboard-card #dashboard-profile .links {
+    display: flex;
+  }
+  #dashboard-card #dashboard-profile .links .link {
+    flex-direction: row;
+  }
+}
+
 .hide {
   display: none;
 }
