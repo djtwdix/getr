@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: $main;
 }
 
@@ -47,7 +47,7 @@
     font-size: 16px;
     border-radius: 40px;
     outline: none;
-    width: 300px;
+    width: 30vw;
     border: none;
     display: none;
   }
@@ -116,6 +116,9 @@
   .my-navbar {
     flex-direction: column !important;
     height: auto;
+    input {
+      width: 75vw;
+    }
   }
   .my-nav-right {
     flex-direction: column;
