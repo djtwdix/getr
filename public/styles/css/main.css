@@ -536,6 +536,32 @@
   }
 }
 
+#status-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  height: 100vh;
+  background: linear-gradient(180deg, #061115 5%, #105578 100%);
+}
+
+#status-body #status-page {
+  color: #F5F6F5;
+}
+
+#status-body #status-page #status {
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#status-body #status-page #status #status-number {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
 .hide {
   display: none;
 }

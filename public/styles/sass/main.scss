@@ -13,8 +13,10 @@ $breakpoint2: 780px;
 @import "_landing.scss";
 @import "_listings.scss";
 @import "_listing.scss";
+
 @import "_post_ad.scss";
 @import "_my_account.scss";
+@import "404.scss";
 
 .hide {
   display: none;
