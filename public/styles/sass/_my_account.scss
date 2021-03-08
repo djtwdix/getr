@@ -29,7 +29,6 @@
         padding: 1rem;
         width: 10rem;
         border-radius: 50%;
-
       }
     }
 
@@ -60,12 +59,17 @@
   }
   #dashboard-lists {
     flex: 2;
+    // padding: 0.5rem;
+    .listings {
+      justify-content: center;
+    }
   }
 }
 
 @media (max-width: $breakpoint) {
   #dashboard-card {
     flex-direction: column;
+    margin: 5vh;
 
     #dashboard-profile {
       border-radius: 40px 40px 0px 0px;
@@ -73,6 +77,24 @@
         display: flex;
         .link {
           flex-direction: row;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint2) {
+  #dashboard-card {
+    flex-direction: column;
+    margin: 1.2vh;
+
+    #dashboard-profile {
+      border-radius: 40px 40px 0px 0px;
+      .links {
+        display: flex;
+        flex-direction: column;
+        .link {
+          margin: 1rem 0rem;
         }
       }
     }
