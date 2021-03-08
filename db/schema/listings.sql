@@ -1,4 +1,3 @@
--- Drop and recreate Widgets table (Example)
 
 DROP TABLE IF EXISTS listings CASCADE;
 CREATE TABLE listings (
@@ -7,7 +6,7 @@ CREATE TABLE listings (
   description TEXT,
   cost DECIMAL(6,2) NOT NULL,
   condition VARCHAR(255),
-  listing_date ****,
+  listing_date DATE,
   brand VARCHAR(255),
   model VARCHAR(255),
   handed VARCHAR(255),
