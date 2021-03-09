@@ -19,5 +19,7 @@ $(document).ready(function() {
 
     $.post("/register", userInfo)
       .done(data => console.log(data, "done"));
+
+    // $.ajax()
   })
 })

@@ -79,7 +79,11 @@ app.get("/register", (req, res) => {
 
 app.post("/register", (req, res) => {
   console.log("userinfo: ", req.body);
-  addUser(req.body);
+  addUser(req.body)
+  .then(() => {
+    res.send(200)
+  })
+  .catch(err => console.log("error /register: " + err))
 })
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
