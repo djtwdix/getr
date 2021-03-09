@@ -1,14 +1,14 @@
 $dark-blue: #061115;
 $blue: #105578;
-$green: #78ADAA;
-$white: #F5F6F5;
-$beige: #EFDE9D;
-$brown: #914B1B;
-$red: #DC4D3E;
-$yellow: #F9BA32;
-$gray: #CBD2D6;
-$logo: 'Delius', cursive;
-$main:  'Poppins', sans-serif;
+$green: #78adaa;
+$white: #f5f6f5;
+$beige: #efde9d;
+$brown: #914b1b;
+$red: #dc4d3e;
+$yellow: #f9ba32;
+$gray: #cbd2d6;
+$logo: "Delius", cursive;
+$main: "Poppins", sans-serif;
 $breakpoint: 1100px;
 $breakpoint2: 780px;
 $breakpoint3: 500px;
@@ -23,6 +23,7 @@ $breakpoint4: 370px;
 @import "_listing.scss";
 
 @import "_post_ad.scss";
+@import "_contact-seller.scss";
 @import "_my_account.scss";
 @import "404.scss";
 
@@ -46,12 +47,21 @@ $breakpoint4: 370px;
 }
 
 /* clears the 'X' from Internet Explorer */
-input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
 
 /* clears the 'X' from Chrome */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
-
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
