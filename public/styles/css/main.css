@@ -172,6 +172,156 @@
   }
 }
 
+#register-background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#105578, #061115);
+}
+
+#register-background #register-card {
+  height: 80vh;
+  max-height: 1000px;
+  width: 80%;
+  max-width: 36rem;
+  border-radius: 30px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  background-color: #f5f6f5;
+}
+
+#register-background #register-card .logo {
+  margin-top: 2rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+#register-background #register-card .logo .circle {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to right, #105578, #061115);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+#register-background #register-card .logo #getr-logo {
+  z-index: 2;
+}
+
+#register-background #register-card .info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+#register-background #register-card .info #register-title {
+  flex: 1;
+}
+
+#register-background #register-card .info .credentials {
+  flex: 2;
+  padding: 1rem;
+}
+
+#register-background #register-card .info .credentials #register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#register-background #register-card .info .credentials #register-form input {
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+#register-background #register-card .info .credentials #register-form .register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#register-background #register-card .info .credentials #register-form button {
+  width: 100%;
+  padding: 0.7rem 0rem;
+  background-color: #ad0f00;
+  border: none;
+  font-weight: bold;
+  color: #f5f6f5;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+#register-background #register-card .info .credentials #photo-upload {
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+}
+
+#register-background #register-card .info .credentials #photo-upload #url {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1100px) {
+  #register-background #register-card {
+    width: 90vw;
+    padding: 1rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    background-color: #f5f6f5;
+  }
+  #register-background #register-card .logo {
+    margin-top: 3rem;
+  }
+  #register-background #register-card .logo .circle {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 370px) {
+  #register-background #register-card {
+    width: 90vw;
+    padding: 1rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    background-color: #f5f6f5;
+  }
+  #register-background #register-card .logo {
+    margin-top: 1rem;
+  }
+  #register-background #register-card .logo .circle {
+    width: 80px;
+    height: 80px;
+  }
+  #register-background #register-card .logo #getr-logo {
+    transform: scale(0.5);
+  }
+  #register-background #register-card .info .credentials #register-form input {
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  #register-background #register-card .info .credentials #register-form .signup {
+    margin: none;
+  }
+}
+
 .my-navbar {
   display: flex;
   flex-direction: row;
