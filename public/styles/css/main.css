@@ -726,9 +726,41 @@
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
-  left: -150px;
+  /*  left: -150px; */
   cursor: pointer;
   font-size: 12px;
+}
+
+.landing-left .search-options {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 40px;
+  width: 40vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.landing-left .advanced-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.landing-left .btn {
+  background-color: #105578;
+  color: #f5f6f5;
+}
+
+.landing-left .btn:hover {
+  color: #F9BA32;
 }
 
 @media (max-width: 1100px) {

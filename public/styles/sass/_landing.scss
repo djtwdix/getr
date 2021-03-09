@@ -64,9 +64,32 @@
     margin-top: 10px;
     align-self: flex-end;
     position: relative;
-    left: -150px;
+   /*  left: -150px; */
     cursor: pointer;
     font-size: 12px;
+  }
+  .search-options {
+    margin-top: 10px;
+    display: flex;
+    position: relative;
+    left: 40px;
+    width: 40vw;
+    justify-content: space-between;
+  }
+
+  .advanced-search {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .btn {
+    background-color: $blue;
+    color: $white;
+  }
+
+  .btn:hover {
+    color: $yellow;
   }
 }
 
