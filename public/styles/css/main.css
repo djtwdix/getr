@@ -369,8 +369,6 @@
 
 .listings .listings-footer {
   width: inherit;
-  padding-left: 100px;
-  padding-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
