@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%- include("partials/_head")  %>
+  <title>GETr</title>
+</head>
+
+<body>
+    <%- include("partials/_navbar")  %>
+    <main class="main-container">
+      <div class="container-l" id="dashboard-card">
+        <div class="container-l" id="dashboard-profile">
+          <div class="user-profile">
+            <img src="./images/user.jpg" alt="user">
+            <h3>Yam</h3>
+          </div>
+          <div class="links container-l">
+            <div class="link">
+              <button type="button" class="btn" id="dashboard-fav">Favourites <i class="fas fa-heart"></i></button>
+            </div>
+            <div class="link" id="dashboard-listings">
+              <button type="button" class="btn" id="dashboard-fav">Listings <i class="fas fa-stream"></i></button>
+            </div>
+            <div class="link" id="dashboard-messages">
+              <button type="button" class="btn" id="dashboard-fav">Messages <i class="fas fa-comment"></i>
+            </div>
+          </div>
+        </div>
+        <div class="container-l" id="dashboard-lists">
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

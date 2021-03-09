@@ -6,7 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   color: #F5F6F5;
   background-color: #061115;
@@ -369,14 +369,13 @@
 
 .listings .listings-footer {
   width: inherit;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 20px;
 }
 

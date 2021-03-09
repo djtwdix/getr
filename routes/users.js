@@ -24,6 +24,7 @@ module.exports = (db) => {
   });
   router.get("/listings", (req, res) => {
     //listings by time
+    res.render("listings");
   });
   router.get("/hotlistings", (req, res) => {
     //listings ordered by views
@@ -50,6 +51,6 @@ module.exports = (db) => {
   router.post("/listings/listingID", (req, res) => {
     //create new listing
   });
-  
+
   return router;
 };
