@@ -4,10 +4,18 @@ $green: #78ADAA;
 $white: #F5F6F5;
 $beige: #EFDE9D;
 $brown: #914B1B;
+$red: #DC4D3E;
+$yellow: #F9BA32;
+$gray: #CBD2D6;
 $logo: 'Delius', cursive;
 $main:  'Poppins', sans-serif;
 $breakpoint: 1100px;
 $breakpoint2: 780px;
+$breakpoint3: 500px;
+$breakpoint4: 370px;
+
+@import "login.scss";
+@import "register.scss";
 
 @import "_navbar.scss";
 @import "_landing.scss";

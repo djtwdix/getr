@@ -1,0 +1,142 @@
+#login-background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#105578, #061115);
+}
+
+#login-background #login-card {
+  height: 80vh;
+  max-height: 1000px;
+  width: 80%;
+  max-width: 36rem;
+  border-radius: 30px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  background-color: #f5f6f5;
+}
+
+#login-background #login-card .logo {
+  margin-top: 2rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-background #login-card .logo .circle {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to right, #105578, #061115);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+#login-background #login-card .logo #getr-logo {
+  z-index: 2;
+}
+
+#login-background #login-card .info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+#login-background #login-card .info #login-title {
+  flex: 1;
+}
+
+#login-background #login-card .info .credentials {
+  flex: 2;
+  padding: 1rem;
+}
+
+#login-background #login-card .info .credentials #login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#login-background #login-card .info .credentials #login-form input {
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+#login-background #login-card .info .credentials #login-form .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-background #login-card .info .credentials #login-form .login button {
+  width: 100%;
+  padding: 0.7rem 0rem;
+  background-color: #ad0f00;
+  border: none;
+  font-weight: bold;
+  color: #f5f6f5;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+#login-background #login-card .info .credentials #login-form .loginSignUpSeparator {
+  font-size: 0.9rem;
+  border-top: 1px solid #cbd2d6;
+  position: relative;
+  margin: 2rem 0 0;
+  text-align: center;
+}
+
+#login-background #login-card .info .credentials #login-form .loginSignUpSeparator .textInSeparator {
+  margin-top: 0.5rem;
+  background-color: #f5f6f5;
+  padding: 0 0.5em;
+  position: inherit;
+  color: #585858;
+  top: -0.7em;
+}
+
+#login-background #login-card .info .credentials .signup {
+  margin-top: 0.7rem;
+}
+
+#login-background #login-card .info .credentials .signup button {
+  width: 100%;
+  padding: 0.7rem 0rem;
+  background-color: #b7babb;
+  border: none;
+  font-weight: bold;
+  color: #343a35;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+@media (max-width: 1100px) {
+  #login-background #login-card {
+    width: 90vw;
+    padding: 1rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    background-color: #f5f6f5;
+  }
+  #login-background #login-card .logo .circle {
+    width: 130px;
+    height: 130px;
+  }
+}
+/*# sourceMappingURL=login.css.map */
