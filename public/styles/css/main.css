@@ -484,6 +484,15 @@
   font-weight: 700;
 }
 
+.my-navbar a {
+  text-decoration: none;
+  color: #f5f6f5;
+}
+
+.my-navbar a:hover {
+  color: #F9BA32;
+}
+
 .logo {
   font-size: 40px;
   font-family: 'Delius', cursive;

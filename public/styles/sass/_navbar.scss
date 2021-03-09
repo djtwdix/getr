@@ -9,6 +9,13 @@
   padding-right: 30px;
   justify-content: space-between;
   font-weight: 700;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+  a:hover {
+    color: $yellow;
+  }
 }
 
 .logo {
