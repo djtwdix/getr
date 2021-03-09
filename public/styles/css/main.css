@@ -387,7 +387,7 @@
 }
 
 .my-navbar .my-nav-right #nav-search-bar {
-  padding-right: 4rem;
+  padding-right: 2rem;
 }
 
 .my-navbar .my-nav-right #nav-search-bar .input-group {
@@ -418,10 +418,10 @@
   color: #f5f6f5;
 }
 
-.my-account-dropdown {
+.my-navbar .my-nav-right .my-account-dropdown {
   text-align: center;
   overflow: hidden;
-  width: 160px;
+  width: 15rem;
   cursor: pointer;
 }
 

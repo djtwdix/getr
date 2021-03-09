@@ -40,7 +40,7 @@
     font-size: 1.25rem;
     font-family: $main;
     #nav-search-bar {
-      padding-right: 4rem;
+      padding-right: 2rem;
       .input-group {
         margin: 1rem;
         border-radius: 17px;
@@ -68,15 +68,16 @@
         color: $white;
       }
     }
+    .my-account-dropdown {
+      text-align: center;
+      overflow: hidden;
+      width: 15rem;
+      cursor: pointer;
+    }
   }
 }
 
-.my-account-dropdown {
-  text-align: center;
-  overflow: hidden;
-  width: 160px;
-  cursor: pointer;
-}
+
 
 .dropdown-list {
   display: none;
