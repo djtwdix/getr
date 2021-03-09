@@ -21,7 +21,7 @@ const landingPage = `<div class="landing">
   </div>
 </div>
 <div class="landing-right">
-  <img src="svg/undraw_compose_music_ovo2.svg" alt="Music SVG">
+  <img src="./svg/undraw_compose_music_ovo2.svg" alt="Music SVG">
 </div>
 </div>`
 
