@@ -1,14 +1,3 @@
-$dark-blue: #061115;
-$blue: #105578;
-$green: #78adaa;
-$white: #f5f6f5;
-$beige: #efde9d;
-$brown: #914b1b;
-$logo: "Delius", cursive;
-$main: "Poppins", sans-serif;
-$breakpoint: 1100px;
-$breakpoint2: 780px;
-
 #login-background {
   width: 100%;
   height: 100vh;
@@ -19,9 +8,9 @@ $breakpoint2: 780px;
 
   #login-card {
     height: 80vh;
-    max-height: 1000px;
+    max-height: 800px;
     width: 80%;
-    max-width: 36rem;
+    max-width: 25rem;
     border-radius: 30px;
     padding: 5rem;
     display: flex;
@@ -37,9 +26,9 @@ $breakpoint2: 780px;
       align-items: center;
       justify-content: center;
       .circle {
-        width: 250px;
-        height: 250px;
-        background: linear-gradient(to right, $blue, $dark-blue);
+        width: 10rem;
+        height: 10rem;
+        background: linear-gradient(to right, $red, $yellow);
         border-radius: 50%;
         position: absolute;
         z-index: 1;
@@ -82,7 +71,7 @@ $breakpoint2: 780px;
             button {
               width: 100%;
               padding: 0.7rem 0rem;
-              background-color: #ad0f00;
+              background-color: $red;
               border: none;
               font-weight: bold;
               color: $white;
@@ -94,7 +83,7 @@ $breakpoint2: 780px;
 
           .loginSignUpSeparator {
             font-size: 0.9rem;
-            border-top: 1px solid #cbd2d6;
+            border-top: 1px solid $gray;
             position: relative;
             margin: 2rem 0 0;
             text-align: center;
@@ -148,7 +137,7 @@ $breakpoint2: 780px;
   }
 }
 
-@media (max-width: $breakpoint3) {
+@media (max-width: $breakpoint4) {
   #login-background {
     #login-card {
       width: 90vw;
@@ -182,6 +171,15 @@ $breakpoint2: 780px;
           }
         }
       }
+    }
+  }
+}
+
+@media (max-height: $breakpoint3) {
+  #login-background {
+    #login-card {
+      height: 90vh;
+
     }
   }
 }

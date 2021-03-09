@@ -24,17 +24,26 @@
         <h1 id="register-title">Sign up to Getr</h1>
         <div class="credentials">
           <form id="register-form" action="/register" method="POST">
-            <input type="text" placeholder="First name" required />
-            <input type="text" placeholder="Last name" required />
-            <input type="email" placeholder="Email or username" required />
-            <input type="password" placeholder="Password" required />
-            <div class="input-group mb-3" id="photo-upload">
-              <label for="image-url">Upload a photo from URL</label>
-              <input type="url" name="url" id="url" placeholder="http://www.example.com" pattern="http://.*" size="30"
-                required>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="First name" required />
             </div>
-            <button href="">SIGN UP</button>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Last name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email or username" required />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required />
+            </div>
+            <div class="form-group" id="photo-upload">
+              <label for="url">Upload a photo from URL</label>
+              <input type="url" class="form-control" name="url" id="url" placeholder="http://www.example.com"
+                pattern="http://.*" size="30" required>
+            </div>
 
+            <button href="">SIGN UP</button>
+          </form>
         </div>
       </div>
     </div>
