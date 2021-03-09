@@ -352,7 +352,8 @@
   padding: 1rem;
   color: #f5f6f5;
   font-weight: bolder;
-  background: linear-gradient(93.84deg, #105578 0%, #061115 101.88%);
+  background-color: #105578;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.25);
 }
 
 .my-navbar a {
@@ -381,6 +382,22 @@
   align-items: center;
   font-size: 1.25rem;
   font-family: "Poppins", sans-serif;
+}
+
+.my-navbar .my-nav-right .input-group {
+  margin: 1rem;
+  border-radius: 17px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.my-navbar .my-nav-right .input-group .btn-primary {
+  border: 1px solid #dc4d3e;
+  background-color: #dc4d3e;
+  border-radius: 0px 17px 17px 0px;
+}
+
+.my-navbar .my-nav-right .input-group .btn-primary .fas {
+  color: #f5f6f5;
 }
 
 .my-account-dropdown {
