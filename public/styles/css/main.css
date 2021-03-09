@@ -10,7 +10,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: radial-gradient(#105578, #061115);
+  /* background: radial-gradient($blue, $dark-blue); */
 }
 
 #login-background #login-card {
@@ -245,7 +245,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: radial-gradient(#105578, #061115);
+  /* background: radial-gradient($blue, $dark-blue); */
 }
 
 #register-background #register-card {
@@ -475,7 +475,7 @@
   width: 100vw;
   height: 100px;
   color: #f5f6f5;
-  background: radial-gradient(#105578, #061115);
+  background: #105578;
   padding-left: 30px;
   padding-right: 30px;
   -webkit-box-pack: justify;
@@ -521,16 +521,15 @@
   margin-right: 20px;
   position: relative;
   bottom: -3px;
-  /* background-color: $beige; */
   padding: 6px;
   border-radius: 40px;
-  color: #efde9d;
+  color: #F9BA32;
   margin-left: 10px;
   cursor: pointer;
 }
 
 .my-navbar i:hover {
-  color: #efde9d;
+  color: #F9BA32;
 }
 
 .my-navbar input {
@@ -548,7 +547,7 @@
 
 .my-navbar button {
   font-size: 16px;
-  background-color: #efde9d;
+  background-color: #F9BA32;
   font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 5px;
@@ -568,10 +567,10 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  background: radial-gradient(#105578, #061115);
+  background: #105578;
   z-index: 1;
-  -webkit-box-shadow: 2px 2px 4px #061115;
-          box-shadow: 2px 2px 4px #061115;
+  -webkit-box-shadow: 0px 5px 4px #105578;
+          box-shadow: 0px 5px 4px #105578;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -583,7 +582,7 @@
 }
 
 .dropdown-list li:hover {
-  color: #efde9d;
+  color: #F9BA32;
 }
 
 .dropdown-list ul {
@@ -594,7 +593,7 @@
 }
 
 .my-account-dropdown:hover .dropdown-button {
-  color: #efde9d;
+  color: #F9BA32;
 }
 
 .my-account-dropdown:hover .dropdown-list {

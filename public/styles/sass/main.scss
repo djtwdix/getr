@@ -14,8 +14,8 @@ $breakpoint2: 780px;
 $breakpoint3: 500px;
 $breakpoint4: 370px;
 
-@import "login.scss";
-@import "register.scss";
+@import "_login.scss";
+@import "_register.scss";
 
 @import "_navbar.scss";
 @import "_landing.scss";
