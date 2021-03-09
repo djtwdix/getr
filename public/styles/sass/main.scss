@@ -8,6 +8,9 @@ $logo: 'Delius', cursive;
 $main:  'Poppins', sans-serif;
 $breakpoint: 1100px;
 $breakpoint2: 780px;
+$breakpoint3: 370px;
+
+@import "login.scss";
 
 @import "_navbar.scss";
 @import "_landing.scss";
