@@ -7,6 +7,7 @@
   background-color: $dark-blue;
   padding-left: 30px;
   padding-right: 30px;
+  justify-content: space-between;
 }
 
 .logo {
@@ -19,6 +20,11 @@
   color: $beige;
 }
 
+.my-nav-left {
+  display: flex;
+  align-items: center;
+}
+
 .my-nav-right {
   display: flex;
   flex-direction: row;
@@ -27,7 +33,7 @@
   font-family: $main;
 }
 
-.navbar {
+.my-navbar {
   i {
     margin-right: 20px;
     position: relative;
@@ -49,7 +55,6 @@
     outline: none;
     width: 30vw;
     border: none;
-    display: none;
   }
   input:focus {
     outline: none;
