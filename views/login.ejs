@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%- include("partials/_head")  %>
+  <title>GETr</title>
+</head>
+
+<body>
+  <%- include("partials/_navbar")  %>
+  <main class="main-container">
+    <div id="login-background">
+      <div id="login-card">
+        <div class="logo">
+          <div class="circle"></div>
+          <img id="getr-logo" src="./images/logo.png">
+        </div>
+        <div class="info">
+          <h1 id="login-title">Login to Getr</h1>
+          <div class="credentials">
+            <form id="login-form" action="/login" method="POST">
+              <input type="email" placeholder="Email or username" required />
+              <input type="password" placeholder="Password" required />
+              <div class="login">
+                <button>LOGIN</button>
+              </div>
+              <div class="loginSignUpSeparator">
+                <span class="textInSeparator">or</span>
+              </div>
+            </form>
+            <div class="signup">
+              <form action="/register" action="GET">
+                <button href="">SIGN UP</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  </body>
+</html>

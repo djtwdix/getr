@@ -2,12 +2,20 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 80px;
+  height: 100px;
   color: $white;
-  background-color: $dark-blue;
+  background: $blue;
   padding-left: 30px;
   padding-right: 30px;
   justify-content: space-between;
+  font-weight: 700;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+  a:hover {
+    color: $yellow;
+  }
 }
 
 .logo {
@@ -17,7 +25,7 @@
 }
 
 .logo:hover {
-  color: $beige;
+  color: #F9BA32;
 }
 
 .my-nav-left {
@@ -38,15 +46,14 @@
     margin-right: 20px;
     position: relative;
     bottom: -3px;
-    /* background-color: $beige; */
     padding: 6px;
     border-radius: 40px;
-    color: $beige;
+    color: $white;
     margin-left: 10px;
     cursor: pointer;
   }
   i:hover {
-    color: $beige;
+    color: $yellow;
   }
   input {
     padding-left: 10px;
@@ -61,7 +68,7 @@
   }
   button {
     font-size: 16px;
-    background-color: $beige;
+    background-color: $yellow;
     font-family: $main;
     border: none;
     border-radius: 5px;
@@ -82,9 +89,9 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  background-color: $dark-blue;
+  background: $blue;
   z-index: 1;
-  box-shadow: 2px 2px 4px $dark-blue;
+  box-shadow: 0px 5px 4px $blue;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -97,7 +104,7 @@
   }
 
   li:hover {
-    color: $beige;
+    color: $yellow;
   }
 
   ul {
@@ -110,7 +117,7 @@
 
 .my-account-dropdown:hover {
   .dropdown-button {
-    color: $beige;
+    color: $yellow;
   }
   .dropdown-list {
     display: flex;

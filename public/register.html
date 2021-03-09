@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/css/main.css">
+  <title>Sign Up to Getr</title>
+</head>
+
+<body>
+  <div id="register-background">
+    <div id="register-card">
+      <div class="logo">
+        <div class="circle"></div>
+        <img id="getr-logo" src="./images/logo.png">
+      </div>
+      <div class="info">
+        <h1 id="register-title">Sign up to Getr</h1>
+        <div class="credentials">
+          <form id="register-form" action="/register" method="POST">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="First name" required />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Last name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email or username" required />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required />
+            </div>
+            <div class="form-group" id="photo-upload">
+              <label for="url">Upload a photo from URL</label>
+              <input type="url" class="form-control" name="url" id="url" placeholder="http://www.example.com"
+                pattern="http://.*" size="30" required>
+            </div>
+
+            <button href="">SIGN UP</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

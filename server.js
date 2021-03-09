@@ -59,11 +59,19 @@ app.get("/account", (req, res) => {
 })
 
 app.get("/new-listing", (req, res) => {
-  res.render("new-listing")
+  res.render("new_listing")
 })
 
 app.get("/listings/:listingID", (req, res) => {
   res.render("listing")
+})
+
+app.get("/login", (req, res) => {
+  res.render("login")
+})
+
+app.get("/register", (req, res) => {
+  res.render("register")
 })
 
 app.listen(PORT, () => {
