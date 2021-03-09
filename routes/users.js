@@ -50,6 +50,6 @@ module.exports = (db) => {
   router.post("/listings/listingID", (req, res) => {
     //create new listing
   });
-  
+
   return router;
 };
