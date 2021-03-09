@@ -390,6 +390,11 @@
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
+.my-navbar .my-nav-right .input-group .form-control {
+  border: none;
+  border-radius: 17px 0px 0px 17px;
+}
+
 .my-navbar .my-nav-right .input-group .btn-primary {
   border: 1px solid #dc4d3e;
   background-color: #dc4d3e;
@@ -991,6 +996,11 @@
 #status-body #status-page #status #take-me-back {
   color: #f5f6f5;
   font-weight: bolder;
+}
+
+body {
+  background-color: #f5f6f5;
+  background-image: url("/images/bg-textures/natural-paper.png");
 }
 
 .hide {
