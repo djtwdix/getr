@@ -15,6 +15,9 @@ $(document).ready(function() {
       password,
       profile_pic
     }
-    console.log(userInfo);
+    /* console.log(userInfo); */
+
+    $.post("/register", userInfo)
+      .done(data => console.log(data, "done"));
   })
 })

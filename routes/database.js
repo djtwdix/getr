@@ -13,4 +13,8 @@ const addUser = (user) => {
   })
   .catch(err => err);
 }
-exports.addUser = addUser;
+module.exports = addUser;
+
+addUser({
+  
+})

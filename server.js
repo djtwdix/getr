@@ -1,3 +1,5 @@
+const addUser = require("./routes/database");
+
 // load .env data into process.env
 require('dotenv').config();
 
@@ -76,7 +78,8 @@ app.get("/register", (req, res) => {
 })
 
 app.post("/register", (req, res) => {
-  AudioScheduledSourceNode()
+  console.log("userinfo: ", req.body);
+  addUser(req.body);
 })
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
