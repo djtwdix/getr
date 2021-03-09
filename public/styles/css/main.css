@@ -349,12 +349,10 @@
   flex-direction: row;
   width: 100vw;
   height: 100px;
+  padding: 1rem;
   color: #f5f6f5;
-  background: #105578;
-  padding-left: 30px;
-  padding-right: 30px;
-  justify-content: space-between;
-  font-weight: 700;
+  font-weight: bolder;
+  background: linear-gradient(93.84deg, #105578 0%, #061115 101.88%);
 }
 
 .my-navbar a {
@@ -366,67 +364,23 @@
   color: #f9ba32;
 }
 
-.logo {
-  font-size: 40px;
-  font-family: 'Delius', cursive;
+.my-navbar .my-nav-left .logo {
   cursor: pointer;
 }
 
-.logo:hover {
-  color: #F9BA32;
+.my-navbar .my-nav-left .logo img {
+  height: auto;
+  width: auto;
+  max-height: 5rem;
+  max-width: 10rem;
 }
 
-.my-nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.my-nav-right {
+.my-navbar .my-nav-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 1.25rem;
   font-family: "Poppins", sans-serif;
-}
-
-.my-navbar i {
-  margin-right: 20px;
-  position: relative;
-  bottom: -3px;
-  padding: 6px;
-  border-radius: 40px;
-  color: #f5f6f5;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.my-navbar i:hover {
-  color: #f9ba32;
-}
-
-.my-navbar input {
-  padding-left: 10px;
-  font-size: 16px;
-  border-radius: 40px;
-  outline: none;
-  width: 30vw;
-  border: none;
-}
-
-.my-navbar input:focus {
-  outline: none;
-}
-
-.my-navbar button {
-  font-size: 16px;
-  background-color: #f9ba32;
-  font-family: "Poppins", sans-serif;
-  border: none;
-  border-radius: 5px;
-}
-
-.my-navbar button:active {
-  background-color: #a4996b;
 }
 
 .my-account-dropdown {
@@ -475,7 +429,7 @@
 
 @media (max-width: 1100px) {
   .my-navbar {
-    flex-direction: column !important;
+    flex-direction: column;
     height: auto;
   }
   .my-navbar input {
@@ -818,7 +772,7 @@
 }
 
 #post-ad-card .row #price #price-input {
-  border-radius: 0 !important;
+  border-radius: 0;
 }
 
 #post-ad-card .row #price #right {
@@ -1034,7 +988,7 @@
 }
 
 .red {
-  color: red !important;
+  color: red;
 }
 
 .dim {

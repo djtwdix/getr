@@ -1,14 +1,15 @@
 .my-navbar {
   display: flex;
   flex-direction: row;
+
   width: 100vw;
   height: 100px;
+  padding: 1rem;
+
   color: $white;
-  background: $blue;
-  padding-left: 30px;
-  padding-right: 30px;
-  justify-content: space-between;
-  font-weight: 700;
+  font-weight: bolder;
+  background: linear-gradient(93.84deg, $blue 0%, $dark-blue 101.88%);
+
   a {
     text-decoration: none;
     color: $white;
@@ -16,67 +17,29 @@
   a:hover {
     color: $yellow;
   }
-}
 
-.logo {
-  font-size: 40px;
-  font-family: 'Delius', cursive;
-  cursor: pointer;
-}
-
-.logo:hover {
-  color: #F9BA32;
-}
-
-.my-nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.my-nav-right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 1.25rem;
-  font-family: $main;
-}
-
-.my-navbar {
-  i {
-    margin-right: 20px;
-    position: relative;
-    bottom: -3px;
-    padding: 6px;
-    border-radius: 40px;
-    color: $white;
-    margin-left: 10px;
-    cursor: pointer;
+  .my-nav-left {
+    .logo {
+      cursor: pointer;
+      img {
+        height: auto;
+        width: auto;
+        max-height: 5rem;
+        max-width: 10rem;
+      }
+    }
   }
-  i:hover {
-    color: $yellow;
-  }
-  input {
-    padding-left: 10px;
-    font-size: 16px;
-    border-radius: 40px;
-    outline: none;
-    width: 30vw;
-    border: none;
-  }
-  input:focus {
-    outline: none;
-  }
-  button {
-    font-size: 16px;
-    background-color: $yellow;
+
+  .my-nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.25rem;
     font-family: $main;
-    border: none;
-    border-radius: 5px;
-  }
-  button:active {
-    background-color: #a4996b;
   }
 }
+
+
 
 .my-account-dropdown {
   text-align: center;
@@ -84,7 +47,6 @@
   width: 160px;
   cursor: pointer;
 }
-
 
 .dropdown-list {
   display: none;
@@ -128,7 +90,7 @@
 
 @media (max-width: $breakpoint) {
   .my-navbar {
-    flex-direction: column !important;
+    flex-direction: column;
     height: auto;
     input {
       width: 75vw;
