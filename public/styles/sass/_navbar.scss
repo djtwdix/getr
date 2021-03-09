@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 80px;
+  height: 100px;
   color: $white;
-  background-color: $dark-blue;
+  background: radial-gradient($blue, $dark-blue);
   padding-left: 30px;
   padding-right: 30px;
   justify-content: space-between;
@@ -17,7 +17,7 @@
 }
 
 .logo:hover {
-  color: $beige;
+  color: $yellow;
 }
 
 .my-nav-left {
@@ -82,7 +82,7 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  background-color: $dark-blue;
+  background: radial-gradient($blue, $dark-blue);
   z-index: 1;
   box-shadow: 2px 2px 4px $dark-blue;
   border-bottom-left-radius: 20px;

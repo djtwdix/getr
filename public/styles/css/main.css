@@ -473,9 +473,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100vw;
-  height: 80px;
+  height: 100px;
   color: #f5f6f5;
-  background-color: #061115;
+  background: radial-gradient(#105578, #061115);
   padding-left: 30px;
   padding-right: 30px;
   -webkit-box-pack: justify;
@@ -490,7 +490,7 @@
 }
 
 .logo:hover {
-  color: #efde9d;
+  color: #F9BA32;
 }
 
 .my-nav-left {
@@ -568,7 +568,7 @@
 .dropdown-list {
   display: none;
   position: absolute;
-  background-color: #061115;
+  background: radial-gradient(#105578, #061115);
   z-index: 1;
   -webkit-box-shadow: 2px 2px 4px #061115;
           box-shadow: 2px 2px 4px #061115;
