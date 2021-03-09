@@ -1,0 +1,31 @@
+#contact-seller-card {
+  display: none;
+
+  #contact-seller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh;
+    padding: 1rem;
+
+    // This value should be calc navbar height margin-top
+    max-width: 400px;
+    height: auto;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    background-color: $white;
+
+    font-family: "Poppins", sans-serif;
+
+    #contact-seller-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      #message-to-seller {
+        border-radius: 10px;
+      }
+    }
+  }
+}

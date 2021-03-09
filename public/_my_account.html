@@ -16,6 +16,9 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/0dace9ff45.js" crossorigin="anonymous"></script>
 
+  <!-- Contact-seller -->
+  <script src="./scripts/contact-seller.js"></script>
+
   <link rel="stylesheet" href="./styles/css/main.css">
 
   <title>Post Ad</title>
@@ -26,6 +29,26 @@
     <p style="color: white;">NAVBAR</p>
   </div>
   <main>
+
+    <!-- Contact seller HTML -->
+    <div id="contact-seller-card">
+      <div class="container-l" id="contact-seller">
+        <h2>Contact Seller</h2>
+        <form id="contact-seller-form">
+          <div class="form-group">
+            <textarea class="form-control" id="message-to-seller" rows="4" required></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+            <label class="form-check-label" for="exampleCheck1">I agree to send my e-mail to the seller</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+
+
     <div class="container-l" id="dashboard-card">
       <div class="container-l" id="dashboard-profile">
         <div class="user-profile">
@@ -47,7 +70,19 @@
       </div>
 
       <div class="container-l" id="dashboard-lists">
-        
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+
+            <!-- This will be the message button -->
+            <a id='contact-seller-button' class="btn btn-primary">Go somewhere</a>
+
+          </div>
+        </div>
+
 
       </div>
 
