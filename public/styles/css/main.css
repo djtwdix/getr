@@ -235,7 +235,7 @@
 
 #register-background {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,6 +481,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-weight: 700;
 }
 
 .logo {
