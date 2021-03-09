@@ -744,6 +744,10 @@
           justify-content: space-between;
 }
 
+.landing-left .search-options a {
+  text-decoration: none;
+}
+
 .landing-left .advanced-search {
   display: -webkit-box;
   display: -ms-flexbox;
