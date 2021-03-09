@@ -26,6 +26,11 @@ $breakpoint4: 370px;
 @import "_my_account.scss";
 @import "404.scss";
 
+body {
+  background-color: #f5f6f5;
+  background-image: url("/images/bg-textures/natural-paper.png");
+}
+
 .hide {
   display: none;
 }
@@ -38,7 +43,7 @@ $breakpoint4: 370px;
 }
 
 .red {
-  color: red ;
+  color: red;
 }
 
 .dim {
