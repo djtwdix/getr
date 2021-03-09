@@ -17,4 +17,9 @@ const addUser = (user) => {
   .catch(err => console.log("addUser erro: " + err));
 }
 module.exports = addUser;
+const loginUser = (user) => {
+  return db.query(`
+  
+  `);
+}
 
