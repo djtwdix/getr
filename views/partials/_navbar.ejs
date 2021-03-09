@@ -7,34 +7,41 @@
     </div>
   </div>
   <div class="my-nav-right">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" type="search" placeholder="search">
-      <div class="input-group-append">
-        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i>
-        </button>
+    <% if(true) { %>
+      <form id="nav-search-bar" action="/listings">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" type="search" placeholder="search">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="my-account-dropdown">
+        <div class="dropdown-button" id="my-account-btn">
+          <a href="/account">My Profile</a>
+        </div>
+        <div class="dropdown-list">
+          <ul>
+            <li>
+              <a href="/account">Favourites</a>
+            </li>
+            <li>
+              <a href="/account">Listings</a>
+            </li>
+            <li id="post-ad-btn">
+              <a href="/new-listing">Post Ad</a>
+            </li>
+            <li id="post-ad-btn">
+              Log Out
+            </li>
+        </div>
+        </ul>
       </div>
-    </div>
-
-    <div class="my-account-dropdown">
-      <div class="dropdown-button" id="my-account-btn">
-        <a href="/account">My Account</a>
-      </div>
-      <div class="dropdown-list">
-        <ul>
-          <li>
-            <a href="/account">My Faves</a>
-          </li>
-          <li>
-            <a href="/account">My Listings</a>
-          </li>
-          <li id="post-ad-btn">
-            <a href="/new-listing">Post Ad</a>
-          </li>
-          <li id="post-ad-btn">
-            Log Out
-          </li>
-      </div>
-      </ul>
-    </div>
+      <% } else { %>
+        <form id="login-signup" class="form-inline" method="GET" action="/login">
+          <button type="submit" class="btn btn-outline-danger"><i class="fas fa-sign-in-alt"></i> Log in </button>
+        </form>
+        <% }; %>
   </div>
 </nav>
