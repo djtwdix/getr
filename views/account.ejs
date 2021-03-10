@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <%- include("partials/_head")  %>
-  <title>Getr - My Account</title>
+
+<head>
+  <%- include("partials/_head") %>
+    <title>Getr - My Account</title>
 </head>
 
 <body>
-    <%- include("partials/_navbar")  %>
+  <%- include("partials/_navbar") %>
     <main class="main-container">
       <div class="container-l" id="dashboard-card">
         <div class="container-l" id="dashboard-profile">
@@ -27,8 +28,23 @@
           </div>
         </div>
         <div class="container-l" id="dashboard-lists">
+          <% if (true) { %>
+            <div id="message-for-empty">
+              <h2>There is nothing here for now</h2>
+              <h3>What are you waiting for <i class="fas fa-guitar"></i></h3>
+            </div>
+
+            <% } else { %>
+
+              <p>some listings</p>
+              <p>some listings</p>
+              <p>some listings</p>
+              <p>some listings</p>
+
+              <% }; %>
         </div>
       </div>
     </main>
-  </body>
+</body>
+
 </html>

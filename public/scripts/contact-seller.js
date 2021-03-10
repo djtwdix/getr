@@ -1,13 +1,10 @@
-$(document).ready(function () {
-  /**
-   * Animation to toggle send message to the seller
-   * It also acts as scroll up :)
-   */
-  $("#contact-seller-button").on("click", (e) => {
-    e.preventDefault();
+function contact() {
+  const form = document.getElementById("contact-seller-form");
+  if (form.style.display === "none") {
+    form.style.display = "block";
+    form.scrollIntoView();
 
-    $("#contact-seller-card").slideToggle();
-    //  Resizes the container for contact-seller for long messages see auto-resizer.js
-    $("#message-to-seller").focus().autoResize();
-  });
-});
+  } else {
+    form.style.display = "none";
+  }
+}
