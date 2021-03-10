@@ -1,4 +1,4 @@
-const { addUser, getUserWithEmail, login, searchListings, getHotListings, getListingsByTime } = require("./routes/database");
+const { addUser, getUserWithEmail, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -65,6 +65,7 @@ app.get("/listings", (req, res) => {
 app.get("/hot", (req, res) => {
   getHotListings()
   .then(listing => {
+    listing = charLimit(listing)
     const templateVars = { id: req.session.userId, listingInfo: listing, title: "Most viewed items..."}
     res.render("listings", templateVars)
   })
@@ -73,9 +74,7 @@ app.get("/hot", (req, res) => {
 app.get("/recent", (req, res) => {
   getListingsByTime()
   .then(listing => {
-    for (let item of listing) {
-      item.descrip = item.descrip.slice(0,50) + "...";
-    }
+    listing = charLimit(listing)
     const templateVars = { id: req.session.userId, listingInfo: listing, title: "Recent listings..."}
 
     res.render("listings", templateVars)
@@ -138,6 +137,7 @@ app.post("/logout", (req, res) => {
 app.post("/search", (req, res) => {
   searchListings(req.body.input)
   .then(listing => {
+    listing = charLimit(listing)
     const templateVars = { id: req.session.userId, listingInfo: listing, title: "Your search results..."}
     res.render("listings", templateVars)
   })

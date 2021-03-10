@@ -74,5 +74,12 @@ const searchListings = (searchQuery) => {
   })
   .catch(err => console.log("search erroe: " + err))
 }
-module.exports = { login, addUser, getUserWithEmail, getHotListings, getListingsByTime, searchListings };
+
+const charLimit = (listingArray) => {
+  for (let item of listingArray) {
+    item.descrip = item.descrip.slice(0,50) + "...";
+  }
+  return listingArray;
+}
+module.exports = { login, addUser, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 
