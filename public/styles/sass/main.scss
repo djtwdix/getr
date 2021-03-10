@@ -7,7 +7,6 @@ $brown: #914b1b;
 $red: #dc4d3e;
 $yellow: #f9ba32;
 $gray: #cbd2d6;
-$logo: "Delius", cursive;
 $main: "Poppins", sans-serif;
 $breakpoint: 1100px;
 $breakpoint2: 780px;
@@ -27,6 +26,11 @@ $breakpoint4: 370px;
 @import "_my_account.scss";
 @import "404.scss";
 
+body {
+  background-color: #f5f6f5;
+  background-image: url("/images/bg-textures/natural-paper.png");
+}
+
 .hide {
   display: none;
 }
@@ -39,7 +43,7 @@ $breakpoint4: 370px;
 }
 
 .red {
-  color: red !important;
+  color: red;
 }
 
 .dim {

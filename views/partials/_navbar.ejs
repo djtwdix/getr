@@ -1,38 +1,47 @@
-<nav class="navbar my-navbar">
+<nav class="navbar my-navbar sticky">
   <div class="my-nav-left">
     <div class="logo">
       <a href="/">
-        <img id="getr-logo" src="/images/logo.png">
+        <img id="getr-logo" src="/images/logo/logo.png">
       </a>
     </div>
   </div>
   <div class="my-nav-right">
-  <div class="search-icon">
-    <i class="fas fa-search"></i>
-  </div>
-    <form>
-      <input class="search-field" type="search" placeholder="search">
-    </form>
-    <div class="my-account-dropdown">
-      <div class="dropdown-button" id="my-account-btn">
-        <a href="/account">My Account</a>
+    <% if(true) { %>
+      <form id="nav-search-bar" action="/listings">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" type="search" placeholder="search">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="my-account-dropdown">
+        <div class="dropdown-button" id="my-account-btn">
+          <a href="/account"><i class="fas fa-user-circle"></i> My Profile</a>
+        </div>
+        <div class="dropdown-list">
+          <ul>
+            <li>
+              <a href="/account">Favourites</a>
+            </li>
+            <li>
+              <a href="/account">Listings</a>
+            </li>
+            <li id="post-ad-btn">
+              <a href="/new-listing">Post Ad</a>
+            </li>
+            <li id="post-ad-btn">
+              Log Out
+            </li>
+        </div>
+        </ul>
       </div>
-      <div class="dropdown-list">
-        <ul>
-          <li>
-            <a href="/account">My Faves</a>
-          </li>
-          <li>
-            <a href="/account">My Listings</a>
-          </li>
-          <li id="post-ad-btn">
-            <a href="/new-listing">Post Ad</a>
-          </li>
-          <li id="post-ad-btn">
-            Log Out
-          </li>
-      </div>
-      </ul>
-    </div>
+      <% } else { %>
+        <form id="login-signup" class="form-inline" method="GET" action="/login">
+          <button type="submit" class="btn btn-outline-danger"><i class="fas fa-sign-in-alt"></i> Register or Sign in </button>
+        </form>
+        <% }; %>
   </div>
-  </nav>
+</nav>

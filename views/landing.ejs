@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <%- include("partials/_head")  %>
-  <title>GETr</title>
+
+<head>
+  <%- include("partials/_head") %>
+    <title>GETr</title>
 </head>
 
 <body>
-    <%- include("partials/_navbar")  %>
+  <%- include("partials/_navbar") %>
     <main class="main-container">
       <div class="landing">
         <div class="landing-left">
-          <div class="title">
-              Find Your
+          <h1 class="title">
+            Find Your
             <br>
-              Dream Guitar
-          </div>
-          <div class="subtitle">
-              Don't go through life without finding <span class="text-emphasis">the ONE</span>
-          </div>
+            Dream Guitar
+          </h1>
+          <h2 class="subtitle">
+            Don't go through life without finding <span class="text-emphasis">the ONE</span>
+          </h2>
           <div class="landing-search">
-            <form>
-              <input type="search" placeholder="Find yours now....">
+            <form id="landing-search-bar" action="/listings">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" type="search" placeholder="Find yours now...">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
             </form>
-            <div class="search-icon search-submit">
-              <i class="fas fa-search"></i>
+          </div>
+          <div class="search-options">
+            <div class="options-buttons">
+              <a href="/listings">Hot Items</a>
+              <a href="/listings">Browse Listings</a>
             </div>
           </div>
-            <div class="search-options">
-              <div class="options-buttons">
-                <a href="/listings">
-                  <button class="btn">Hot Items</button>
-                </a>
-                <a href="/listings">
-                  <button class="btn">Browse Listings</button>
-                </a>
-              </div>
-              <div class="advanced-search">Advanced Search</div>
-            </div>
         </div>
         <div class="landing-right">
-          <img src="./svg/undraw_compose_music_ovo2.svg" alt="Music SVG">
+          <img src="/images/svg/music.svg" alt="Music SVG">
         </div>
-        </div>
+      </div>
     </main>
-  </body>
+</body>
+
 </html>
