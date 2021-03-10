@@ -1,4 +1,4 @@
-const addUser = require("./routes/database");
+const { addUser, getUserWithEmail, login } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -8,6 +8,7 @@ const PORT       = process.env.PORT || 8080;
 const ENV        = process.env.ENV || "development";
 const express    = require("express");
 const bodyParser = require("body-parser");
+const cookieSession = require('cookie-session');
 /* const sass       = require("node-sass-middleware"); */
 const app        = express();
 const morgan     = require('morgan');
@@ -90,11 +91,16 @@ app.post("/register", (req, res) => {
 })
 app.post("/login", (req, res) => {
   console.log("userinfo: ", req.body);
-  addUser(req.body)
-  .then(() => {
-    res.send(200)
+  login(req.body.email, req.body.password)
+  .then(user => {
+    if (!user) {
+      res.send({error: "Error"});
+      return;
+    }
+    req.session.userId = user.id;
+    res.redirect("landing");
   })
-  .catch(err => console.log("error /register: " + err))
+  .catch(e => res.send(e));
 })
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

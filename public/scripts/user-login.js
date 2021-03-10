@@ -12,6 +12,6 @@ $(document).ready(function() {
     console.log(userLoginInfo);
 
     $.post("/login", userLoginInfo)
-      .done(data => console.log(data, "done"));
+      .done(data => console.log("done"));
   })
 })
