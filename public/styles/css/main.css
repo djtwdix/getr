@@ -1074,6 +1074,9 @@
 
 #dashboard-card #dashboard-lists {
   flex: 2;
+  background-image: url("/images/bg-textures/natural-paper.png");
+  display: flex;
+  padding: 1rem;
 }
 
 #dashboard-card #dashboard-lists .listings {
@@ -1093,6 +1096,9 @@
   #dashboard-card #dashboard-profile .links .link {
     flex-direction: row;
   }
+  #dashboard-lists {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 780px) {
@@ -1110,6 +1116,9 @@
   #dashboard-card #dashboard-profile .links .link {
     margin: 0.5rem 0rem;
     padding: 0.5rem;
+  }
+  #dashboard-card #dashboard-lists {
+    flex-direction: column;
   }
 }
 

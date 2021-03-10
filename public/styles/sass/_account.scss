@@ -70,7 +70,10 @@
   }
   #dashboard-lists {
     flex: 2;
-    // padding: 0.5rem;
+    background-image: url("/images/bg-textures/natural-paper.png");
+    display: flex;
+
+    padding: 1rem;
     .listings {
       justify-content: center;
     }
@@ -81,17 +84,18 @@
   #dashboard-card {
     flex-direction: column;
 
-
     #dashboard-profile {
       border-radius: 40px 40px 0px 0px;
       .links {
         display: flex;
         .link {
           flex-direction: row;
-
         }
       }
     }
+  }
+  #dashboard-lists {
+    flex-direction: column;
   }
 }
 
@@ -107,8 +111,12 @@
         flex-direction: column;
         .link {
           margin: 0.5rem 0rem;
-          padding: 0.5rem;        }
+          padding: 0.5rem;
+        }
       }
+    }
+    #dashboard-lists {
+      flex-direction: column;
     }
   }
 }
