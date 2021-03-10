@@ -10,43 +10,43 @@
   <main class="main-container">
     <div class="listings-page">
       <div class="listings-title">
-        Your search results...
+        <%= title %>
       </div>
       <div class="listings">
-        <div class="listings-item">
-          <div class="listings-image show-listing">
-            <img src="./images/start.jpeg">
-          </div>
-          <div class="listings-info show-listing">
-            <div class="listings-mid">
-              <div class="specs">
-                <div class="listings-make">
-                  Fender
-                </div>
-                <div class="listings-model">
-                 Stratocastor
-                </div>
-               </div>
-               <div class="listings-price">
-                 $829.99
-               </div>
+        <% for (let listing in listingInfo) { %>
+          <div class="listings-item">
+            <div class="listings-image">
+              <img id="no-image-vector" src="/images/guitar-vector.png">
             </div>
-             <div class="listings-description">
-                 Selling used fender Stratocastor....
+            <div class="listings-info">
+              <div class="listings-mid">
+                <div class="specs">
+                  <div class="listings-make">
+                    <%= listingInfo[listing].brand %>
+                  </div>
+                  <div class="listings-model">
+                    <%= listingInfo[listing].model %>
+                  </div>
+                 </div>
+                 <div class="listings-price">
+                  <%= listingInfo[listing].cost %>
+                 </div>
+              </div>
+               <div class="listings-description">
+                  <%= listingInfo[listing].descrip %>
+               </div>
              </div>
-           </div>
-           <div class="listings-footer">
-             <div>
-              <i class="fas fa-heart"></i>
+             <div class="listings-footer">
+               <div>
+                <i class="fas fa-heart"></i>
+               </div>
+               <div>
+                 <i class="fas fa-envelope"></i>
+               </div>
              </div>
-             <div>
-               <i class="fas fa-envelope"></i>
-             </div>
-           </div>
-         </div>
+        </div>
+        <% } %>
       </div>
-      </div>
-
   </main>
 
   </body>
