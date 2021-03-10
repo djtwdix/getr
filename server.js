@@ -96,6 +96,7 @@ app.get("/listings/:listingID", (req, res) => {
   getListingById(listingId)
   .then(listing => {
     if (listing) {
+      /* console.log(listing); */
       const templateVars = { id: req.session.userId , listingInfo: listing}
       res.render("listing", templateVars)
     }
@@ -156,6 +157,10 @@ app.post("/search", (req, res) => {
 })
 
 app.post("/listings/new", (req, res) => {
+  const today = todayDate();
+  req.body.listing_date = today;
+  console.log(today);
+  console.log(req.body);
   addListing(req.body, req.session.userId)
   .then(listing => {
 
