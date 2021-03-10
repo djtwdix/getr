@@ -1,6 +1,6 @@
 #dashboard-card {
   display: flex;
-  margin: 10vh;
+  margin: 2vh;
 
   // This value should be calc navbar height margin-top
   max-width: 2000px;
@@ -18,7 +18,7 @@
     justify-content: space-evenly;
     text-align: center;
 
-    background: linear-gradient(180deg, $blue 5%, #6825d9 100%);
+    background: linear-gradient(180deg, $red 5%, $blue 100%);
 
     border-radius: 40px 0px 0px 40px;
     color: $white;
@@ -49,9 +49,9 @@
         }
 
         .btn {
-          background-color: rgba(241, 171, 41, 0.89);
+          background-color: $red;
           border-radius: 40px;
-          color: $dark-blue;
+          color: $white;
         }
       }
     }

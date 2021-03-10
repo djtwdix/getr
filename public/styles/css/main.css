@@ -636,9 +636,13 @@
 }
 
 .landing .landing-right {
+<<<<<<< HEAD
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+=======
+  flex: 1;
+>>>>>>> front-end
 }
 
 .landing .landing-right img {
@@ -646,11 +650,15 @@
 }
 
 .landing .landing-left {
+<<<<<<< HEAD
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+  flex: 1.5;
+>>>>>>> front-end
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -686,6 +694,11 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.landing .landing-left .landing-search #landing-search-bar {
+  width: 80%;
+  max-width: 800px;
 }
 
 .landing .landing-left .landing-search #landing-search-bar .input-group {
@@ -1138,7 +1151,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10vh;
+  margin: 2vh;
   max-width: 2000px;
   -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
@@ -1165,8 +1178,12 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
+<<<<<<< HEAD
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #105578), to(#6825d9));
   background: linear-gradient(180deg, #105578 5%, #6825d9 100%);
+=======
+  background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
+>>>>>>> front-end
   border-radius: 40px 0px 0px 40px;
   color: #f5f6f5;
 }
@@ -1207,9 +1224,9 @@
 }
 
 #dashboard-card #dashboard-profile .links .link .btn {
-  background-color: rgba(241, 171, 41, 0.89);
+  background-color: #dc4d3e;
   border-radius: 40px;
-  color: #061115;
+  color: #f5f6f5;
 }
 
 #dashboard-card #dashboard-lists {
