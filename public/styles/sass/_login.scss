@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   /* background: radial-gradient($blue, $dark-blue); */
 
   #login-card {
@@ -19,22 +20,17 @@
     align-items: center;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
     background-color: $white;
+    background-image: url("/images/bg-textures/natural-paper.png");
+
     .logo {
       margin-top: 2rem;
       display: flex;
       flex: 1;
       align-items: center;
       justify-content: center;
-      .circle {
-        width: 10rem;
-        height: 10rem;
-        background: linear-gradient(to right, $red, $yellow);
-        border-radius: 50%;
-        position: absolute;
-        z-index: 1;
-      }
+
       #getr-logo {
-        z-index: 2;
+        width: 80%;
       }
     }
     .info {
@@ -127,11 +123,6 @@
       background-color: $white;
       .logo {
         margin-top: 3rem;
-
-        .circle {
-          width: 130px;
-          height: 130px;
-        }
       }
     }
   }
@@ -147,27 +138,23 @@
       background-color: $white;
       .logo {
         margin-top: 1rem;
-        .circle {
-          width: 80px;
-          height: 80px;
-        }
-        #getr-logo {
-          transform: scale(0.5);
-        }
       }
-      .info {
-        .credentials {
-          #login-form {
-            input {
-              padding: 0.3rem;
-              margin-bottom: 1rem;
-            }
-            .loginSignUpSeparator {
-              margin-top: 1rem;
-            }
-            .signup {
-              margin: none;
-            }
+      #getr-logo {
+        transform: scale(0.5);
+      }
+    }
+    .info {
+      .credentials {
+        #login-form {
+          input {
+            padding: 0.3rem;
+            margin-bottom: 1rem;
+          }
+          .loginSignUpSeparator {
+            margin-top: 1rem;
+          }
+          .signup {
+            margin: none;
           }
         }
       }
@@ -179,7 +166,6 @@
   #login-background {
     #login-card {
       height: 90vh;
-
     }
   }
 }

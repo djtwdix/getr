@@ -20,6 +20,7 @@
   align-items: center;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
   background-color: #f5f6f5;
+  background-image: url("/images/bg-textures/natural-paper.png");
 }
 
 #login-background #login-card .logo {
@@ -30,17 +31,8 @@
   justify-content: center;
 }
 
-#login-background #login-card .logo .circle {
-  width: 10rem;
-  height: 10rem;
-  background: linear-gradient(to right, #dc4d3e, #f9ba32);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-}
-
 #login-background #login-card .logo #getr-logo {
-  z-index: 2;
+  width: 80%;
 }
 
 #login-background #login-card .info {
@@ -137,10 +129,6 @@
   #login-background #login-card .logo {
     margin-top: 3rem;
   }
-  #login-background #login-card .logo .circle {
-    width: 130px;
-    height: 130px;
-  }
 }
 
 @media (max-width: 370px) {
@@ -153,21 +141,17 @@
   #login-background #login-card .logo {
     margin-top: 1rem;
   }
-  #login-background #login-card .logo .circle {
-    width: 80px;
-    height: 80px;
-  }
-  #login-background #login-card .logo #getr-logo {
+  #login-background #login-card #getr-logo {
     transform: scale(0.5);
   }
-  #login-background #login-card .info .credentials #login-form input {
+  #login-background .info .credentials #login-form input {
     padding: 0.3rem;
     margin-bottom: 1rem;
   }
-  #login-background #login-card .info .credentials #login-form .loginSignUpSeparator {
+  #login-background .info .credentials #login-form .loginSignUpSeparator {
     margin-top: 1rem;
   }
-  #login-background #login-card .info .credentials #login-form .signup {
+  #login-background .info .credentials #login-form .signup {
     margin: none;
   }
 }
