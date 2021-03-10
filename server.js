@@ -150,9 +150,11 @@ app.post("/search", (req, res) => {
 })
 
 app.post("/listings/new", (req, res) => {
-  console.log(req.body);
   addListing(req.body, req.session.userId)
-  res.redirect("/account")
+  .then(listing => {
+    console.log(listing);
+    res.redirect("/listing/")
+  })
 })
 
 app.listen(PORT, () => {
