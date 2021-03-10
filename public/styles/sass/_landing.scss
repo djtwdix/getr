@@ -6,14 +6,14 @@
   font-family: $main;
 
   .landing-right {
-    flex: 2;
+    flex: 1;
     img {
       width: 90%;
     }
   }
 
   .landing-left {
-    flex: 1;
+    flex: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -38,6 +38,8 @@
       display: flex;
       justify-content: flex-start;
       #landing-search-bar {
+        width: 80%;
+        max-width: 800px;
         .input-group {
           height: 3rem;
           width: 100%;
