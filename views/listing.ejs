@@ -3,12 +3,29 @@
 
 <head>
   <%- include("partials/_head")%>
+    <script src="/scripts/contact-seller.js"></script>
+
     <title>GETr</title>
 </head>
 
 <body>
   <%- include("partials/_navbar") %>
     <main class="main-container">
+
+      <form id="contact-seller-form" action="" style="background-color: gray;">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Default checkbox
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+      </form>
 
 
 
@@ -42,9 +59,9 @@
             <a id="fave-listing" href="">
               <i class="fas fa-heart"></i>
             </a>
-            <a id="contact-seller" href="">
+            <button onclick="contact()" id="contact-seller" href="">
               <i class="fas fa-envelope"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
