@@ -89,7 +89,7 @@ const addListing = (listing, seller_id) => {
       INSERT INTO listings(seller_id, cost, descrip, brand, model, listing_pic, province, country)
       VALUES ($1, $2, $3, $4, $5, $6, $7, $7)
       RETURNING *;
- `[seller_id, listing.cost, listing.description, listing.brand, listing.model, listing.listing_pic, listing.province,listing.country])
+ `, [seller_id, listing.cost, listing.description, listing.brand, listing.model, listing.listing_pic, listing.province,listing.country])
   .then(res => {
       console.log("addListing: " + res.rows);
       return res.rows[0];
