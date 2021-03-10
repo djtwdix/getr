@@ -62,7 +62,7 @@ app.get("/listings", (req, res) => {
   res.render("listings", templateVars)
 })
 
-app.get("/hot-items", (req, res) => {
+app.get("/hot", (req, res) => {
   getHotListings()
   .then(listing => {
     const templateVars = { id: req.session.userId, listingInfo: listing, title: "Most viewed items..."}
@@ -70,10 +70,13 @@ app.get("/hot-items", (req, res) => {
   })
 })
 
-app.get("/browse-listings", (req, res) => {
-  const templateVars = { id: req.session.userId }
-  res.render("listings", templateVars)
-})
+app.get("/recent", (req, res) => {
+  getListingsByTime()
+  .then(listing => {
+    const templateVars = { id: req.session.userId, listingInfo: listing, title: "Recent listings..."}
+    res.render("listings", templateVars)
+  })
+  })
 
 app.get("/account", (req, res) => {
   const templateVars = { id: req.session.userId }
@@ -81,11 +84,8 @@ app.get("/account", (req, res) => {
 })
 
 app.get("/new-listing", (req, res) => {
-  getListingsByTime()
-  .then(listing => {
-    const templateVars = { id: req.session.userId, listingInfo: listing}
-    res.render("new_listing", templateVars);
-  })
+  const templateVars = { id: req.session.userId }
+  res.render("account", templateVars)
 })
 
 app.get("/listings/:listingID", (req, res) => {
