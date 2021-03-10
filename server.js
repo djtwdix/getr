@@ -96,7 +96,7 @@ app.get("/listings/:listingID", (req, res) => {
   getListingById(listingId)
   .then(listing => {
     if (listing) {
-      /* console.log(listing); */
+      console.log(listing);
       const templateVars = { id: req.session.userId , listingInfo: listing}
       res.render("listing", templateVars)
     }

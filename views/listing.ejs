@@ -37,18 +37,15 @@
           <div class="listing-info">
             <div class="listing-mid">
               <div class="listing-specs">
-                <h1 id="listing-brand">Fender</h1>
-                <h2 id="listing-model">Stratocaster</h2>
+                <h1 id="listing-brand"><%= listingInfo.brand %></h1>
+                <h2 id="listing-model"><%= listingInfo.make %></h2>
               </div>
               <p id="listing-price">
-                $829.99
+                <%= listingInfo.price %>
               </p>
             </div>
             <p id="listing-description">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-              Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-              Lorem Ipsum passage
+              <%= listingInfo.descrip %>
             </p>
           </div>
           <div class="listing-footer">
