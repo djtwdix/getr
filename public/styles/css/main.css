@@ -681,6 +681,7 @@
   margin-bottom: 1rem;
   font-size: x-large;
   font-weight: 500;
+  opacity: 80%;
 }
 
 #contact-seller-form .form-group textarea {
@@ -698,6 +699,10 @@
 #contact-seller-form #check-button .form-check {
   margin: 2rem;
   font-size: 110%;
+}
+
+#contact-seller-form #check-button .form-check label {
+  opacity: 80%;
 }
 
 #contact-seller-form #check-button button {
