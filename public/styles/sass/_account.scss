@@ -72,8 +72,19 @@
     flex: 2;
     background-image: url("/images/bg-textures/natural-paper.png");
     display: flex;
-
     padding: 1rem;
+    #message-for-empty{
+      margin-left: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3{
+        i{
+          color: $red;
+        }
+      }
+    }
     .listings {
       justify-content: center;
     }

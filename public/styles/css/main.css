@@ -1079,6 +1079,18 @@
   padding: 1rem;
 }
 
+#dashboard-card #dashboard-lists #message-for-empty {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#dashboard-card #dashboard-lists #message-for-empty h3 i {
+  color: #dc4d3e;
+}
+
 #dashboard-card #dashboard-lists .listings {
   justify-content: center;
 }
