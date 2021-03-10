@@ -1,4 +1,4 @@
-const { addUser, getUserWithEmail, login } = require("./routes/database");
+const { addUser, getUserWithEmail, login, getHotListings } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();

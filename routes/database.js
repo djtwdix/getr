@@ -41,5 +41,15 @@ const login = (email, password) => {
     }
   })
 }
-module.exports = { login, addUser, getUserWithEmail };
+const getHotListings = () => {
+  return db.query(`
+  SELECT * FROM listings
+  ORDER BY total_views DESC;
+  `)
+  .then(res => {
+    return res.rows;
+  })
+  .catch(err => console.log("HotListings error: " + err))
+};
+module.exports = { login, addUser, getUserWithEmail, getHotListings };
 
