@@ -636,13 +636,9 @@
 }
 
 .landing .landing-right {
-<<<<<<< HEAD
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-=======
-  flex: 1;
->>>>>>> front-end
 }
 
 .landing .landing-right img {
@@ -650,15 +646,11 @@
 }
 
 .landing .landing-left {
-<<<<<<< HEAD
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-  flex: 1.5;
->>>>>>> front-end
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -757,6 +749,7 @@
   font-weight: 700;
   margin-left: 2rem;
   margin-bottom: 1rem;
+  color: #dc4d3e;
 }
 
 .listings {
@@ -774,9 +767,11 @@
           justify-content: flex-start;
   font-family: "Poppins", sans-serif;
   color: #061115;
+  width: 100%;
+  height: 100%;
 }
 
-.listings .listings-item {
+.listings-item {
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -799,20 +794,27 @@
   margin: 20px;
 }
 
-.listings .listings-image {
+.listings-image {
   width: inherit;
-  height: 50%;
+  height: 180px;
   text-align: center;
   overflow: hidden;
   cursor: pointer;
+  border-bottom: 2px solid black;
 }
 
-.listings .listings-image img {
+.listings-image img {
   max-height: auto;
   max-width: 100%;
 }
 
-.listings .listings-info {
+.listings-image #no-image-vector {
+  max-height: auto;
+  max-width: 90%;
+}
+
+.listings-info {
+  margin: 0px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -822,9 +824,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px;
+  width: 200px;
+  height: 176px;
 }
 
-.listings .listings-mid {
+.listings-mid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,7 +837,7 @@
           justify-content: space-between;
 }
 
-.listings .specs {
+.specs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,19 +849,19 @@
       justify-content: space-around;
 }
 
-.listings .specs div {
+.specs div {
   margin-bottom: 20px;
 }
 
-.listings .listings-make {
+.listings-make {
   font-weight: 700;
 }
 
-.listings .listings-model {
+.listings-model {
   font-weight: 500;
 }
 
-.listings .listings-footer {
+.listings-footer {
   width: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -867,12 +871,12 @@
   margin-bottom: 20px;
 }
 
-.listings .listings-footer i {
+.listings-footer i {
   cursor: pointer;
   color: #105578;
 }
 
-.listings .listings-price {
+.listings-price {
   opacity: 90%;
   color: lightgray;
 }
@@ -1178,12 +1182,8 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
-<<<<<<< HEAD
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #105578), to(#6825d9));
-  background: linear-gradient(180deg, #105578 5%, #6825d9 100%);
-=======
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #dc4d3e), to(#105578));
   background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
->>>>>>> front-end
   border-radius: 40px 0px 0px 40px;
   color: #f5f6f5;
 }
