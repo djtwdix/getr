@@ -7,8 +7,9 @@
   margin: 10vh;
   padding: 3w;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  background-color: #f5f6f5;
+  background-image: url("/images/bg-textures/natural-paper.png");
   border-radius: 40px;
-  background-color: $white;
 }
 
 .listing {
@@ -77,7 +78,7 @@
       padding-left: 4rem;
       padding-right: 4rem;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.3));
       #fave-listing {
         border-radius: 20px 0 0 20px;
@@ -103,7 +104,7 @@
         }
         &:active{
           filter: none;
-          transform: scale(.95);
+          transform: scale(.98);
         }
       }
     }
