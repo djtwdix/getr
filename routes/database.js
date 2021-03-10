@@ -50,5 +50,14 @@ const getHotListings = () => {
     return res.rows;
   })
 }
-module.exports = { login, addUser, getUserWithEmail, getHotListings };
+const getListingsByTime = () => {
+  return db.query(`
+  SELECT * FROM listings
+  ORDER BY listing_date DESC
+  `)
+  .then(res => {
+    return res.rows;
+  })
+}
+module.exports = { login, addUser, getUserWithEmail, getHotListings, getListingsByTime };
 
