@@ -546,15 +546,6 @@
   color: #f5f6f5;
 }
 
-.landing .landing-left .advanced-search {
-  margin-top: 10px;
-  align-self: flex-end;
-  position: relative;
-  /*  left: -150px; */
-  cursor: pointer;
-  font-size: 12px;
-}
-
 .landing .landing-left .search-options {
   margin-top: 10px;
   display: flex;
