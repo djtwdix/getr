@@ -137,9 +137,15 @@ app.post("/logout", (req, res) => {
 app.post("/search", (req, res) => {
   searchListings(req.body.input)
   .then(listing => {
-    listing = charLimit(listing)
-    const templateVars = { id: req.session.userId, listingInfo: listing, title: "Your search results..."}
-    res.render("listings", templateVars)
+    console.log(listing);
+    if(listing) {
+      listing = charLimit(listing)
+      const templateVars = { id: req.session.userId, listingInfo: listing, title: "Your search results..."}
+      res.render("listings", templateVars)
+    } else {
+      const templateVars = { id: req.session.userId, listingInfo: null, title: "No results..." }
+      res.render("listings", templateVars)
+    }
   })
 })
 

@@ -13,38 +13,41 @@
         <%= title %>
       </div>
       <div class="listings">
-        <% for (let listing in listingInfo) { %>
-          <div class="listings-item">
-            <div class="listings-image">
-              <img id="no-image-vector" src="/images/guitar-vector.png">
-            </div>
-            <div class="listings-info">
-              <div class="listings-mid">
-                <div class="specs">
-                  <div class="listings-make">
-                    <%= listingInfo[listing].brand %>
-                  </div>
-                  <div class="listings-model">
-                    <%= listingInfo[listing].model %>
-                  </div>
-                 </div>
-                 <div class="listings-price">
-                  <%= listingInfo[listing].cost %>
-                 </div>
+
+        <% if (listingInfo) { %>
+          <% for (let listing in listingInfo) { %>
+            <div class="listings-item">
+              <div class="listings-image">
+                <img id="no-image-vector" src="/images/guitar-vector.png">
               </div>
-               <div class="listings-description">
-                  <%= listingInfo[listing].descrip %>
+              <div class="listings-info">
+                <div class="listings-mid">
+                  <div class="specs">
+                    <div class="listings-make">
+                      <%= listingInfo[listing].brand %>
+                    </div>
+                    <div class="listings-model">
+                      <%= listingInfo[listing].model %>
+                    </div>
+                   </div>
+                   <div class="listings-price">
+                    <%= listingInfo[listing].cost %>
+                   </div>
+                </div>
+                 <div class="listings-description">
+                    <%= listingInfo[listing].descrip %>
+                 </div>
                </div>
-             </div>
-             <div class="listings-footer">
-               <div>
-                <i class="fas fa-heart"></i>
+               <div class="listings-footer">
+                 <div>
+                  <i class="fas fa-heart"></i>
+                 </div>
+                 <div>
+                   <i class="fas fa-envelope"></i>
+                 </div>
                </div>
-               <div>
-                 <i class="fas fa-envelope"></i>
-               </div>
-             </div>
-        </div>
+          </div>
+          <% } %>
         <% } %>
       </div>
   </main>
