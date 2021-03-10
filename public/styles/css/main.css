@@ -926,22 +926,29 @@
   padding: 1rem;
   font-family: "Poppins", sans-serif;
   max-width: 2000px;
-  margin: 10vh;
-  padding: 3w;
+  margin: 3vh;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
+  background-image: url("/images/bg-textures/natural-paper.png");
   background-color: #f5f6f5;
 }
 
 #post-ad-card .banner {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
-#post-ad-card .banner img {
-  width: 300px;
+#post-ad-card .banner h1 {
+  flex: 2;
+}
+
+#post-ad-card .banner .figure {
+  flex: 1;
+}
+
+#post-ad-card .banner .figure img {
+  width: 13rem;
 }
 
 #post-ad-card h1 {
@@ -961,6 +968,8 @@
 }
 
 #post-ad-card .row #price {
+  display: flex;
+  flex-direction: column;
   max-width: 20rem;
 }
 
@@ -976,17 +985,33 @@
   border-radius: 17px 0px 0px 17px;
 }
 
-#post-ad-card .row button {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  min-width: 6rem;
-  border-radius: 17px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #105578;
-  color: #f5f6f5;
+#post-ad-card .row #post-button {
+  margin-top: 3rem;
+}
+
+#post-ad-card .row #post-button button {
+  border-radius: 40px;
+  height: 2.5rem;
+  width: 6rem;
+  background: #dc4d3e;
   font-weight: bolder;
+  color: #f5f6f5;
+  font-size: 1rem;
+  border: none;
+  margin: -5px;
+  padding: 0.2rem;
+  stroke: black;
+  outline: none;
+}
+
+#post-ad-card .row #post-button button:hover {
+  cursor: pointer;
+  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+#post-ad-card .row #post-button button:active {
+  filter: none;
+  transform: scale(0.98);
 }
 
 #post-ad-card input,
