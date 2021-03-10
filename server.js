@@ -53,65 +53,51 @@ app.use("/api/widgets", widgetsRoutes(db)); */
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-  console.log(req.session.userId);
   const templateVars = { id: req.session.userId }
-  console.log(templateVars);
   res.render("landing", templateVars);
 });
 
 app.get("/listings", (req, res) => {
-  console.log(req.session.userId);
   const templateVars = { id: req.session.userId }
-  console.log(templateVars);
   res.render("listings", templateVars)
 })
 
 app.get("/account", (req, res) => {
-  console.log(req.session.userId);
   const templateVars = { id: req.session.userId }
-  console.log(templateVars);
   res.render("account", templateVars)
 })
 
 app.get("/new-listing", (req, res) => {
-  console.log(req.session.userId);
   const templateVars = { id: req.session.userId }
-  console.log(templateVars);
   res.render("new_listing", templateVars)
 })
 
 app.get("/listings/:listingID", (req, res) => {
-  console.log(req.session.userId);
   const templateVars = { id: req.session.userId }
-  console.log(templateVars);
   res.render("listing", templateVars)
 })
 
 app.get("/login", (req, res) => {
-  console.log(req.session.userId);
   const templateVars = { id: req.session.userId }
-  console.log(templateVars);
   res.render("login", templateVars)
 })
 
 app.get("/register", (req, res) => {
-  console.log(req.session.userId);
   const templateVars = { id: req.session.userId }
-  console.log(templateVars);
   res.render("register", templateVars)
 })
 
 app.post("/register", (req, res) => {
-  console.log("userinfo: ", req.body);
   addUser(req.body)
-  .then(() => {
-    /* res.send(200) */
-    res.redirect("/")
+  .then((user) => {
+    console.log("userID: ", user.id)
+    req.session.userId = user.id;
+    const templateVars = { id: req.session.userId }
+    res.redirect("/");
   })
   .catch(err => console.log("error /register: " + err))
 })
 app.post("/login", (req, res) => {
-  console.log(req.body);
   login(req.body.email, req.body.password)
   .then(user => {
     if (!user) {
@@ -119,7 +105,6 @@ app.post("/login", (req, res) => {
       return;
     }
     req.session.userId = user.id;
-    console.log("post-login")
     res.redirect("/");
   })
   .catch(e => res.send(e));

@@ -4,7 +4,6 @@ const db = new Pool(dbParams);
 console.log(`db params: ${JSON.stringify(dbParams)}`)
 db.connect();
 const addUser = (user) => {
-  console.log(`use in add user: ${JSON.stringify(user)}`)
   return db.query(`
   INSERT INTO users (email, hashed_password, first_name, last_name, city, province, country, profile_pic)
   VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
