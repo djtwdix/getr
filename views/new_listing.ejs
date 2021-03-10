@@ -9,7 +9,7 @@
   <%- include("partials/_navbar")  %>
   <main class="main-container">
     <div class="container-l" id="post-ad-card">
-      <form class="row g-3">
+      <form class="row g-3" method="POST" action="/listings/new">
         <div class="banner container-xl">
           <h1>Post on Getr</h1>
           <figure class="figure">
@@ -18,7 +18,7 @@
         </div>
         <div class="col-sm-7">
           <label class="form-label">Brand</label>
-          <select class="form-select" id="validationCustom04" required>
+          <select name="brand" class="form-select" id="validationCustom04" required>
             <option selected disabled value="">Choose...</option>
             <option>Charvel</option>
             <option>Epiphone</option>
@@ -33,20 +33,20 @@
 
         <div class="col-sm-6">
           <label class="form-label">Model</label>
-          <input type="text" class="form-control form-control-lg" maxlength="25" required>
+          <input name="model" type="text" class="form-control form-control-lg" maxlength="25" required>
         </div>
 
 
 
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+          <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
         </div>
         <div id="price">
           <div class="input-group col-1">
             <label class="form-label"></label>
             <span class="input-group-text" id="left">$</span>
-            <input type="text" class="form-control" id="price-input" aria-label="Amount (to the nearest dollar)"
+            <input name="cost" type="text" class="form-control" id="price-input" aria-label="Amount (to the nearest dollar)"
               required>
             <span class="input-group-text" id="right">CAD</span>
           </div>
@@ -61,7 +61,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="image-url">https://</span>
           </div>
-          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          <input name="listing_pic" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
         </div>
 
         <h2>Where are you located?</h2>
@@ -72,7 +72,7 @@
         </div>
         <div class="col-md-4">
           <label for="validationCustom04" class="form-label">Province</label>
-          <select class="form-select" id="validationCustom04" required>
+          <select name="province" class="form-select" id="validationCustom04" required>
             <option selected disabled value="">Choose...</option>
             <option value="AB">Alberta</option>
             <option value="BC">British Columbia</option>
@@ -94,7 +94,7 @@
         </div>
         <div class="col-md-3">
           <label for="validationCustom04" class="form-label">Country</label>
-          <select class="form-select" id="validationCustom04" required>
+          <select name="country" class="form-select" id="validationCustom04" required>
             <option selected disabled value="">Choose...</option>
             <option>Canada</option>
           </select>
