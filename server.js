@@ -131,6 +131,9 @@ app.post("/logout", (req, res) => {
   res.redirect("/")
 })
 
+app.post("/search", (req, res) => {
+  
+})
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

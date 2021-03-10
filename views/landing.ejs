@@ -20,9 +20,9 @@
             Don't go through life without finding <span class="text-emphasis">the ONE</span>
           </h2>
           <div class="landing-search">
-            <form id="landing-search-bar" action="/listings">
+            <form id="landing-search-bar" method="POST" action="/search">
               <div class="input-group mb-3">
-                <input type="text" class="form-control" type="search" placeholder="Find yours now...">
+                <input type="text" name="search-input" class="form-control" type="search" placeholder="Find yours now...">
                 <div class="input-group-append">
                   <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i>
                   </button>
