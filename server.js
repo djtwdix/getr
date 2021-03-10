@@ -150,7 +150,7 @@ app.post("/search", (req, res) => {
 })
 
 app.post("/listings/new", (req, res) => {
-  /* addListing(req.body, req.session.userId) */
+  addListing(req.body, req.session.userId)
   console.log(req.body);
   console.log(req.session.userId);
   res.redirect("/account")

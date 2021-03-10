@@ -14,5 +14,8 @@ CREATE TABLE listings (
   listing_pic VARCHAR(255),
   listing_thumbnail VARCHAR(255),
   is_active BOOLEAN DEFAULT TRUE,
-  total_views INTEGER DEFAULT 0
+  total_views INTEGER DEFAULT 0,
+  city VARCHAR(255),
+  province VARCHAR(255),
+  country VARCHAR(255)
 );

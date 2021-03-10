@@ -87,7 +87,7 @@ const charLimit = (listingArray) => {
 const addListing = (listing, seller_id) => {
 	return db.query(`
       INSERT INTO listings(seller_id, cost, descrip, brand, model, listing_pic, province, country)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $7)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
       RETURNING *;
  `, [seller_id, listing.cost, listing.description, listing.brand, listing.model, listing.listing_pic, listing.province,listing.country])
   .then(res => {
