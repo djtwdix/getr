@@ -62,6 +62,16 @@ app.get("/listings", (req, res) => {
   res.render("listings", templateVars)
 })
 
+app.get("/hot-items", (req, res) => {
+  const templateVars = { id: req.session.userId }
+  res.render("listings", templateVars)
+})
+
+app.get("/browse-listings", (req, res) => {
+  const templateVars = { id: req.session.userId }
+  res.render("listings", templateVars)
+})
+
 app.get("/account", (req, res) => {
   const templateVars = { id: req.session.userId }
   res.render("account", templateVars)
