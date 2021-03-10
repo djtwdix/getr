@@ -1,4 +1,4 @@
-const { addUser, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
+const { addUser, todayDate ,getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -92,8 +92,14 @@ app.get("/listings/new", (req, res) => {
 })
 
 app.get("/listings/:listingID", (req, res) => {
-  const templateVars = { id: req.session.userId }
-  res.render("listing", templateVars)
+  const listingId = Number(req.params.listingID);
+  getListingById(listingId)
+  .then(listing => {
+    if (listing) {
+      const templateVars = { id: req.session.userId , listingInfo: listing}
+      res.render("listing", templateVars)
+    }
+  })
 })
 
 app.get("/login", (req, res) => {

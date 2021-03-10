@@ -96,6 +96,39 @@ const addListing = (listing, seller_id) => {
     })
     .catch(err => console.log("addListing error: " + err));
 }
+const getListingById = (id) => {
+  return db.query(`
+  SELECT * FROM listings
+  WHERE id = $1;
+  `, [id])
+  .then(res => {
+    if (res.rows[0]) {
+      return res.rows[0];
+    } else {
+      return null;
+    }
+  })
+  .catch(err => console.log("getListingByID error: " + err))
+}
+/**Coverts date to SQL format
+ *
+ * @returns SQL formated date
+ */
+ const todayDate = () => {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1;
+  var yyyy = today.getFullYear();
+  if (dd < 10) {
+    dd = '0' + dd;
+  }
 
-module.exports = { login, addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+  if (mm < 10) {
+    mm = '0' + mm;
+  }
+  today = yyyy + '-' + mm + '-' + dd;
+  return today
+}
+
+module.exports = { login, getListingById, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 
