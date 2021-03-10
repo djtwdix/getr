@@ -66,6 +66,7 @@ app.get("/hot", (req, res) => {
   getHotListings()
   .then(listing => {
     listing = charLimit(listing)
+    console.log(listing);
     const templateVars = { id: req.session.userId, listingInfo: listing, title: "Most viewed items..."}
     res.render("listings", templateVars)
   })
