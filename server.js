@@ -65,8 +65,8 @@ app.get("/listings", (req, res) => {
 app.get("/hot-items", (req, res) => {
   getHotListings()
   .then(listing => {
-    const templateVars = { id: req.session.userId, listingInfo: listing}
-    res.render("listings", templateVars);
+    const templateVars = { id: req.session.userId, listingInfo: listing, title: "Most viewed items..."}
+    res.render("listings", templateVars)
   })
 })
 
