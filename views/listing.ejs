@@ -9,38 +9,42 @@
 <body>
   <%- include("partials/_navbar") %>
     <main class="main-container">
-      <div class="listing-page">
-        <div class="listing">
-          <div class="listing-image">
-            <img src="/images/start.jpeg">
+
+
+
+      <div class="listing">
+        <div class="listing-image">
+          <img src="/images/start.jpeg">
+        </div>
+        <div class="listing-right">
+          <div class="listing-info">
+            <div class="listing-mid">
+              <div class="listing-specs">
+                <h1 id="listing-brand">Fender</h1>
+                <h2 id="listing-model">Stratocaster</h2>
+              </div>
+              <p id="listing-price">
+                $829.99
+              </p>
+            </div>
+            <p id="listing-description">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+              Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+              Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+              undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+              (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+              ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+              amet..", comes from a line in section 1.10.32.
+            </p>
           </div>
-          <div class="listing-right">
-            <div class="listing-info">
-              <div class="listing-mid">
-                <div class="listing-specs">
-                  <div class="listing-make">
-                    Fender
-                  </div>
-                  <div class="listing-model">
-                    Stratocastor
-                  </div>
-                </div>
-                <div class="listing-price">
-                  $829.99
-                </div>
-              </div>
-              <div class="listing-description">
-                Selling used fender Stratocastor....
-              </div>
-            </div>
-            <div class="listing-footer">
-              <div>
-                <i class="fas fa-heart"></i>
-              </div>
-              <div>
-                <i class="fas fa-envelope"></i>
-              </div>
-            </div>
+          <div class="listing-footer">
+            <a id="fave-listing" href="">
+              <i class="fas fa-heart"></i>
+            </a>
+            <a id="contact-seller" href="">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
       </div>
