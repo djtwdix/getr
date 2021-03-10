@@ -73,7 +73,11 @@ app.get("/hot", (req, res) => {
 app.get("/recent", (req, res) => {
   getListingsByTime()
   .then(listing => {
+    for (let item of listing) {
+      item.descrip = item.descrip.slice(0,50) + "...";
+    }
     const templateVars = { id: req.session.userId, listingInfo: listing, title: "Recent listings..."}
+
     res.render("listings", templateVars)
   })
   })
