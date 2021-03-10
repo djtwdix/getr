@@ -1,4 +1,4 @@
-const { addUser, getUserWithEmail, login, getHotListings, getListingsByTime } = require("./routes/database");
+const { addUser, getUserWithEmail, login, searchListings, getHotListings, getListingsByTime } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -132,7 +132,11 @@ app.post("/logout", (req, res) => {
 })
 
 app.post("/search", (req, res) => {
-  
+  searchListings(req.body.input)
+  .then(listing => {
+    const templateVars = { id: req.session.userId, listingInfo: listing, title: "Your search results..."}
+    res.render("listings", templateVars)
+  })
 })
 
 app.listen(PORT, () => {
