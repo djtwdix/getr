@@ -1,5 +1,14 @@
 #contact-seller-form {
   display: none;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  max-width: 2000px;
+  // This value should be calc navbar height margin-top
+  margin: 10vh;
+  padding: 3w;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  background-color: $white;
 }
 
 .listing {
@@ -69,12 +78,32 @@
       padding-right: 4rem;
       display: flex;
       justify-content: flex-end;
-      a {
-        margin-right: 5vw;
-        i {
+      filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.3));
+      #fave-listing {
+        border-radius: 20px 0 0 20px;
+      }
+      #contact-seller {
+        border-radius: 0 20px 20px 0;
+      }
+      button {
+        height: 2.5rem;
+        width: 11rem;
+        background: $red;
+        font-weight: bolder;
+        color: $white;
+        font-size: 1rem;
+        border: none;
+        margin: -5px;
+        padding: 0.2rem;
+        stroke: black;
+        outline: none;
+        &:hover{
           cursor: pointer;
-          font-size: 150%;
-          color: $red;
+          filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+        }
+        &:active{
+          filter: none;
+          transform: scale(.95);
         }
       }
     }
@@ -115,16 +144,34 @@
       }
       .listing-footer {
         margin-top: 0.5vh;
-        justify-content: space-evenly;
-        a {
-          margin-right: none;
-          i {
-            cursor: pointer;
-            font-size: 400%;
-            color: $red;
-          }
+        justify-content: center;
+        #fave-listing {
+          border-radius: 60px 0 0 60px;
         }
-      }
+        #contact-seller {
+          border-radius: 0 60px 60px 0;
+        }
+        button {
+          height: 7rem;
+          width: 25rem;
+          background: $red;
+          font-weight: bolder;
+          color: $white;
+          font-size: 2.2rem;
+          border: none;
+          margin-bottom: 2vh;
+          padding: 0.2rem;
+          stroke: black;
+          outline: none;
+          &:hover{
+            cursor: pointer;
+            filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+          }
+          &:active{
+            filter: none;
+            transform: scale(.95);
+          }
+        }      }
     }
   }
 }

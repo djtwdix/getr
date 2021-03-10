@@ -12,7 +12,7 @@
   <%- include("partials/_navbar") %>
     <main class="main-container">
 
-      <form id="contact-seller-form" action="" style="background-color: gray;">
+      <form id="contact-seller-form" action="">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Example textarea</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -48,18 +48,14 @@
               Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
               Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
               Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-              Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-              undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
-              (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
-              ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-              amet..", comes from a line in section 1.10.32.
+              Lorem Ipsum passage
             </p>
           </div>
           <div class="listing-footer">
-            <a id="fave-listing" href="">
+            <button id="fave-listing" href="">Add to Favourites
               <i class="fas fa-heart"></i>
-            </a>
-            <button onclick="contact()" id="contact-seller" href="">
+            </button>
+            <button onclick="contact()" id="contact-seller" href="">Message Seller
               <i class="fas fa-envelope"></i>
             </button>
           </div>

@@ -1,8 +1,10 @@
 function contact() {
-  const x = document.getElementById("contact-seller-form");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  const form = document.getElementById("contact-seller-form");
+  if (form.style.display === "none") {
+    form.style.display = "block";
+    form.scrollIntoView();
+
   } else {
-    x.style.display = "none";
+    form.style.display = "none";
   }
 }
