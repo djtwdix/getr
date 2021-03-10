@@ -1,4 +1,4 @@
-const { addUser, getUserWithEmail, login } = require("./routes/database");
+const { addUser, getUserWithEmail, login, getHotListings } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -64,6 +64,7 @@ app.get("/listings", (req, res) => {
 
 app.get("/hot-items", (req, res) => {
   const templateVars = { id: req.session.userId }
+  getHotListings();
   res.render("listings", templateVars)
 })
 
