@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/* $(document).ready(function() {
   console.log("registration")
   $("#login-form").on("submit", function(event) {
     console.log("submitted")
@@ -15,3 +15,4 @@ $(document).ready(function() {
       .done(data => console.log("done"));
   })
 })
+ */

@@ -53,6 +53,7 @@ app.use("/api/widgets", widgetsRoutes(db)); */
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
+  console.log("landing")
   res.render("landing");
 });
 
@@ -85,12 +86,13 @@ app.post("/register", (req, res) => {
   console.log("userinfo: ", req.body);
   addUser(req.body)
   .then(() => {
-    res.send(200)
+    /* res.send(200) */
+    res.redirect("/")
   })
   .catch(err => console.log("error /register: " + err))
 })
 app.post("/login", (req, res) => {
-  console.log("userinfo: ", req.body);
+  console.log(req.body);
   login(req.body.email, req.body.password)
   .then(user => {
     if (!user) {
@@ -98,7 +100,8 @@ app.post("/login", (req, res) => {
       return;
     }
     req.session.userId = user.id;
-    res.redirect("landing");
+    console.log("post-login")
+    res.redirect("/");
   })
   .catch(e => res.send(e));
 })

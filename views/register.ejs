@@ -17,22 +17,22 @@
         <div class="info">
           <h1 id="register-title">Sign up to Getr</h1>
           <div class="credentials">
-            <form id="register-form">
+            <form id="register-form" method="POST" action="/register">
               <div class="form-group">
-                <input id="reg-first-name" type="text" class="form-control" placeholder="First name" required />
+                <input id="reg-first-name" type="text" name="first_name" class="form-control" placeholder="First name" required />
               </div>
               <div class="form-group">
-                <input id="reg-last-name" type="text" class="form-control" placeholder="Last name" required />
+                <input id="reg-last-name" type="text" name="last_name" class="form-control" placeholder="Last name" required />
               </div>
               <div class="form-group">
-                <input id="reg-email" type="email" class="form-control" placeholder="Email or username" required />
+                <input id="reg-email" type="email" name="email" class="form-control" placeholder="Email or username" required />
               </div>
               <div class="form-group">
-                <input id="reg-password" type="password" class="form-control" placeholder="Password" required />
+                <input id="reg-password" type="password" name="password" class="form-control" placeholder="Password" required />
               </div>
               <div class="form-group" id="photo-upload">
                 <label for="url">Upload a photo from URL</label>
-                <input id="reg-photo" type="url" class="form-control" name="url" id="url" placeholder="http://www.example.com"
+                <input id="reg-photo" name="profile_pic" type="url" class="form-control" name="url" id="url" placeholder="http://www.example.com"
                   pattern="http://.*" size="30" required>
               </div>
 

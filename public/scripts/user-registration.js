@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/* $(document).ready(function() {
   console.log("registration")
   $("#register-form").on("submit", function(event) {
     console.log("submitted")
@@ -15,11 +15,13 @@ $(document).ready(function() {
       password,
       profile_pic
     }
-    /* console.log(userInfo); */
+
 
     $.post("/register", userInfo)
       .done(data => console.log(data, "done"));
 
-    // $.ajax()
+    $.ajax()
   })
 })
+
+ */
