@@ -97,5 +97,5 @@ const addListing = (listing, seller_id) => {
     .catch(err => console.log("addListing error: " + err));
 }
 
-module.exports = { login, addListing, addUser, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 

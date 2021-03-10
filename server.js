@@ -1,4 +1,4 @@
-const { addUser, addListing, getUserWithEmail, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
+const { addUser, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -150,11 +150,10 @@ app.post("/search", (req, res) => {
 })
 
 app.post("/listings/new", (req, res) => {
-  addListing(req.body, req.session.userId)
-  .then(listing => {
-    console.log(listing);
-    res.redirect("/listing/")
-  })
+  /* addListing(req.body, req.session.userId) */
+  console.log(req.body);
+  console.log(req.session.userId);
+  res.redirect("/account")
 })
 
 app.listen(PORT, () => {
