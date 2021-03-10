@@ -771,6 +771,19 @@
   height: 100%;
 }
 
+.listings a {
+  text-decoration: none;
+  color: #105578;
+}
+
+.listings a:visited {
+  color: #105578;
+}
+
+.listings a:hover {
+  color: #dc4d3e;
+}
+
 .listings-item {
   overflow: hidden;
   display: -webkit-box;
