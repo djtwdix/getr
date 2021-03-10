@@ -59,5 +59,20 @@ const getListingsByTime = () => {
     return res.rows;
   })
 }
-module.exports = { login, addUser, getUserWithEmail, getHotListings, getListingsByTime };
+const searchListings = (searchQuery) => {
+  searchQuery = '%' + searchQuery +'%';
+  return db.query(`
+  SELECT * FROM listings
+  WHERE descrip LIKE $1;
+  `, [searchQuery])
+  .then(res => {
+    if (res.rows[0]) {
+      return res.rows;
+    } else {
+      return null;
+    }
+  })
+  .catch(err => console.log("search erroe: " + err))
+}
+module.exports = { login, addUser, getUserWithEmail, getHotListings, getListingsByTime, searchListings };
 
