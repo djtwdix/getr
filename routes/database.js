@@ -77,7 +77,9 @@ const searchListings = (searchQuery) => {
 
 const charLimit = (listingArray) => {
   for (let item of listingArray) {
-    item.descrip = item.descrip.slice(0,50) + "...";
+    if (item.descrip.length > 50) {
+      item.descrip = item.descrip.slice(0,50) + "...";
+    }
   }
   return listingArray;
 }
