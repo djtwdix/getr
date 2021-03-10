@@ -86,10 +86,10 @@ const charLimit = (listingArray) => {
 
 const addListing = (listing, seller_id) => {
 	return db.query(`
-      INSERT INTO listings(seller_id, cost, descrip, brand, model, listing_pic, province, country)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      INSERT INTO listings(seller_id, cost, descrip, brand, model, listing_pic, province, country, listing_date)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
       RETURNING *;
- `, [seller_id, listing.cost, listing.description, listing.brand, listing.model, listing.listing_pic, listing.province,listing.country])
+ `, [seller_id, listing.cost, listing.description, listing.brand, listing.model, listing.listing_pic, listing.province,listing.country, listing.listing_date])
   .then(res => {
       console.log("addListing: " + res.rows);
       return res.rows[0];
@@ -126,7 +126,7 @@ const getListingById = (id) => {
   if (mm < 10) {
     mm = '0' + mm;
   }
-  today = yyyy + '-' + mm + '-' + dd;
+  today = dd + '/' + mm + '/' + yyyy;
   return today
 }
 
