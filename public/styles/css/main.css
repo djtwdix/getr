@@ -352,7 +352,7 @@
   flex-direction: row;
   color: #f5f6f5;
   font-weight: bolder;
-  background-color: #105578;
+  background-color: #21626d;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -483,13 +483,7 @@
 }
 
 .landing .landing-right {
-<<<<<<< HEAD
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-=======
   flex: 1;
->>>>>>> front-end
 }
 
 .landing .landing-right img {
@@ -497,15 +491,7 @@
 }
 
 .landing .landing-left {
-<<<<<<< HEAD
-  -webkit-box-flex: 1.5;
-      -ms-flex: 1.5;
-          flex: 1.5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
   flex: 1.5;
->>>>>>> front-end
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -648,24 +634,12 @@
   height: 176px;
 }
 
-<<<<<<< HEAD
 .listings-mid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
-.listings .listings-mid {
->>>>>>> front-end
   display: flex;
   justify-content: space-between;
 }
 
-<<<<<<< HEAD
 .specs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
-.listings .specs {
->>>>>>> front-end
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1089,10 +1063,6 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-<<<<<<< HEAD
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #dc4d3e), to(#105578));
-=======
->>>>>>> front-end
   background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
   border-radius: 40px 0px 0px 40px;
   color: #f5f6f5;
