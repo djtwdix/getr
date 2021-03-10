@@ -531,7 +531,7 @@
 .landing .landing-left .landing-search #landing-search-bar .input-group .form-control {
   border: none;
   border-radius: 60px 0px 0px 60px;
-  font-size: x-large;
+  font-size: large;
 }
 
 .landing .landing-left .landing-search #landing-search-bar .input-group .btn-primary {
@@ -547,32 +547,19 @@
 }
 
 .landing .landing-left .search-options {
-  margin-top: 10px;
+  margin-top: 1rem;
   display: flex;
-  position: relative;
-  left: 40px;
-  width: 40vw;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .landing .landing-left .search-options a {
+  color: #dc4d3e;
   text-decoration: none;
+  padding: 1rem;
 }
 
-.landing .landing-left .advanced-search {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.landing .landing-left .btn {
-  background-color: #105578;
-  color: #f5f6f5;
-  border-radius: 40px;
-}
-
-.landing .landing-left .btn:hover {
-  color: #f9ba32;
+.landing .landing-left .search-options a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1100px) {
