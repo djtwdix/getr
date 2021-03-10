@@ -53,32 +53,52 @@ app.use("/api/widgets", widgetsRoutes(db)); */
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-  res.render("landing");
+  console.log(req.session.userId);
+  const templateVars = { id: req.session.userId }
+  console.log(templateVars);
+  res.render("landing", templateVars);
 });
 
 app.get("/listings", (req, res) => {
-  res.render("listings")
+  console.log(req.session.userId);
+  const templateVars = { id: req.session.userId }
+  console.log(templateVars);
+  res.render("listings", templateVars)
 })
 
 app.get("/account", (req, res) => {
-  res.render("account")
+  console.log(req.session.userId);
+  const templateVars = { id: req.session.userId }
+  console.log(templateVars);
+  res.render("account", templateVars)
 })
 
 app.get("/new-listing", (req, res) => {
-  res.render("new_listing")
+  console.log(req.session.userId);
+  const templateVars = { id: req.session.userId }
+  console.log(templateVars);
+  res.render("new_listing", templateVars)
 })
 
 app.get("/listings/:listingID", (req, res) => {
-  res.render("listing")
+  console.log(req.session.userId);
+  const templateVars = { id: req.session.userId }
+  console.log(templateVars);
+  res.render("listing", templateVars)
 })
 
 app.get("/login", (req, res) => {
-  res.render("login")
+  console.log(req.session.userId);
+  const templateVars = { id: req.session.userId }
+  console.log(templateVars);
+  res.render("login", templateVars)
 })
 
 app.get("/register", (req, res) => {
-
-  res.render("register")
+  console.log(req.session.userId);
+  const templateVars = { id: req.session.userId }
+  console.log(templateVars);
+  res.render("register", templateVars)
 })
 
 app.post("/register", (req, res) => {
@@ -104,6 +124,13 @@ app.post("/login", (req, res) => {
   })
   .catch(e => res.send(e));
 })
+
+app.post("/logout", (req, res) => {
+  req.session = null;
+  res.redirect("/")
+})
+
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });

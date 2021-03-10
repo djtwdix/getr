@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="my-nav-right">
-    <% if(true) { %>
+    <% if(id) { %>
       <form id="nav-search-bar" action="/listings">
         <div class="input-group mb-3">
           <input type="text" class="form-control" type="search" placeholder="search">
@@ -33,7 +33,9 @@
               <a href="/new-listing">Post Ad</a>
             </li>
             <li id="post-ad-btn">
-              Log Out
+              <form method="POST" action="/logout">
+                <button type="submit" class="btn" style="color: white;font-size: 1.25rem">Log Out</button>
+              </form>
             </li>
         </div>
         </ul>
