@@ -1,21 +1,60 @@
 #contact-seller-form {
-  display: block;
-  padding: 1rem;
+  display: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-family: "Poppins", sans-serif;
   max-width: 50rem;
+  text-align: center;
 
   // This value should be calc navbar height margin-top
-  margin: 5vh;
-  padding: 1rem;
+  margin: auto;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   background-color: #f5f6f5;
   background-image: url("/images/bg-textures/natural-paper.png");
-  border-radius: 40px;
-
-
-  input,
-  textarea {
-    border-radius: 17px;
+  border-radius: 60px;
+  .form-group {
+    label {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      font-size: x-large;
+      font-weight: 500;
+    }
+    textarea {
+      font-size: 110%;
+      padding: 1rem;
+      background-image: url("/images/bg-textures/natural-paper.png");
+    }
+  }
+  #check-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-check {
+      margin: 2rem;
+      font-size: 110%;
+    }
+    button {
+      border-radius: 40px;
+      height: 2.5rem;
+      width: 6rem;
+      background: $red;
+      font-weight: bolder;
+      color: $white;
+      font-size: 1rem;
+      border: none;
+      margin: -5px;
+      padding: 0.2rem;
+      stroke: black;
+      outline: none;
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+      }
+      &:active {
+        filter: none;
+        transform: scale(0.98);
+      }
+    }
   }
 }
 
@@ -105,13 +144,13 @@
         padding: 0.2rem;
         stroke: black;
         outline: none;
-        &:hover{
+        &:hover {
           cursor: pointer;
           filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
         }
-        &:active{
+        &:active {
           filter: none;
-          transform: scale(.98);
+          transform: scale(0.98);
         }
       }
     }
@@ -119,6 +158,30 @@
 }
 
 @media (max-width: $breakpoint) {
+  #contact-seller-form {
+    width: 95%;
+    max-width: none;
+
+    // This value should be calc navbar height margin-top
+    margin: 2vw;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+    background-color: #f5f6f5;
+    background-image: url("/images/bg-textures/natural-paper.png");
+    border-radius: 40px;
+    .form-group {
+      label {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        font-size: 450%;
+        font-weight: 500;
+      }
+      textarea {
+        padding: 1rem;
+        font-size: 200%;
+        background-image: url("/images/bg-textures/natural-paper.png");
+      }
+    }
+  }
   .listing {
     flex-direction: column;
     width: 90vw;
@@ -171,15 +234,16 @@
           padding: 0.2rem;
           stroke: black;
           outline: none;
-          &:hover{
+          &:hover {
             cursor: pointer;
             filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
           }
-          &:active{
+          &:active {
             filter: none;
-            transform: scale(.95);
+            transform: scale(0.95);
           }
-        }      }
+        }
+      }
     }
   }
 }

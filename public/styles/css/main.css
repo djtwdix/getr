@@ -663,21 +663,66 @@
 }
 
 #contact-seller-form {
-  display: block;
-  padding: 1rem;
+  display: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-family: "Poppins", sans-serif;
   max-width: 50rem;
-  margin: 5vh;
-  padding: 1rem;
+  text-align: center;
+  margin: auto;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   background-color: #f5f6f5;
   background-image: url("/images/bg-textures/natural-paper.png");
-  border-radius: 40px;
+  border-radius: 60px;
 }
 
-#contact-seller-form input,
-#contact-seller-form textarea {
-  border-radius: 17px;
+#contact-seller-form .form-group label {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: x-large;
+  font-weight: 500;
+}
+
+#contact-seller-form .form-group textarea {
+  font-size: 110%;
+  padding: 1rem;
+  background-image: url("/images/bg-textures/natural-paper.png");
+}
+
+#contact-seller-form #check-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-seller-form #check-button .form-check {
+  margin: 2rem;
+  font-size: 110%;
+}
+
+#contact-seller-form #check-button button {
+  border-radius: 40px;
+  height: 2.5rem;
+  width: 6rem;
+  background: #dc4d3e;
+  font-weight: bolder;
+  color: #f5f6f5;
+  font-size: 1rem;
+  border: none;
+  margin: -5px;
+  padding: 0.2rem;
+  stroke: black;
+  outline: none;
+}
+
+#contact-seller-form #check-button button:hover {
+  cursor: pointer;
+  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+#contact-seller-form #check-button button:active {
+  filter: none;
+  transform: scale(0.98);
 }
 
 .listing {
@@ -792,6 +837,26 @@
 }
 
 @media (max-width: 1100px) {
+  #contact-seller-form {
+    width: 95%;
+    max-width: none;
+    margin: 2vw;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+    background-color: #f5f6f5;
+    background-image: url("/images/bg-textures/natural-paper.png");
+    border-radius: 40px;
+  }
+  #contact-seller-form .form-group label {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 450%;
+    font-weight: 500;
+  }
+  #contact-seller-form .form-group textarea {
+    padding: 1rem;
+    font-size: 200%;
+    background-image: url("/images/bg-textures/natural-paper.png");
+  }
   .listing {
     flex-direction: column;
     width: 90vw;
