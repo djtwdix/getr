@@ -9,7 +9,7 @@
         "../sass/_landing.scss",
         "../sass/_listings.scss",
         "../sass/_listing.scss",
-        "../sass/_post_ad.scss",
+        "../sass/_new_listing.scss",
         "../sass/_contact-seller.scss",
         "../sass/_account.scss",
         "../sass/404.scss"
