@@ -867,7 +867,7 @@
 
 #dashboard-card {
   display: flex;
-  margin: 10vh;
+  margin: 2vh;
   max-width: 2000px;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
@@ -882,7 +882,7 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  background: linear-gradient(180deg, #105578 5%, #6825d9 100%);
+  background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
   border-radius: 40px 0px 0px 40px;
   color: #f5f6f5;
 }
@@ -914,9 +914,9 @@
 }
 
 #dashboard-card #dashboard-profile .links .link .btn {
-  background-color: rgba(241, 171, 41, 0.89);
+  background-color: #dc4d3e;
   border-radius: 40px;
-  color: #061115;
+  color: #f5f6f5;
 }
 
 #dashboard-card #dashboard-lists {
