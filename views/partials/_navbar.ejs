@@ -19,15 +19,15 @@
       </form>
       <div class="my-account-dropdown">
         <div class="dropdown-button" id="my-account-btn">
-          <a href="/account"><i class="fas fa-user-circle"></i> My Profile</a>
+          <a href="/account/<%=id%>"><i class="fas fa-user-circle"></i> My Profile</a>
         </div>
         <div class="dropdown-list">
           <ul>
             <li>
-              <a href="/account">Favourites</a>
+              <a href="/account/<%=id%>/faves">Favourites</a>
             </li>
             <li>
-              <a href="/account">Listings</a>
+              <a href="/account/<%=id%>/listings">Listings</a>
             </li>
             <li id="post-ad-btn">
               <a href="/listings/new">Post Ad</a>

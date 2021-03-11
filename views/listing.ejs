@@ -13,8 +13,14 @@
     <main class="main-container">
       <div id="contact-seller-form">
         <form action="">
-          <div class="form-group">
+          <div id="title-contact">
             <label for="exampleFormControlTextarea1">Contact Seller</label>
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="form-group">
             <textarea class="form-control" id="contact-message" rows="4" required></textarea>
           </div>
           <div id="check-button">
@@ -31,33 +37,44 @@
 
       <div class="listing">
         <div class="listing-image">
-          <img src="/images/start.jpeg">
+          <img src="/images/guitar-vector.png">
         </div>
         <div class="listing-right">
           <div class="listing-info">
             <div class="listing-mid">
               <div class="listing-specs">
-                <h1 id="listing-brand">Fender</h1>
-                <h2 id="listing-model">Stratocaster</h2>
+                <h1 id="listing-brand">
+                  <%= listingInfo.brand %>
+                </h1>
+                <h2 id="listing-model">
+                  <%= listingInfo.make %>
+                </h2>
               </div>
               <p id="listing-price">
-                $829.99
+                <%= listingInfo.price %>
               </p>
             </div>
             <p id="listing-description">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-              Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-              Lorem Ipsum passage
+              <%= listingInfo.descrip %>
             </p>
           </div>
           <div class="listing-footer">
-            <button id="fave-listing" href="">Add to Favourites
-              <i class="fas fa-heart"></i>
-            </button>
-            <button onclick="contact()" id="contact-seller" href="">Contact Seller
-              <i class="fas fa-envelope"></i>
-            </button>
+
+            <% if (false) { %>
+              <button id="fave-listing" href="">Add to Favourites
+                <i class="fas fa-heart"></i>
+              </button>
+              <!-- onclick="contact()" -->
+              <button id="contact-seller" href="">Contact Seller
+                <i class="fas fa-envelope"></i>
+              </button>
+              <% } else { %>
+                <button id="sold-listing" href="">Mark as Sold
+                  <i class="fas fa-check"></i> </button>
+                <button id="delete-listing" href="">Delete Listing
+                  <i class="fas fa-trash"></i>
+                </button>
+                <% }; %>
           </div>
         </div>
       </div>

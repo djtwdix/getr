@@ -86,10 +86,10 @@ const charLimit = (listingArray) => {
 
 const addListing = (listing, seller_id) => {
 	return db.query(`
-      INSERT INTO listings(seller_id, cost, descrip, brand, model, listing_pic, province, country, listing_date)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+      INSERT INTO listings(seller_id, cost, descrip, brand, model, listing_pic, province, country)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
       RETURNING *;
- `, [seller_id, listing.cost, listing.description, listing.brand, listing.model, listing.listing_pic, listing.province,listing.country, listing.listing_date])
+ `, [seller_id, listing.cost, listing.description, listing.brand, listing.model, listing.listing_pic, listing.province,listing.country])
   .then(res => {
       console.log("addListing: " + res.rows);
       return res.rows[0];
@@ -110,6 +110,112 @@ const getListingById = (id) => {
   })
   .catch(err => console.log("getListingByID error: " + err))
 }
+
+const getUserByID = (userID) => {
+  return db.query(`
+  SELECT * FROM users
+  WHERE users.id = $1;
+  `, [userID])
+    .then(res => {
+      if (res.rows[0]) {
+        return res.rows[0];
+      } else {
+        return null;
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
+const favourite = (req) => {
+  console.log("delete: ", typeof req.isFave);
+  if (req.isFave === 'true') {
+    console.log("delete: ", req);
+    return db.query(`
+  DELETE FROM likes
+  WHERE user_id = $1
+  AND listing_id = $2;
+  `, [req.userId, req.listingId])
+      .catch(err => {
+        console.log(err);
+      });
+  } else {
+    console.log("add: ", req)
+  return db.query(`
+  INSERT INTO likes(user_id, listing_id)
+  VALUES ($1, $2);
+  `, [req.userId, req.listingId])
+    .catch(err => {
+      console.log(err);
+    });
+  }
+}
+
+const getLikesByUser = (userId) => {
+    return db.query(`
+  SELECT * FROM likes
+  WHERE user_id = $1;
+  `, [userId])
+  .then(res => {
+    if (res.rows[0]) {
+      return res.rows;
+    } else {
+      return null;
+    }
+  })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+  const getFaveListings = (userId) => {
+    return db.query(`
+  SELECT listings.*
+  FROM listings
+  JOIN likes ON listing_id = listings.id
+  JOIN users ON users.id = likes.user_id
+  WHERE user_id = $1;
+  `, [userId])
+  .then(res => {
+    if (res.rows[0]) {
+      return res.rows;
+    } else {
+      return null;
+    }
+  })
+      .catch(err => {
+        console.log(err);
+      });
+}
+
+const getMyListings = (userId) => {
+  return db.query(`
+SELECT * FROM listings
+WHERE seller_id = $1;
+`, [userId])
+.then(res => {
+  if (res.rows[0]) {
+    return res.rows;
+  } else {
+    return null;
+  }
+})
+    .catch(err => {
+      console.log(err);
+    });
+}
+
+const deleteListing = (listingId) => {
+  return db.query(`
+  DELETE FROM listings
+  WHERE id = $1;
+  `, [listingId])
+    .catch(err => {
+      console.log(err);
+    });
+}
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -126,9 +232,9 @@ const getListingById = (id) => {
   if (mm < 10) {
     mm = '0' + mm;
   }
-  today = dd + '/' + mm + '/' + yyyy;
+  today = yyyy + '-' + mm + '-' + dd;
   return today
 }
 
-module.exports = { login, getListingById, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, deleteListing,favourite, getMyListings, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 

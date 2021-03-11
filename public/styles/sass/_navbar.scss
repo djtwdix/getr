@@ -59,6 +59,7 @@
       }
     }
     #login-signup {
+      font-family: $secondary;
       .btn {
         font-weight: bolder;
         border: none;
@@ -71,6 +72,7 @@
       overflow: hidden;
       width: 15rem;
       cursor: pointer;
+      font-family: $secondary;
     }
   }
 }
@@ -81,8 +83,8 @@
   font-weight: lighter;
   background: $blue;
   z-index: 1;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .dropdown-list {
