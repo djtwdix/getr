@@ -216,6 +216,27 @@ const deleteListing = (listingId) => {
     });
 }
 
+const markSold = (listingId, isSold) => {
+  if (isSold === 'true') {
+    return db.query(`UPDATE listings
+  SET is_active = TRUE
+  WHERE id = $1;
+  `, [listingId])
+    .catch(err => {
+      console.log(err);
+    });
+  } else {
+  return db.query(`
+  UPDATE listings
+  SET is_active = FALSE
+  WHERE id = $1;
+  `, [listingId])
+    .catch(err => {
+      console.log(err);
+    });
+  }
+}
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -236,5 +257,5 @@ const deleteListing = (listingId) => {
   return today
 }
 
-module.exports = { login, deleteListing,favourite, getMyListings, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, markSold, deleteListing,favourite, getMyListings, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 
