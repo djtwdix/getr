@@ -1,9 +1,39 @@
 .listings-title {
+  display: flex;
+  justify-content: space-between;
   font-size: 40px;
   font-weight: 700;
   margin-left: 2rem;
   margin-bottom: 1rem;
   color: $red;
+  #filter-form {
+    margin-left: 5rem;
+    button {
+      border-radius: 40px;
+      height: 2.5rem;
+      width: 8rem;
+      background: $red;
+      font-weight: bolder;
+      color: $white;
+      font-size: 1rem;
+      border: none;
+      margin: -5px;
+      padding: 0.2rem;
+      stroke: black;
+      outline: none;
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+      }
+      &:active {
+        filter: none;
+        transform: scale(0.98);
+      }
+    }
+    #search-result {
+      display: none;
+    }
+  }
 }
 
 .listings {
@@ -19,7 +49,6 @@
   a {
     text-decoration: none;
     color: $blue;
-
   }
   a:visited {
     color: $blue;
@@ -107,10 +136,3 @@
   opacity: 90%;
   color: lightgray;
 }
-
-
-
-
-
-
-

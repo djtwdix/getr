@@ -1,68 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <%- include("partials/_head")  %>
-  <script src="/scripts/favourite.js"></script>
-  <title>GETr</title>
+
+<head>
+  <%- include("partials/_head") %>
+    <script src="/scripts/favourite.js"></script>
+    <title>GETr</title>
 
 </head>
 
 <body>
-  <%- include("partials/_navbar")  %>
-  <main class="main-container">
-    <div class="listings-page">
-      <div class="listings-title">
-        <%= title %>
-      </div>
-      <div class="listings">
+  <%- include("partials/_navbar") %>
+    <main class="main-container">
+      <div class="listings-page">
+        <div class="listings-title">
+          <%= title %>
+            <form id="filter-form">
 
-        <% if (listingInfo) { %>
-          <% for (let listing in listingInfo) { %>
-            <a href="/listings/<%=listingInfo[listing].id%>">
-              <div class="listings-item">
-                <div class="listings-image">
-                  <img id="no-image-vector" src="/images/guitar-vector.png">
-                </div>
-                <div class="listings-info">
-                  <div class="listings-mid">
-                    <div class="specs">
-                      <div class="listings-make">
-                        <%= listingInfo[listing].brand %>
-                      </div>
-                      <div class="listings-model">
-                        <%= listingInfo[listing].model %>
-                      </div>
-                     </div>
-                     <div class="listings-price">
-                      <%= listingInfo[listing].cost %>
-                     </div>
+              <input type="text" class="form-control" id="search-result" aria-describedby="filterResults">
+
+              <div class="btn-group">
+                <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Filter <i class="fas fa-filter"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Price (min - max)</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Price (max - min)</a></li>
+                </ul>
+              </div>
+            </form>
+
+        </div>
+        <div class="listings">
+          <% if (listingInfo) { %>
+            <% for (let listing in listingInfo) { %>
+              <a href="/listings/<%=listingInfo[listing].id%>">
+                <div class="listings-item">
+                  <div class="listings-image">
+                    <img id="no-image-vector" src="/images/guitar-vector.png">
                   </div>
-                   <div class="listings-description">
+                  <div class="listings-info">
+                    <div class="listings-mid">
+                      <div class="specs">
+                        <div class="listings-make">
+                          <%= listingInfo[listing].brand %>
+                        </div>
+                        <div class="listings-model">
+                          <%= listingInfo[listing].model %>
+                        </div>
+                      </div>
+                      <div class="listings-price">
+                        <%= listingInfo[listing].cost %>
+                      </div>
+                    </div>
+                    <div class="listings-description">
                       <%= listingInfo[listing].descrip %>
-                   </div>
-                 </div>
-            </a>
-               <div class="listings-footer">
-                 <div>
-                   <% if (favourites.includes(listingInfo[listing].id)) { %>
-                     <i class="fas fa-heart favourite-icon red">
+                    </div>
+                  </div>
+              </a>
+              <div class="listings-footer">
+                <div>
+                  <% if (favourites.includes(listingInfo[listing].id)) { %>
+                    <i class="fas fa-heart favourite-icon red">
 
-                   <% } else { %>
-                    <i class="fas fa-heart favourite-icon">
-                  <% } %>
-                    <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
-                <div class="fave-user-id" style="display:none"><%= id %> </div>
-                  </i>
-                 </div>
-                 <div>
-                   <i class="fas fa-envelope"></i>
-                 </div>
-               </div>
-          </div>
-          <% } %>
+                      <% } else { %>
+                        <i class="fas fa-heart favourite-icon">
+                          <% } %>
+                            <div class="fave-item-id" style="display:none">
+                              <%= listingInfo[listing].id %>
+                            </div>
+                            <div class="fave-user-id" style="display:none">
+                              <%= id %>
+                            </div>
+                        </i>
+                </div>
+                <div>
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
+        </div>
         <% } %>
+          <% } %>
       </div>
-  </main>
+    </main>
 
-  </body>
+</body>
+
 </html>
