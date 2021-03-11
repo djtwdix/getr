@@ -59,13 +59,22 @@
             </p>
           </div>
           <div class="listing-footer">
-            <button id="fave-listing" href="">Add to Favourites
-              <i class="fas fa-heart"></i>
-            </button>
-            <!-- onclick="contact()" -->
-            <button id="contact-seller" href="">Contact Seller
-              <i class="fas fa-envelope"></i>
-            </button>
+
+            <% if (false) { %>
+              <button id="fave-listing" href="">Add to Favourites
+                <i class="fas fa-heart"></i>
+              </button>
+              <!-- onclick="contact()" -->
+              <button id="contact-seller" href="">Contact Seller
+                <i class="fas fa-envelope"></i>
+              </button>
+              <% } else { %>
+                <button id="sold-listing" href="">Mark as Sold
+                  <i class="fas fa-check"></i> </button>
+                <button id="delete-listing" href="">Delete Listing
+                  <i class="fas fa-trash"></i>
+                </button>
+                <% }; %>
           </div>
         </div>
       </div>
