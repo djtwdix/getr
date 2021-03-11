@@ -3,19 +3,18 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* background: radial-gradient($blue, $dark-blue); */
+  align-items: flex-start;
 }
 
 #login-background #login-card {
   height: 80vh;
-  max-height: 800px;
-  width: 80%;
-  max-width: 25rem;
+  max-height: 50rem;
+  width: 80vw;
+  max-width: 70rem;
   border-radius: 30px;
-  padding: 5rem;
+  padding: 3rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -24,15 +23,13 @@
 }
 
 #login-background #login-card .logo {
-  margin-top: 2rem;
-  display: flex;
+  margin-left: 1rem;
   flex: 1;
-  align-items: center;
-  justify-content: center;
 }
 
 #login-background #login-card .logo #getr-logo {
-  width: 80%;
+  width: 95%;
+  filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
 }
 
 #login-background #login-card .info {
@@ -41,7 +38,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5vh;
 }
 
 #login-background #login-card .info #login-title {
@@ -65,7 +61,6 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
 }
 
 #login-background #login-card .info .credentials #login-form .login {
@@ -75,15 +70,28 @@
 }
 
 #login-background #login-card .info .credentials #login-form .login button {
+  border-radius: 40px;
+  height: 2.5rem;
   width: 100%;
-  padding: 0.7rem 0rem;
-  background-color: #dc4d3e;
-  border: none;
-  font-weight: bold;
-  color: #f5f6f5;
-  cursor: pointer;
-  border-radius: 30px;
+  background: #dc4d3e;
   font-weight: bolder;
+  color: #f5f6f5;
+  font-size: 1rem;
+  border: none;
+  margin: -5px;
+  padding: 0.2rem;
+  stroke: black;
+  outline: none;
+}
+
+#login-background #login-card .info .credentials #login-form .login button:hover {
+  cursor: pointer;
+  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+#login-background #login-card .info .credentials #login-form .login button:active {
+  filter: none;
+  transform: scale(0.98);
 }
 
 #login-background #login-card .info .credentials #login-form .loginSignUpSeparator {
@@ -108,45 +116,82 @@
 }
 
 #login-background #login-card .info .credentials .signup button {
+  border-radius: 40px;
+  height: 2.5rem;
   width: 100%;
-  padding: 0.7rem 0rem;
-  background-color: #b7babb;
-  border: none;
-  font-weight: bold;
-  color: #343a35;
-  cursor: pointer;
-  border-radius: 30px;
+  background: #105578;
   font-weight: bolder;
+  color: #f5f6f5;
+  font-size: 1rem;
+  border: none;
+  margin: -5px;
+  padding: 0.2rem;
+  stroke: black;
+  outline: none;
+}
+
+#login-background #login-card .info .credentials .signup button:hover {
+  cursor: pointer;
+  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+#login-background #login-card .info .credentials .signup button:active {
+  filter: none;
+  transform: scale(0.98);
 }
 
 @media (max-width: 1100px) {
   #login-background #login-card {
+    flex-direction: column;
     width: 90vw;
+    height: 90vh;
+    max-height: 90rem;
     padding: 1rem;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
     background-color: #f5f6f5;
   }
   #login-background #login-card .logo {
-    margin-top: 3rem;
-  }
-}
-
-@media (max-width: 370px) {
-  #login-background #login-card {
-    width: 90vw;
-    padding: 1rem;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-    background-color: #f5f6f5;
-  }
-  #login-background #login-card .logo {
-    margin-top: 1rem;
+    flex: 0.5;
+    margin-left: none;
   }
   #login-background #login-card #getr-logo {
-    transform: scale(0.5);
+    transform: scale(0.8);
+  }
+  #login-background .info {
+    align-items: flex-start;
+  }
+  #login-background .info #login-title {
+    font-size: 7rem;
+  }
+  #login-background .info .credentials {
+    font-size: 300%;
   }
   #login-background .info .credentials #login-form input {
     padding: 0.3rem;
     margin-bottom: 1rem;
+    border-radius: 100%;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  #login-background .info .credentials #login-form .login button {
+    border-radius: 60px;
+    height: 5rem;
+    width: 100%;
+    background: #dc4d3e;
+    font-weight: bolder;
+    color: #f5f6f5;
+    font-size: 300%;
+    border: none;
+    margin: -5px;
+    padding: 0.2rem;
+    stroke: black;
+    outline: none;
+  }
+  #login-background .info .credentials #login-form .login button:hover {
+    cursor: pointer;
+    filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+  }
+  #login-background .info .credentials #login-form .login button:active {
+    filter: none;
+    transform: scale(0.98);
   }
   #login-background .info .credentials #login-form .loginSignUpSeparator {
     margin-top: 1rem;
@@ -156,55 +201,38 @@
   }
 }
 
-@media (max-height: 500px) {
-  #login-background #login-card {
-    height: 90vh;
-  }
-}
-
 #register-background {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* background: radial-gradient($blue, $dark-blue); */
+  align-items: flex-start;
 }
 
 #register-background #register-card {
-  height: 90vh;
-  max-height: 900px;
-  width: 80%;
-  max-width: 25rem;
+  height: 80vh;
+  max-height: 50rem;
+  width: 80vw;
+  max-width: 70rem;
   border-radius: 30px;
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
   background-color: #f5f6f5;
+  background-image: url("/images/bg-textures/natural-paper.png");
 }
 
 #register-background #register-card .logo {
-  margin-top: 2rem;
-  display: flex;
+  margin-left: 1rem;
   flex: 1;
-  align-items: center;
-  justify-content: center;
-}
-
-#register-background #register-card .logo .circle {
-  width: 9rem;
-  height: 9rem;
-  background: linear-gradient(to right, #f9ba32, #dc4d3e);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
 }
 
 #register-background #register-card .logo #getr-logo {
-  z-index: 2;
+  width: 95%;
+  filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
 }
 
 #register-background #register-card .info {
@@ -213,7 +241,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5vh;
 }
 
 #register-background #register-card .info #register-title {
@@ -230,6 +257,11 @@
   flex-direction: column;
 }
 
+#register-background #register-card .info .credentials #register-form label {
+  margin-bottom: 1rem;
+  font-family: "Martel", serif;
+}
+
 #register-background #register-card .info .credentials #register-form input {
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
@@ -237,25 +269,31 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-}
-
-#register-background #register-card .info .credentials #register-form .register {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #register-background #register-card .info .credentials #register-form button {
+  border-radius: 40px;
+  height: 3rem;
   width: 100%;
-  padding: 0.7rem 0rem;
-  background-color: #ad0f00;
-  border: none;
-  font-weight: bold;
-  color: #f5f6f5;
-  cursor: pointer;
-  border-radius: 30px;
+  background: #dc4d3e;
   font-weight: bolder;
+  color: #f5f6f5;
+  font-size: 1rem;
+  border: none;
+  margin: -5px;
+  padding: 0.2rem;
+  stroke: black;
+  outline: none;
+}
+
+#register-background #register-card .info .credentials #register-form button:hover {
+  cursor: pointer;
+  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+#register-background #register-card .info .credentials #register-form button:active {
+  filter: none;
+  transform: scale(0.98);
 }
 
 #register-background #register-card .info .credentials #photo-upload {
@@ -272,6 +310,7 @@
 
 @media (max-width: 780px) {
   #register-background #register-card {
+    flex-direction: column;
     width: 90vw;
     padding: 1rem;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -288,6 +327,7 @@
 
 @media (max-width: 1100px) {
   #register-background #register-card {
+    flex-direction: row;
     width: 90vw;
     padding: 1rem;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -304,6 +344,7 @@
 
 @media (max-width: 500px) {
   #register-background #register-card {
+    flex-direction: column;
     width: 90vw;
     padding: 1rem;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
