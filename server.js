@@ -69,7 +69,9 @@ app.get("/hot", (req, res) => {
     .then(likes => {
       console.log(likes);
       console.log(listing);
-      listing = charLimit(listing)
+      if (listing) {
+        listing = charLimit(listing)
+      }
       const faves = []
       if (likes) {
         for (let likeInfo of likes) {
@@ -90,7 +92,9 @@ app.get("/recent", (req, res) => {
     .then(likes => {
       console.log(likes);
       console.log(listing);
-      listing = charLimit(listing)
+      if (listing) {
+        listing = charLimit(listing)
+      }
       const faves = []
       if (likes) {
         for (let likeInfo of likes) {
@@ -118,11 +122,22 @@ app.get("/account/:userId/faves", (req, res) => {
   .then(user => {
     getFaveListings(req.session.userId)
     .then(faves => {
-      console.log(faves);
-      faves = charLimit(faves)
-      const templateVars = { id: req.session.userId, userInfo: user, listingInfo: faves}
+      if (faves) {
+        faves = charLimit(faves)
+      }
+      console.log("faves:", faves)
+      getLikesByUser(req.session.userId)
+    .then(likes => {
+      const userFaves = []
+      if (likes) {
+        for (let likeInfo of likes) {
+          userFaves.push(likeInfo.listing_id);
+        }
+      }
+      console.log("favesArray ", userFaves);
+      const templateVars = { id: req.session.userId, userInfo: user, listingInfo: faves, favourites: userFaves, title: "Recent listings..."}
       res.render("my_faves", templateVars)
-
+    })
     })
   })
 })
@@ -132,10 +147,12 @@ app.get("/account/:userId/listings", (req, res) => {
   .then(user => {
     getMyListings(req.session.userId)
     .then(listings => {
-      listings = charLimit(listings)
+      if (listings) {
+        listings = charLimit(listings)
+      }
       console.log("user listings: ", listings);
       const templateVars = { id: req.session.userId, userInfo: user, listingInfo: listings}
-      res.render("my_faves", templateVars)
+      res.render("my_listings", templateVars)
     })
   })
 })
@@ -202,7 +219,9 @@ app.post("/search", (req, res) => {
     .then(likes => {
       console.log(likes);
       console.log(listing);
-      listing = charLimit(listing)
+      if (listing) {
+        listing = charLimit(listing)
+      }
       const faves = []
       if (likes) {
         for (let likeInfo of likes) {
