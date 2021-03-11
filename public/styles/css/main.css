@@ -4,18 +4,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* background: radial-gradient($blue, $dark-blue); */
-=======
-  justify-content: center;
-  align-items: flex-start;
->>>>>>> front-end
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #login-background #login-card {
@@ -24,15 +18,14 @@
   width: 80vw;
   max-width: 70rem;
   border-radius: 30px;
-<<<<<<< HEAD
-  padding: 5rem;
+  padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -41,52 +34,21 @@
           align-items: center;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-=======
-  padding: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
->>>>>>> front-end
   background-color: #f5f6f5;
   background-image: url("/images/bg-textures/natural-paper.png");
 }
 
 #login-background #login-card .logo {
-<<<<<<< HEAD
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-left: 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#login-background #login-card .logo .circle {
-  width: 10rem;
-  height: 10rem;
-  background: -webkit-gradient(linear, left top, right top, from(#dc4d3e), to(#f9ba32));
-  background: linear-gradient(to right, #dc4d3e, #f9ba32);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-=======
-  margin-left: 1rem;
-  flex: 1;
->>>>>>> front-end
 }
 
 #login-background #login-card .logo #getr-logo {
   width: 95%;
-  filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
 }
 
 #login-background #login-card .info {
@@ -96,7 +58,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -107,12 +68,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 5vh;
-=======
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
->>>>>>> front-end
 }
 
 #login-background #login-card .info #login-title {
@@ -177,12 +132,15 @@
 
 #login-background #login-card .info .credentials #login-form .login button:hover {
   cursor: pointer;
-  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
 #login-background #login-card .info .credentials #login-form .login button:active {
-  filter: none;
-  transform: scale(0.98);
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 #login-background #login-card .info .credentials #login-form .loginSignUpSeparator {
@@ -223,71 +181,56 @@
 
 #login-background #login-card .info .credentials .signup button:hover {
   cursor: pointer;
-  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
 #login-background #login-card .info .credentials .signup button:active {
-  filter: none;
-  transform: scale(0.98);
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 @media (max-width: 1100px) {
   #login-background #login-card {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 90vw;
     height: 90vh;
     max-height: 90rem;
     padding: 1rem;
-<<<<<<< HEAD
-    -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-=======
->>>>>>> front-end
     background-color: #f5f6f5;
   }
   #login-background #login-card .logo {
-    flex: 0.5;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
     margin-left: none;
   }
   #login-background #login-card #getr-logo {
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
-<<<<<<< HEAD
-}
-
-@media (max-width: 370px) {
-  #login-background #login-card {
-    width: 90vw;
-    padding: 1rem;
-    -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-    background-color: #f5f6f5;
-=======
   #login-background .info {
-    align-items: flex-start;
->>>>>>> front-end
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   #login-background .info #login-title {
     font-size: 7rem;
   }
-<<<<<<< HEAD
-  #login-background #login-card .logo .circle {
-    width: 80px;
-    height: 80px;
-  }
-  #login-background #login-card .logo #getr-logo {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-=======
   #login-background .info .credentials {
     font-size: 300%;
->>>>>>> front-end
   }
   #login-background .info .credentials #login-form input {
     padding: 0.3rem;
     margin-bottom: 1rem;
     border-radius: 100%;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
   #login-background .info .credentials #login-form .login button {
     border-radius: 60px;
@@ -305,11 +248,14 @@
   }
   #login-background .info .credentials #login-form .login button:hover {
     cursor: pointer;
-    filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
   }
   #login-background .info .credentials #login-form .login button:active {
-    filter: none;
-    transform: scale(0.98);
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
   }
   #login-background .info .credentials #login-form .loginSignUpSeparator {
     margin-top: 1rem;
@@ -321,24 +267,16 @@
 
 #register-background {
   width: 100%;
-<<<<<<< HEAD
-  height: 120vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* background: radial-gradient($blue, $dark-blue); */
-=======
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
->>>>>>> front-end
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #register-background #register-card {
@@ -347,15 +285,14 @@
   width: 80vw;
   max-width: 70rem;
   border-radius: 30px;
-<<<<<<< HEAD
-  padding: 2rem;
+  padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -364,52 +301,21 @@
           align-items: center;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-=======
-  padding: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
->>>>>>> front-end
   background-color: #f5f6f5;
   background-image: url("/images/bg-textures/natural-paper.png");
 }
 
 #register-background #register-card .logo {
-<<<<<<< HEAD
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-left: 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#register-background #register-card .logo .circle {
-  width: 9rem;
-  height: 9rem;
-  background: -webkit-gradient(linear, left top, right top, from(#f9ba32), to(#dc4d3e));
-  background: linear-gradient(to right, #f9ba32, #dc4d3e);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-=======
-  margin-left: 1rem;
-  flex: 1;
->>>>>>> front-end
 }
 
 #register-background #register-card .logo #getr-logo {
   width: 95%;
-  filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.25));
 }
 
 #register-background #register-card .info {
@@ -419,7 +325,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -430,12 +335,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 5vh;
-=======
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
->>>>>>> front-end
 }
 
 #register-background #register-card .info #register-title {
@@ -474,22 +373,6 @@
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
-<<<<<<< HEAD
-  border-radius: 30px;
-}
-
-#register-background #register-card .info .credentials #register-form .register {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-=======
->>>>>>> front-end
 }
 
 #register-background #register-card .info .credentials #register-form button {
@@ -509,12 +392,15 @@
 
 #register-background #register-card .info .credentials #register-form button:hover {
   cursor: pointer;
-  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
 #register-background #register-card .info .credentials #register-form button:active {
-  filter: none;
-  transform: scale(0.98);
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 #register-background #register-card .info .credentials #photo-upload {
@@ -540,7 +426,10 @@
 
 @media (max-width: 780px) {
   #register-background #register-card {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 90vw;
     padding: 1rem;
     -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -558,7 +447,10 @@
 
 @media (max-width: 1100px) {
   #register-background #register-card {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 90vw;
     padding: 1rem;
     -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -576,7 +468,10 @@
 
 @media (max-width: 500px) {
   #register-background #register-card {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 90vw;
     padding: 1rem;
     -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -780,13 +675,9 @@
 }
 
 .landing .landing-right {
-<<<<<<< HEAD
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-=======
-  flex: 1;
->>>>>>> front-end
 }
 
 .landing .landing-right img {
@@ -794,15 +685,11 @@
 }
 
 .landing .landing-left {
-<<<<<<< HEAD
   -webkit-box-flex: 1.5;
       -ms-flex: 1.5;
           flex: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-  flex: 1.5;
->>>>>>> front-end
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -995,11 +882,8 @@
 }
 
 .listings-mid {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> front-end
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1007,11 +891,8 @@
 }
 
 .specs {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> front-end
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1529,10 +1410,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
-<<<<<<< HEAD
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #dc4d3e), to(#105578));
-=======
->>>>>>> front-end
   background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
   border-radius: 40px 0px 0px 40px;
   color: #f5f6f5;
