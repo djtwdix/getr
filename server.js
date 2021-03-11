@@ -109,11 +109,15 @@ app.get("/recent", (req, res) => {
   })
 
 app.get("/account/:userId", (req, res) => {
-  getUserByID(req.session.userId)
-  .then(user => {
-    const templateVars = { id: req.session.userId, userInfo: user }
-    res.render("account", templateVars)
-  })
+  if (req.params.userId === req.session.userId) {
+    getUserByID(req.session.userId)
+    .then(user => {
+      const templateVars = { id: req.session.userId, userInfo: user }
+      res.render("account", templateVars)
+    })
+  } else {
+    res.redirect("/")
+  }
 })
 
 
