@@ -1,4 +1,4 @@
-const { addUser, getLikesByUser, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
+const { addUser, getLikesByUser, getFaveListings, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -116,8 +116,13 @@ app.get("/account/:userId", (req, res) => {
 app.get("/account/:userId/faves", (req, res) => {
   getUserByID(req.session.userId)
   .then(user => {
-    const templateVars = { id: req.session.userId, userInfo: user }
-    res.render("account", templateVars)
+    getFaveListings(req.session.userId)
+    .then(faves => {
+      console.log(faves);
+      const templateVars = { id: req.session.userId, userInfo: user, listingInfo: faves}
+      res.render("my_faves", templateVars)
+
+    })
   })
 })
 

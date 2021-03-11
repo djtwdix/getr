@@ -169,6 +169,26 @@ const getLikesByUser = (userId) => {
       });
   }
 
+  const getFaveListings = (userId) => {
+    return db.query(`
+  SELECT listings.*
+  FROM listings
+  JOIN likes ON listing_id = listings.id
+  JOIN users ON users.id = likes.user_id
+  WHERE user_id = $1;
+  `, [userId])
+  .then(res => {
+    if (res.rows[0]) {
+      return res.rows;
+    } else {
+      return null;
+    }
+  })
+      .catch(err => {
+        console.log(err);
+      });
+}
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -189,5 +209,5 @@ const getLikesByUser = (userId) => {
   return today
 }
 
-module.exports = { login, favourite, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, favourite, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 

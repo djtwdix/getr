@@ -1392,6 +1392,19 @@
   font-family: "Poppins", sans-serif;
 }
 
+#dashboard-card a {
+  text-decoration: none;
+  color: #105578;
+}
+
+#dashboard-card a:visited {
+  color: #105578;
+}
+
+#dashboard-card a:hover {
+  color: #dc4d3e;
+}
+
 #dashboard-card #dashboard-profile {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1406,9 +1419,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #dc4d3e), to(#105578));
   background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
@@ -1480,6 +1493,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 1rem;
 }
 
