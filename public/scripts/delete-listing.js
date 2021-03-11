@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".fa-trash-alt").on("click", function(){
+  $(".delete-my-listing").on("click", function(){
     console.log("clicked");
 
     const listingId = $(this).find(".fave-item-id").text();

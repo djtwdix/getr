@@ -6,6 +6,7 @@
     <title>Getr - My Account</title>
     <script src="/scripts/favourite.js"></script>
     <script src="/scripts/delete-listing.js"></script>
+    <script src="/scripts/mark-as-sold.js"></script>
 </head>
 
 <body>
@@ -56,17 +57,24 @@
                          </div>
                        </div>
                   </a>
-                     <div class="listings-footer">
+                     <div class="listings-footer sold-delete">
                        <div>
-                          <i class="fas fa-check-square"></i>
+                        <button class="btn mark-as-sold">
+                          <% if (listingInfo[listing].is_active) { %>
+                            Mark as Sold
+                          <% } else { %>
+                            Sold
+                         <% } %>
                           <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
+                        </button>
                       <div class="fave-user-id" style="display:none"><%= id %> </div>
                         </i>
                        </div>
                        <div>
-                        <i class="fas fa-trash-alt">
+                        <button class="btn delete-my-listing" href="">Delete Listing
                           <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id%> </div>
                         <div class="fave-user-id" style="display:none"><%= id%> </div>
+                        </button>
                         </i>
                        </div>
                      </div>
