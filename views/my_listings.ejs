@@ -13,35 +13,66 @@
         <div class="container-l" id="dashboard-profile">
           <div class="user-profile">
             <img src="./images/user.jpg" alt="user">
-            <h3>Yam</h3>
+            <h3><%=userInfo.first_name%></h3>
           </div>
           <div class="links container-l">
             <div class="link">
-              <button type="button" class="btn" id="dashboard-fav">Favourites <i class="fas fa-heart"></i></button>
+              <button type="button" class="btn" id="dashboard-fav"><a href="/account/<%=id%>/faves">Favourites </a><i class="fas fa-heart"></i></button>
             </div>
             <div class="link" id="dashboard-listings">
-              <button type="button" class="btn" id="dashboard-fav">Listings <i class="fas fa-stream"></i></button>
+              <button type="button" class="btn" id="dashboard-fav"><a href="/account/<%=id%>/listings">Lisitings </a> <i class="fas fa-stream"></i></button>
             </div>
             <div class="link" id="dashboard-messages">
-              <button type="button" class="btn" id="dashboard-fav">Messages <i class="fas fa-comment"></i>
+              <button type="button" class="btn" id="dashboard-fav" style="display:none">Messages <i class="fas fa-comment"></i>
             </div>
           </div>
         </div>
         <div class="container-l" id="dashboard-lists">
-          <% if (true) { %>
-            <div id="message-for-empty">
-              <h2>There is nothing here for now</h2>
-              <h3>What are you waiting for <i class="fas fa-guitar"></i></h3>
-            </div>
-
-            <% } else { %>
-
-              <p>some listings</p>
-              <p>some listings</p>
-              <p>some listings</p>
-              <p>some listings</p>
-
-              <% }; %>
+              <% if (listingInfo) { %>
+                <% for (let listing in listingInfo) { %>
+                  <a href="/listings/<%=listingInfo[listing].id%>">
+                    <div class="listings-item">
+                      <div class="listings-image">
+                        <img id="no-image-vector" src="/images/guitar-vector.png">
+                      </div>
+                      <div class="listings-info">
+                        <div class="listings-mid">
+                          <div class="specs">
+                            <div class="listings-make">
+                              <%= listingInfo[listing].brand %>
+                            </div>
+                            <div class="listings-model">
+                              <%= listingInfo[listing].model %>
+                            </div>
+                           </div>
+                           <div class="listings-price">
+                            <%= listingInfo[listing].cost %>
+                           </div>
+                        </div>
+                         <div class="listings-description">
+                            <%= listingInfo[listing].descrip %>
+                         </div>
+                       </div>
+                  </a>
+                     <div class="listings-footer">
+                       <div>
+                           <i class="fas fa-heart favourite-icon red"></i>
+                          <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
+                      <div class="fave-user-id" style="display:none"><%= id %> </div>
+                        </i>
+                       </div>
+                       <div>
+                         <i class="fas fa-envelope"></i>
+                       </div>
+                     </div>
+                </div>
+                <% } %>
+              <% } else { %>
+                  <div id="message-for-empty">
+                    <h2>There is nothing here for now</h2>
+                    <h3>What are you waiting for <i class="fas fa-guitar"></i></h3>
+                  </div>
+              <%  } %>
         </div>
       </div>
     </main>
