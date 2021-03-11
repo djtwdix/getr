@@ -732,12 +732,38 @@
   border-radius: 60px;
 }
 
-#contact-seller-form label {
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+#contact-seller-form #title-contact {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#contact-seller-form #title-contact label {
+  flex: 1;
+  margin: 1rem;
   font-size: x-large;
   font-weight: 500;
   opacity: 80%;
+}
+
+#contact-seller-form #title-contact .close {
+  transition: all 0.75 ease-out;
+  position: absolute;
+  height: auto;
+  width: auto;
+  padding-right: 2.5rem;
+  background: none;
+  font-weight: normal;
+  color: #061115;
+  font-size: 2rem;
+  border: none;
+  stroke: black;
+  outline: none;
+  opacity: 0.45;
+}
+
+#contact-seller-form #title-contact .close:hover {
+  color: #dc4d3e;
+  opacity: 1;
 }
 
 #contact-seller-form .form-group textarea {

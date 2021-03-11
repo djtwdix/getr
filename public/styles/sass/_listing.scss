@@ -12,12 +12,36 @@
   background-color: #f5f6f5;
   background-image: url("/images/bg-textures/natural-paper.png");
   border-radius: 60px;
-  label {
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    font-size: x-large;
-    font-weight: 500;
-    opacity: 80%;
+  #title-contact {
+    display: flex;
+    justify-content: flex-end;
+    label {
+      flex: 1;
+      margin: 1rem;
+
+      font-size: x-large;
+      font-weight: 500;
+      opacity: 80%;
+    }
+    .close {
+      transition: all 0.75 ease-out;
+      position: absolute;
+      height: auto;
+      width: auto;
+      padding-right: 2.5rem;
+      background: none;
+      font-weight:normal;
+      color: $dark-blue;
+      font-size: 2rem;
+      border: none;
+      stroke: black;
+      outline: none;
+      opacity: 0.45;
+      &:hover {
+        color: $red;
+        opacity: 1;
+      }
+    }
   }
   .form-group {
     textarea {
@@ -33,7 +57,7 @@
     .form-check {
       margin: 2rem;
       font-size: 110%;
-      label{
+      label {
         opacity: 80%;
       }
     }
