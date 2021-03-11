@@ -605,11 +605,46 @@
 }
 
 .listings-title {
+  display: flex;
+  justify-content: space-between;
   font-size: 40px;
   font-weight: 700;
   margin-left: 2rem;
   margin-bottom: 1rem;
   color: #dc4d3e;
+}
+
+.listings-title #filter-form {
+  margin-left: 5rem;
+}
+
+.listings-title #filter-form button {
+  border-radius: 40px;
+  height: 2.5rem;
+  width: 8rem;
+  background: #dc4d3e;
+  font-weight: bolder;
+  color: #f5f6f5;
+  font-size: 1rem;
+  border: none;
+  margin: -5px;
+  padding: 0.2rem;
+  stroke: black;
+  outline: none;
+}
+
+.listings-title #filter-form button:hover {
+  cursor: pointer;
+  filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+.listings-title #filter-form button:active {
+  filter: none;
+  transform: scale(0.98);
+}
+
+.listings-title #filter-form #search-result {
+  display: none;
 }
 
 .listings {
