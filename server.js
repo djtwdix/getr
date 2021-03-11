@@ -1,4 +1,4 @@
-const { addUser, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
+const { addUser, getLikesByUser, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -65,20 +65,38 @@ app.get("/listings", (req, res) => {
 app.get("/hot", (req, res) => {
   getHotListings()
   .then(listing => {
-    listing = charLimit(listing)
-    console.log(listing);
-    const templateVars = { id: req.session.userId, listingInfo: listing, title: "Most viewed items..."}
-    res.render("listings", templateVars)
+    getLikesByUser(req.session.userId)
+    .then(likes => {
+      console.log(likes);
+      console.log(listing);
+      listing = charLimit(listing)
+      const faves = []
+      for (let likeInfo of likes) {
+        faves.push(likeInfo.listing_id);
+      }
+      console.log(faves);
+      const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
+      res.render("listings", templateVars)
+    })
   })
 })
 
 app.get("/recent", (req, res) => {
   getListingsByTime()
   .then(listing => {
-    listing = charLimit(listing)
-    const templateVars = { id: req.session.userId, listingInfo: listing, title: "Recent listings..."}
-
-    res.render("listings", templateVars)
+    getLikesByUser(req.session.userId)
+    .then(likes => {
+      console.log(likes);
+      console.log(listing);
+      listing = charLimit(listing)
+      const faves = []
+      for (let likeInfo of likes) {
+        faves.push(likeInfo.listing_id);
+      }
+      console.log(faves);
+      const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
+      res.render("listings", templateVars)
+    })
   })
   })
 
@@ -157,15 +175,19 @@ app.post("/logout", (req, res) => {
 app.post("/search", (req, res) => {
   searchListings(req.body.input)
   .then(listing => {
-    console.log(listing);
-    if(listing) {
+    getLikesByUser(req.session.userId)
+    .then(likes => {
+      console.log(likes);
+      console.log(listing);
       listing = charLimit(listing)
-      const templateVars = { id: req.session.userId, listingInfo: listing, title: "Your search results..."}
+      const faves = []
+      for (let likeInfo of likes) {
+        faves.push(likeInfo.listing_id);
+      }
+      console.log(faves);
+      const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
       res.render("listings", templateVars)
-    } else {
-      const templateVars = { id: req.session.userId, listingInfo: null, title: "No results..." }
-      res.render("listings", templateVars)
-    }
+    })
   })
 })
 

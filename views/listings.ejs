@@ -44,7 +44,12 @@
             </a>
                <div class="listings-footer">
                  <div>
-                  <i class="fas fa-heart favourite-icon">
+                   <% if (favourites.includes(listingInfo[listing].id)) { %>
+                     <i class="fas fa-heart favourite-icon red">
+
+                   <% } else { %>
+                    <i class="fas fa-heart favourite-icon">
+                  <% } %>
                     <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
                 <div class="fave-user-id" style="display:none"><%= id %> </div>
                   </i>

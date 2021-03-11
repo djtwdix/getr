@@ -152,6 +152,23 @@ const favourite = (req) => {
   }
 }
 
+const getLikesByUser = (userId) => {
+    return db.query(`
+  SELECT * FROM likes
+  WHERE user_id = $1;
+  `, [userId])
+  .then(res => {
+    if (res.rows[0]) {
+      return res.rows;
+    } else {
+      return null;
+    }
+  })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -172,5 +189,5 @@ const favourite = (req) => {
   return today
 }
 
-module.exports = { login, favourite, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, favourite, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 
