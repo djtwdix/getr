@@ -23,8 +23,6 @@
                 <div class="listings-image">
                   <img id="no-image-vector" src="/images/guitar-vector.png">
                 </div>
-                <div class="listing-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
-                <div class="listing-item-id" style="display:none"><%= id %> </div>
                 <div class="listings-info">
                   <div class="listings-mid">
                     <div class="specs">
@@ -46,7 +44,10 @@
             </a>
                <div class="listings-footer">
                  <div>
-                  <i class="fas fa-heart favourite-icon"></i>
+                  <i class="fas fa-heart favourite-icon">
+                    <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
+                <div class="fave-user-id" style="display:none"><%= id %> </div>
+                  </i>
                  </div>
                  <div>
                    <i class="fas fa-envelope"></i>
