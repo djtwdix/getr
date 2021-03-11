@@ -109,7 +109,9 @@ app.get("/recent", (req, res) => {
   })
 
 app.get("/account/:userId", (req, res) => {
-  if (req.params.userId === req.session.userId) {
+  console.log("params: ", typeof req.params.userId)
+  console.log("userId", typeof req.session.userId);
+  if (Number(req.params.userId) === req.session.userId) {
     getUserByID(req.session.userId)
     .then(user => {
       const templateVars = { id: req.session.userId, userInfo: user }
