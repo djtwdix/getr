@@ -12,14 +12,14 @@
   background-color: #f5f6f5;
   background-image: url("/images/bg-textures/natural-paper.png");
   border-radius: 60px;
+  label {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: x-large;
+    font-weight: 500;
+    opacity: 80%;
+  }
   .form-group {
-    label {
-      margin-left: 1rem;
-      margin-bottom: 1rem;
-      font-size: x-large;
-      font-weight: 500;
-      opacity: 80%;
-    }
     textarea {
       font-size: 110%;
       padding: 1rem;
