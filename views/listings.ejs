@@ -24,11 +24,20 @@
                   Filter <i class="fas fa-filter"></i>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Price (min - max)</a></li>
                   <li>
-                    <hr class="dropdown-divider">
+                    <form id="price-range">
+                      <p>Price:</p>
+                      <div class="form-group">
+                        <label for="minPrice">from</label>
+                        <input id="minPrice" class="form-control form-control-sm" type="number">
+                      </div>
+                      <div class="form-group">
+                        <label for="maxPrice">to</label>
+                        <input id="maxPrice" class="form-control form-control-sm" type="number">
+                      </div>
+                      <button id="update-btn" type="submit" class="btn btn-primary">Update</button>
+                    </form>
                   </li>
-                  <li><a class="dropdown-item" href="#">Price (max - min)</a></li>
                 </ul>
               </div>
             </form>
