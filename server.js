@@ -67,7 +67,7 @@ app.get("/hot", (req, res) => {
   .then(listing => {
     getLikesByUser(req.session.userId)
     .then(likes => {
-      console.log(likes);
+      // console.log(likes);
       console.log(listing);
       if (listing) {
         listing = charLimit(listing)
@@ -78,7 +78,7 @@ app.get("/hot", (req, res) => {
           faves.push(likeInfo.listing_id);
         }
       }
-      console.log(faves);
+      // console.log(faves);
       const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
       res.render("listings", templateVars)
     })

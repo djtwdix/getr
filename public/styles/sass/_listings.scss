@@ -8,6 +8,10 @@
   color: $red;
   #filter-form {
     margin-left: 5rem;
+    #search-result {
+      display: none;
+    }
+
     button {
       border-radius: 40px;
       height: 2.5rem;
@@ -30,8 +34,20 @@
         transform: scale(0.98);
       }
     }
-    #search-result {
-      display: none;
+    li {
+      height: 17rem;
+      font-weight: normal;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      #price-range {
+        padding: 1rem;
+        .form-group {
+          margin-bottom: 0.2rem;
+        }
+      }
     }
   }
 }
