@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".favourite-icon").on("click", function(){
     console.log("clicked")
-    $(this).toggleClass("red");
+
     const listingId = $(this).find(".fave-item-id").text();
     const userId = $(this).find(".fave-user-id").text();
     const addToFaves = {
@@ -11,6 +11,7 @@ $(document).ready(function(){
     }
 
     if ($(this).hasClass("red") === false) {
+      $(this).toggleClass("red");
       console.log("is not red")
       addToFaves.isFave = false;
       $.post("/favourite", addToFaves)
@@ -18,6 +19,7 @@ $(document).ready(function(){
           console.log("Added to favourites");
         })
     } else {
+      $(this).toggleClass("red");
       console.log("is red");
       addToFaves.isFave = true;
       $.post("/favourite", addToFaves)

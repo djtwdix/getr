@@ -128,6 +128,30 @@ const getUserByID = (userID) => {
     });
 }
 
+const favourite = (req) => {
+  console.log("delete: ", typeof req.isFave);
+  if (req.isFave === 'true') {
+    console.log("delete: ", req);
+    return db.query(`
+  DELETE FROM likes
+  WHERE user_id = $1
+  AND listing_id = $2;
+  `, [req.userId, req.listingId])
+      .catch(err => {
+        console.log(err);
+      });
+  } else {
+    console.log("add: ", req)
+  return db.query(`
+  INSERT INTO likes(user_id, listing_id)
+  VALUES ($1, $2);
+  `, [req.userId, req.listingId])
+    .catch(err => {
+      console.log(err);
+    });
+  }
+}
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -148,5 +172,5 @@ const getUserByID = (userID) => {
   return today
 }
 
-module.exports = { login, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, favourite, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 
