@@ -6,13 +6,26 @@ $(document).ready(function(){
     const userId = $(this).find(".fave-user-id").text();
     const addToFaves = {
       listingId,
-      userId
+      userId,
+      isFave: null
     }
 
-    $.post("/favourite", addToFaves)
+    if ($(this).hasClass("red") === false) {
+      console.log("is not red")
+      addToFaves.isFave = false;
+      $.post("/favourite", addToFaves)
+        .done(data => {
+          console.log("Added to favourites");
+        })
+    } else {
+      console.log("is red");
+      addToFaves.isFave = true;
+      $.post("/favourite", addToFaves)
       .done(data => {
         console.log("Added to favourites");
       })
+    }
+
 
     console.log(addToFaves);
   })
