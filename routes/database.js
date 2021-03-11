@@ -110,6 +110,24 @@ const getListingById = (id) => {
   })
   .catch(err => console.log("getListingByID error: " + err))
 }
+
+const getUserByID = (userID) => {
+  return db.query(`
+  SELECT * FROM users
+  WHERE users.id = $1;
+  `, [userID])
+    .then(res => {
+      if (res.rows[0]) {
+        return res.rows[0];
+      } else {
+        return null;
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -130,5 +148,5 @@ const getListingById = (id) => {
   return today
 }
 
-module.exports = { login, getListingById, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 
