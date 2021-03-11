@@ -5,6 +5,7 @@
   <%- include("partials/_head") %>
     <title>Getr - My Account</title>
     <script src="/scripts/favourite.js"></script>
+    <script src="/scripts/delete-listing.js"></script>
 </head>
 
 <body>
@@ -57,13 +58,16 @@
                   </a>
                      <div class="listings-footer">
                        <div>
-                           <i class="fas fa-heart favourite-icon"></i>
+                          <i class="fas fa-check-square"></i>
                           <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
                       <div class="fave-user-id" style="display:none"><%= id %> </div>
                         </i>
                        </div>
                        <div>
-                         <i class="fas fa-envelope"></i>
+                        <i class="fas fa-trash-alt">
+                          <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id%> </div>
+                        <div class="fave-user-id" style="display:none"><%= id%> </div>
+                        </i>
                        </div>
                      </div>
                 </div>

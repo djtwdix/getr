@@ -206,6 +206,16 @@ WHERE seller_id = $1;
     });
 }
 
+const deleteListing = (listingId) => {
+  return db.query(`
+  DELETE FROM listings
+  WHERE id = $1;
+  `, [listingId])
+    .catch(err => {
+      console.log(err);
+    });
+}
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -226,5 +236,5 @@ WHERE seller_id = $1;
   return today
 }
 
-module.exports = { login, favourite, getMyListings, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, deleteListing,favourite, getMyListings, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 

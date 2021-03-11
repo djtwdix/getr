@@ -1,4 +1,4 @@
-const { addUser, getLikesByUser, getMyListings, getFaveListings, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
+const { addUser, deleteListing, getLikesByUser, getMyListings, getFaveListings, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
 
 // load .env data into process.env
 require('dotenv').config();
@@ -258,6 +258,11 @@ app.post("/listings/new", (req, res) => {
 app.post("/favourite", (req, res) => {
   console.log(req.body)
   favourite(req.body);
+})
+
+app.delete("/listings/:listingId/delete", (req, res) => {
+  console.log(req.body);
+  deleteListing(req.body.listingId);
 })
 
 app.listen(PORT, () => {
