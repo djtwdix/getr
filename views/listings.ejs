@@ -14,9 +14,9 @@
       <div class="listings-page">
         <div class="listings-title">
           <%= title %>
-            <form id="filter-form">
+            <!-- <form id="filter-form" method="POST" action="/search"> -->
 
-              <input type="text" class="form-control" id="search-result" aria-describedby="filterResults">
+
 
               <div class="btn-group">
                 <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -25,15 +25,20 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li>
-                    <form id="price-range">
+                    <form id="price-range" method="POST" action="/search">
+                    <%  if (searchInput) { %>
+                        <input type="text" name="input" class="form-control" id="search-result" value=<%=searchInput%> aria-describedby="filterResults" style="display: none">
+                    <%  } else { %>
+                        <input type="text" name="input" class="form-control" id="search-result" aria-describedby="filterResults" style="display: none">
+                     <% } %>
                       <p>Price:</p>
                       <div class="form-group">
                         <label for="minPrice">from</label>
-                        <input id="minPrice" class="form-control form-control-sm" type="number">
+                        <input id="minPrice" name="min_price" class="form-control form-control-sm" type="number">
                       </div>
                       <div class="form-group">
                         <label for="maxPrice">to</label>
-                        <input id="maxPrice" class="form-control form-control-sm" type="number">
+                        <input id="maxPrice" name="max_price" class="form-control form-control-sm" type="number">
                       </div>
                       <button id="update-btn" type="submit" class="btn btn-primary">Update</button>
                     </form>

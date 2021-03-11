@@ -79,7 +79,7 @@ app.get("/hot", (req, res) => {
         }
       }
       // console.log(faves);
-      const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
+      const templateVars = { id: req.session.userId, listingInfo: listing, searchInput: null, favourites: faves, title: "Recent listings..."}
       res.render("listings", templateVars)
     })
   })
@@ -102,7 +102,7 @@ app.get("/recent", (req, res) => {
         }
       }
       console.log(faves);
-      const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
+      const templateVars = { id: req.session.userId, listingInfo: listing, searchInput: null, favourites: faves, title: "Recent listings..."}
       res.render("listings", templateVars)
     })
   })
@@ -219,7 +219,10 @@ app.post("/logout", (req, res) => {
 })
 
 app.post("/search", (req, res) => {
-  searchListings(req.body.input)
+  console.log("input: ", req.body.input)
+  console.log("min: ", typeof req.body.min_price)
+  console.log("max: ", typeof req.body.max_price)
+  searchListings(req.body.input, req.body.min_price, req.body.max_price)
   .then(listing => {
     getLikesByUser(req.session.userId)
     .then(likes => {
@@ -235,7 +238,11 @@ app.post("/search", (req, res) => {
         }
       }
       console.log(faves);
-      const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
+      const templateVars = { id: req.session.userId, listingInfo: listing, searchInput: null, favourites: faves, title: "Recent listings..."}
+      if (req.body.input) {
+        templateVars.searchInput = req.body.input;
+      }
+
       res.render("listings", templateVars)
     })
   })

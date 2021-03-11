@@ -59,21 +59,35 @@ const getListingsByTime = () => {
     return res.rows;
   })
 }
-const searchListings = (searchQuery) => {
-  searchQuery = '%' + searchQuery +'%';
-  return db.query(`
+
+const searchListings = (searchQuery, min, max) => {
+  searchQuery = '%' + searchQuery + '%';
+  min = Number(min);
+  max = Number(max);
+  const value = [searchQuery]
+  let queryString = `
   SELECT * FROM listings
-  WHERE descrip LIKE $1;
-  `, [searchQuery])
-  .then(res => {
-    if (res.rows[0]) {
-      return res.rows;
-    } else {
-      return null;
-    }
-  })
-  .catch(err => console.log("search erroe: " + err))
-}
+  WHERE descrip LIKE $1
+  `;
+  if (min) {
+    value.push(min)
+    queryString += `AND cost >= $${value.length}`;
+  }
+  if (max) {
+    value.push(max)
+    queryString += `AND cost <= $${value.length}`;
+  }
+  console.log(queryString, value)
+  return db.query(queryString, value)
+      .then(res => {
+        if (res.rows[0]) {
+          return res.rows;
+        } else {
+          return null;
+        }
+      })
+      .catch(err => console.log("search error: " + err))
+  }
 
 const charLimit = (listingArray) => {
   for (let item of listingArray) {
