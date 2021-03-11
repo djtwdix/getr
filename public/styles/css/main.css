@@ -836,16 +836,29 @@
 
 .listings-title #filter-form li {
   height: 17rem;
-  font-weight: lighter;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem;
 }
 
 .listings-title #filter-form li #price-range {
   padding: 1rem;
+}
+
+.listings-title #filter-form li #price-range .form-group {
+  margin-bottom: 0.2rem;
 }
 
 .listings {
@@ -1488,11 +1501,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-=======
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1503,7 +1511,6 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
->>>>>>> mark-as-sold
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #dc4d3e), to(#105578));
   background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
