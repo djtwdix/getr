@@ -1392,19 +1392,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-#dashboard-card a {
-  text-decoration: none;
-  color: #105578;
-}
-
-#dashboard-card a:visited {
-  color: #105578;
-}
-
-#dashboard-card a:hover {
-  color: #dc4d3e;
-}
-
 #dashboard-card #dashboard-profile {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1427,6 +1414,19 @@
   background: linear-gradient(180deg, #dc4d3e 5%, #105578 100%);
   border-radius: 40px 0px 0px 40px;
   color: #f5f6f5;
+}
+
+#dashboard-card #dashboard-profile a {
+  text-decoration: none;
+  color: #f5f6f5;
+}
+
+#dashboard-card #dashboard-profile a:visited {
+  color: #f5f6f5;
+}
+
+#dashboard-card #dashboard-profile a:hover {
+  color: #105578;
 }
 
 #dashboard-card #dashboard-profile .user-profile img {
@@ -1496,6 +1496,19 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1rem;
+}
+
+#dashboard-card #dashboard-lists a {
+  text-decoration: none;
+  color: #105578;
+}
+
+#dashboard-card #dashboard-lists a:visited {
+  color: #105578;
+}
+
+#dashboard-card #dashboard-lists a:hover {
+  color: #dc4d3e;
 }
 
 #dashboard-card #dashboard-lists #message-for-empty {

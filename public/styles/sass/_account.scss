@@ -9,18 +9,7 @@
   background-color: $white;
 
   font-family: "Poppins", sans-serif;
-  a {
-    text-decoration: none;
-    color: $blue;
 
-  }
-  a:visited {
-    color: $blue;
-  }
-
-  a:hover {
-    color: $red;
-  }
   #dashboard-profile {
     flex: 1;
     display: flex;
@@ -33,6 +22,18 @@
 
     border-radius: 40px 0px 0px 40px;
     color: $white;
+    a {
+      text-decoration: none;
+      color: $white;
+
+    }
+    a:visited {
+      color: $white;
+    }
+
+    a:hover {
+      color: $blue;
+    }
     .user-profile {
       img {
         margin: 1rem;
@@ -80,6 +81,18 @@
     }
   }
   #dashboard-lists {
+    a {
+      text-decoration: none;
+      color: $blue;
+
+    }
+    a:visited {
+      color: $blue;
+    }
+
+    a:hover {
+      color: $red;
+    }
     flex: 2;
     background-image: url("/images/bg-textures/natural-paper.png");
     display: flex;
