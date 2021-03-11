@@ -71,8 +71,10 @@ app.get("/hot", (req, res) => {
       console.log(listing);
       listing = charLimit(listing)
       const faves = []
-      for (let likeInfo of likes) {
-        faves.push(likeInfo.listing_id);
+      if (likes) {
+        for (let likeInfo of likes) {
+          faves.push(likeInfo.listing_id);
+        }
       }
       console.log(faves);
       const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
@@ -90,8 +92,10 @@ app.get("/recent", (req, res) => {
       console.log(listing);
       listing = charLimit(listing)
       const faves = []
-      for (let likeInfo of likes) {
-        faves.push(likeInfo.listing_id);
+      if (likes) {
+        for (let likeInfo of likes) {
+          faves.push(likeInfo.listing_id);
+        }
       }
       console.log(faves);
       const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
@@ -181,8 +185,10 @@ app.post("/search", (req, res) => {
       console.log(listing);
       listing = charLimit(listing)
       const faves = []
-      for (let likeInfo of likes) {
-        faves.push(likeInfo.listing_id);
+      if (likes) {
+        for (let likeInfo of likes) {
+          faves.push(likeInfo.listing_id);
+        }
       }
       console.log(faves);
       const templateVars = { id: req.session.userId, listingInfo: listing, favourites: faves, title: "Recent listings..."}
