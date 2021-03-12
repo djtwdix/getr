@@ -23,73 +23,84 @@
           </div>
           <div class="links container-l">
             <div class="link">
-              <a href="/account/<%=id%>/faves"><button type="button" class="btn" id="dashboard-fav">Favourites <i class="fas fa-heart"></i></button></a>
+              <a href="/account/<%=id%>/faves"><button type="button" class="btn" id="dashboard-fav">Favourites <i
+                    class="fas fa-heart"></i></button></a>
             </div>
             <div class="link" id="dashboard-listings">
-              <a href="/account/<%=id%>/listings"><button type="button" class="btn" id="dashboard-fav">Lisitings<i class="fas fa-stream"></i></button></a>
+              <a href="/account/<%=id%>/listings"><button type="button" class="btn" id="dashboard-fav">Lisitings<i
+                    class="fas fa-stream"></i></button></a>
             </div>
             <div class="link" id="dashboard-messages">
-              <button type="button" class="btn" id="dashboard-fav" style="display:none">Messages <i class="fas fa-comment"></i>
+              <button type="button" class="btn" id="dashboard-fav" style="display:none">Messages <i
+                  class="fas fa-comment"></i>
             </div>
           </div>
         </div>
         <div class="container-l" id="dashboard-lists">
-              <% if (listingInfo) { %>
-                <% for (let listing in listingInfo) { %>
-                  <a href="/listings/<%=listingInfo[listing].id%>">
-                    <div class="listings-item">
-                      <div class="listings-image">
-                        <img id="no-image-vector" src="/images/guitar-vector.png">
-                      </div>
-                      <div class="listings-info">
-                        <div class="listings-mid">
-                          <div class="specs">
-                            <div class="listings-make">
-                              <%= listingInfo[listing].brand %>
-                            </div>
-                            <div class="listings-model">
-                              <%= listingInfo[listing].model %>
-                            </div>
-                           </div>
-                           <div class="listings-price">
-                            <%= listingInfo[listing].cost %>
-                           </div>
-                        </div>
-                         <div class="listings-description">
-                            <%= listingInfo[listing].descrip %>
-                         </div>
-                       </div>
-                  </a>
-                     <div class="listings-footer sold-delete">
-                       <div>
-                        <button class="btn mark-as-sold">
-                          <% if (listingInfo[listing].is_active) { %>
-                            Mark as Sold
-                          <% } else { %>
-                            Sold
-                         <% } %>
-                          <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id %> </div>
-                        </button>
-                      <div class="fave-user-id" style="display:none"><%= id %> </div>
-                        </i>
-                       </div>
-                       <div>
-                        <button class="btn delete-my-listing" href="">Delete Listing
-                          <div class="fave-item-id" style="display:none"><%= listingInfo[listing].id%> </div>
-                        <div class="fave-user-id" style="display:none"><%= id%> </div>
-                        </button>
-                        </i>
-                       </div>
-                     </div>
-                </div>
-                <% } %>
-              <% } else { %>
-                  <div id="message-for-empty">
-                    <h2>There is nothing here for now</h2>
-                    <h3>What are you waiting for <i class="fas fa-guitar"></i></h3>
+          <% if (listingInfo) { %>
+            <% for (let listing in listingInfo) { %>
+              <a href="/listings/<%=listingInfo[listing].id%>">
+                <div class="listings-item">
+                  <div class="listings-image">
+                    <img id="no-image-vector" src="/images/guitar-vector.png">
                   </div>
-              <%  } %>
+                  <div class="listings-info">
+                    <div class="listings-mid">
+                      <div class="specs">
+                        <div class="listings-make">
+                          <%= listingInfo[listing].brand %>
+                        </div>
+                        <div class="listings-model">
+                          <%= listingInfo[listing].model %>
+                        </div>
+                      </div>
+                      <div class="listings-price">
+                        <%= listingInfo[listing].cost %>
+                      </div>
+                    </div>
+                    <div class="listings-description">
+                      <%= listingInfo[listing].descrip %>
+                    </div>
+                  </div>
+              </a>
+              <div class="listings-footer sold-delete">
+                <div>
+                  <button class="btn mark-as-sold">
+                    <% if (listingInfo[listing].is_active) { %>
+                      Mark as Sold
+                      <% } else { %>
+                        Sold
+                        <% } %>
+                          <div class="fave-item-id" style="display:none">
+                            <%= listingInfo[listing].id %>
+                          </div>
+                  </button>
+                  <div class="fave-user-id" style="display:none">
+                    <%= id %>
+                  </div>
+                  </i>
+                </div>
+                <div>
+                  <button class="btn delete-my-listing" href="">Delete
+                    <div class="fave-item-id" style="display:none">
+                      <%= listingInfo[listing].id%>
+                    </div>
+                    <div class="fave-user-id" style="display:none">
+                      <%= id%>
+                    </div>
+                  </button>
+                  </i>
+                </div>
+              </div>
         </div>
+        <% } %>
+          <% } else { %>
+            <div id="message-for-empty">
+              <h2>There is nothing here for now</h2>
+              <h3>What are you waiting for <i class="fas fa-guitar"></i></h3>
+            </div>
+            <% } %>
+      </div>
       </div>
     </main>
 </body>

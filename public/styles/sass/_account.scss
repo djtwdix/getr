@@ -25,7 +25,6 @@
     a {
       text-decoration: none;
       color: $white;
-
     }
     a:visited {
       color: $white;
@@ -84,7 +83,6 @@
     a {
       text-decoration: none;
       color: $blue;
-
     }
     a:visited {
       color: $blue;
@@ -98,16 +96,16 @@
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
-    #message-for-empty{
+    #message-for-empty {
       margin-left: 5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      h3{
+      h3 {
         margin-top: 1rem;
         font-family: $secondary;
-        i{
+        i {
           color: $red;
         }
       }
@@ -160,14 +158,16 @@
 }
 
 .sold-delete {
+  padding-left: 1rem;
+  padding-right: 1rem;
   button {
     border-radius: 40px;
     height: 1.5rem;
-    width: 5rem;
+    width: 4.5rem;
     background: $red;
     font-weight: bolder;
     color: $white;
-    font-size: .60rem;
+    font-size: 0.6rem;
     border: none;
     padding: 0.2rem;
     stroke: black;
