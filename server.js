@@ -267,9 +267,12 @@ app.post("/favourite", (req, res) => {
   favourite(req.body);
 })
 
-app.delete("/listings/:listingId/delete", (req, res) => {
+app.post("/listings/:listingId/delete", (req, res) => {
   console.log(req.body);
   deleteListing(req.body.listingId);
+  const userId = req.session.userId;
+  console.log(`/account/${userId}/listings`);
+  res.redirect(`/account/${userId}/listings`)
 })
 
 app.put("/listings/:listingId/sold", (req, res) => {
