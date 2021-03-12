@@ -798,6 +798,10 @@
   color: #dc4d3e;
 }
 
+.listings-title #filter-button-group ul {
+  border-radius: 0px 0px 20px 20px;
+}
+
 .listings-title #filter-button-group button {
   border-radius: 40px;
   height: 2.5rem;
@@ -923,8 +927,10 @@
 }
 
 .listings-image #no-image-vector {
-  max-height: auto;
-  max-width: 90%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .listings-info {

@@ -79,7 +79,7 @@ app.get("/hot", (req, res) => {
         }
       }
       // console.log(faves);
-      const templateVars = { id: req.session.userId, listingInfo: listing, searchInput: null, favourites: faves, title: "Recent listings..."}
+      const templateVars = { id: req.session.userId, listingInfo: listing, searchInput: null, favourites: faves, title: "Featured listings..."}
       res.render("listings", templateVars)
     })
   })
@@ -279,10 +279,18 @@ app.post("/listings/:listingId/delete", (req, res) => {
   res.redirect(`/account/${userId}/listings`)
 })
 
+app.delete("/listings/:listingId/delete", (req, res) => {
+  console.log(req.body);
+  deleteListing(req.body.listingId);
+  const userId = req.session.userId;
+  console.log(`/account/${userId}/listings`);
+})
+
 app.post("/email", (req, res) => {
   console.log(req.body);
   getSeller(req.body.listingId)
   .then(seller => {
+    console.log(seller);
     getUserByID(req.body.senderId)
     .then (sender => {
       getListingById(req.body.listingId)
