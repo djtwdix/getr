@@ -1,5 +1,5 @@
-const { addUser, markSold, deleteListing, getLikesByUser, getMyListings, getFaveListings, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
-
+const { addUser,getSeller, markSold, deleteListing, getLikesByUser, getMyListings, getFaveListings, todayDate, favourite, getUserByID, getListingById, getUserWithEmail, addListing, login, searchListings, getHotListings, getListingsByTime, charLimit } = require("./routes/database");
+const { sendOffer } = require("./helpers/email")
 // load .env data into process.env
 require('dotenv').config();
 
@@ -273,6 +273,21 @@ app.post("/listings/:listingId/delete", (req, res) => {
   const userId = req.session.userId;
   console.log(`/account/${userId}/listings`);
   res.redirect(`/account/${userId}/listings`)
+})
+
+app.post("/email", (req, res) => {
+  console.log(req.body);
+  getSeller(req.body.listingId)
+  .then(seller => {
+    getUserByID(req.body.senderId)
+    .then (sender => {
+      getListingById(req.body.listingId)
+      .then(listing => {
+        console.log(seller.email, req.body.message, listing.brand, listing.model, sender.email)
+        sendOffer(seller.email, req.body.message, listing.brand, listing.model, sender.email)
+      })
+    })
+  })
 })
 
 app.put("/listings/:listingId/sold", (req, res) => {

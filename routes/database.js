@@ -255,7 +255,7 @@ const markSold = (listingId, isSold) => {
 
 const getSeller = (id) => {
   return db.query(`
-  SELECT user.*
+  SELECT users.email
   FROM users
   JOIN listings ON users.id = seller_id
   WHERE seller_id = $1;
