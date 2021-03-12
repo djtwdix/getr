@@ -190,6 +190,10 @@ app.get("/register", (req, res) => {
   res.render("register", templateVars)
 })
 
+app.get("*", (req,res) => {
+  res.render("404")
+})
+
 app.post("/register", (req, res) => {
   addUser(req.body)
   .then((user) => {
