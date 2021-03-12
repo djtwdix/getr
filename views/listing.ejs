@@ -39,7 +39,11 @@
 
       <div class="listing">
         <div class="listing-image">
-          <img src="/images/guitar-vector.png">
+        <%  if (listingInfo.listing_pic) { %>
+            <img src="<%=listingInfo.listing_pic%>">
+        <%  } else { %>
+            <img src="/images/guitar-vector.png">
+        <%  } %>
         </div>
         <div class="listing-right">
           <div class="listing-info">
