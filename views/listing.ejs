@@ -6,6 +6,7 @@
     <script src="/scripts/contact-seller.js"></script>
     <script src="/scripts/mark-as-sold.js"></script>
     <script src="/scripts/delete-listing.js"></script>
+    <script src="/scripts/send-message.js"></script>
 
     <title>GETr</title>
 </head>
@@ -23,7 +24,9 @@
           </div>
 
           <div class="form-group">
-            <textarea class="form-control" id="contact-message" rows="4" required></textarea>
+            <textarea class="form-control" id="contact-message" rows="4" required>
+
+            </textarea>
           </div>
           <div id="check-button">
             <div class="form-check">
@@ -32,7 +35,10 @@
                 I agree for seller to have access to my e-mail.
               </label>
             </div>
-            <button type="submit">Send</button>
+            <button id="submit-message" type="submit">Send
+              <div id="message-sender" style="display:none"><%=id%></div>
+              <div id="message-listing-id" style="display:none"><%=listingInfo.id%></div>
+            </button>
           </div>
         </form>
       </div>

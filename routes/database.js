@@ -253,6 +253,23 @@ const markSold = (listingId, isSold) => {
   }
 }
 
+const getSeller = (id) => {
+  return db.query(`
+  SELECT user.*
+  FROM users
+  JOIN listings ON users.id = seller_id
+  WHERE seller_id = $1;
+  `, [id])
+  .then(res => {
+    if (res.rows[0]) {
+      return res.rows[0];
+    } else {
+      return null;
+    }
+  })
+  .catch(err => console.log("getSeller error: " + err))
+}
+
 /**Coverts date to SQL format
  *
  * @returns SQL formated date
@@ -273,5 +290,5 @@ const markSold = (listingId, isSold) => {
   return today
 }
 
-module.exports = { login, markSold, deleteListing,favourite, getMyListings, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
+module.exports = { login, getSeller, markSold, deleteListing,favourite, getMyListings, getFaveListings, getLikesByUser, getListingById, getUserByID, todayDate ,addUser, addListing, getUserWithEmail, getHotListings, getListingsByTime, searchListings, charLimit};
 
