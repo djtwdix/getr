@@ -44,6 +44,7 @@ const login = (email, password) => {
 const getHotListings = () => {
   return db.query(`
   SELECT * FROM listings
+  WHERE listings.is_active = true
   ORDER BY total_views DESC
   `)
   .then(res => {
@@ -53,6 +54,7 @@ const getHotListings = () => {
 const getListingsByTime = () => {
   return db.query(`
   SELECT * FROM listings
+  WHERE listings.is_active = true
   ORDER BY listing_date DESC
   `)
   .then(res => {
@@ -68,6 +70,7 @@ const searchListings = (searchQuery, min, max) => {
   let queryString = `
   SELECT * FROM listings
   WHERE descrip LIKE $1
+  AND listings.is_active = true
   `;
   if (min) {
     value.push(min)
@@ -77,7 +80,6 @@ const searchListings = (searchQuery, min, max) => {
     value.push(max)
     queryString += `AND cost <= $${value.length}`;
   }
-  console.log(queryString, value)
   return db.query(queryString, value)
       .then(res => {
         if (res.rows[0]) {
