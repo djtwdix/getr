@@ -1323,14 +1323,19 @@
   }
 }
 
+.sold-delete {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .sold-delete button {
   border-radius: 40px;
   height: 1.5rem;
-  width: 5rem;
+  width: 4.5rem;
   background: #dc4d3e;
   font-weight: bolder;
   color: #f5f6f5;
-  font-size: .60rem;
+  font-size: 0.6rem;
   border: none;
   padding: 0.2rem;
   stroke: black;
