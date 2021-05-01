@@ -91,13 +91,14 @@
   overflow: hidden;
   cursor: pointer;
   border-bottom: 2px solid black;
-  img {
-    max-height: auto;
-    max-width: 100%;
+  #guitar-img {
+    object-fit:cover;
+    height: 100%;
+    width: 100%;
   }
   #no-image-vector {
     max-height: auto;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -137,7 +138,7 @@
   width: inherit;
   display: flex;
   justify-content: space-around;
-  padding-top: .75rem;
+  padding-top: 0.75rem;
   margin-bottom: 20px;
   i {
     cursor: pointer;
