@@ -7,6 +7,9 @@
   margin-bottom: 1rem;
   color: $red;
   #filter-button-group {
+    ul {
+      border-radius: 0px 0px 20px 20px;
+    }
     button {
       border-radius: 40px;
       height: 2.5rem;
@@ -97,8 +100,14 @@
     width: 100%;
   }
   #no-image-vector {
+<<<<<<< HEAD
     max-height: auto;
     max-width: 100%;
+=======
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+>>>>>>> 0b5de4445cb85c9015b4d20eb9b7f60a60459963
   }
 }
 

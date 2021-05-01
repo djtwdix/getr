@@ -258,7 +258,7 @@ const getSeller = (id) => {
   SELECT users.email
   FROM users
   JOIN listings ON users.id = seller_id
-  WHERE seller_id = $1;
+  WHERE listings.id = $1;
   `, [id])
   .then(res => {
     if (res.rows[0]) {

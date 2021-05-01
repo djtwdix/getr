@@ -37,8 +37,12 @@
                   <a href="/listings/<%=listingInfo[listing].id%>">
                     <div class="listings-item">
                       <div class="listings-image">
-                        <img id="no-image-vector" src="/images/guitar-vector.png">
-                      </div>
+                        <%  if (listingInfo[listing].listing_pic) { %>
+                            <img id="no-image-vector" src=<%=listingInfo[listing].listing_pic%>>
+                        <%  } else { %>
+                            <img id="no-image-vector" src="/images/guitar-vector.png">
+                        <%  } %>
+                        </div>
                       <div class="listings-info">
                         <div class="listings-mid">
                           <div class="specs">

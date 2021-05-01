@@ -2,7 +2,7 @@ $(document).ready(function(){
   $(".delete-my-listing").on("click", function(){
     console.log("clicked");
 
-    const listingId = $(this).find(".fave-item-id").text();
+    const listingId = $(this).find(".fave-item-id").text().trim();
     console.log(listingId);
     $.ajax({
       url: `/listings/${listingId}/delete`,
